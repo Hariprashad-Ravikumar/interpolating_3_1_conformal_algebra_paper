@@ -202,8 +202,9 @@ When the system is evolving in the future direction (i.e., positive $\tau$), for
 
 However, this sign correlation does not exist in IFD, and the vacuum structure appears much more complicated than in the LFD case due to the quantum fluctuations. 
 
-\begin{table}[H][t]
+\begin{table}[H]
   \caption{\label{tab:Kinematic_and_dynamic_generators_for_different_interoplation_angles}Kinematic and dynamic generators for different interpolation angles \cite{Ji2001, Ji2012}}
+  \resizebox{\textwidth}{!}{%
     \begin{tabular}{lcc}
 	% \hline
 	% \hline
@@ -214,7 +215,8 @@ However, this sign correlation does not exist in IFD, and the vacuum structure a
 	$\delta=\pi/4$ & $\mathcal{K}^{\hat{1}}=-E^{1}, \mathcal{K}^{\hat{2}}=-E^{2}, J^{3}, -K_3, P^{1}, P^{2}, P^{+}$ & $\mathcal{D}^{\hat{1}}=-F^{1}, \mathcal{D}^{\hat{2}}=-F^{2}, P^{-}$\\
 	% \hline
 	% \hline
-      \end{tabular}
+      \end{tabular}%
+  }
     \end{table}
 
 
@@ -396,7 +398,7 @@ The algebra Eq.\eqref{simplesrint} with the above interpolating $6\times6$ metri
 \centering
 \setlength{\tabcolsep}{2pt}
 \caption{\label{tab:full_interpolation}Full $15 \times 15$ conformal algebra in the interpolation form}
-\scalebox{0.35}{
+\resizebox{\textwidth}{!}{
 \begin{tabular}{ |c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c| }
 \hline
 \rule{0pt}{16pt} & $\mathfrak{K}_{\hat{+}}$ & $P_{\hat{+}}$ & $D_{\hat{+}}$ & $\mathfrak{K}_{\hat{-}}$ & $P_{\hat{-}}$ & $D_{\hat{-}}$ & $P_{1}$ & $P_{2}$ & $\mathfrak{K}_{1}$ & $\mathfrak{K}_{2}$ & $\mathcal{D}^{\hat{1}}$ & $\mathcal{D}^{\hat{2}}$ & $\mathcal{K}^{\hat{1}}$ & $\mathcal{K}^{\hat{2}}$ & $J^{3}$ \\
@@ -437,7 +439,7 @@ The algebra Eq.\eqref{simplesrint} with the above interpolating $6\times6$ metri
 \end{table}
 \begin{table}[h!]
 \caption{\label{tabelinterpolationifd}Full conformal algebra in IFD}
-\scalebox{0.9}{
+\resizebox{\textwidth}{!}{
 \begin{tabular}{ |c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c| } 
  \hline
  \rule{0pt}{16pt} & $\mathfrak{K}_{{0}}$ & $P_{{0}}$ & $D$ & $\mathfrak{K}_{{3}}$ & $P_{{3}}$ & $K_{{3}}$ & $P_{{1}}$ & $P_{{2}}$ & $\mathfrak{K}_{{1}}$ & $\mathfrak{K}_{{2}}$  & ${K}^{{1}}$ & ${K}^{{2}}$  & ${J}^{{2}}$ & ${J}^{{1}}$ & $J^{{3}}$ \\
@@ -480,7 +482,7 @@ The algebra Eq.\eqref{simplesrint} with the above interpolating $6\times6$ metri
 \centering
 \setlength{\tabcolsep}{2pt}
 \caption{\label{tab:lfd_limit}Full $15 \times 15$ conformal algebra in the LFD limit ($\delta \rightarrow \pi/4$)}
-\scalebox{0.45}{
+\resizebox{\textwidth}{!}{
 \begin{tabular}{ |c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c| }
 \hline
 \rule{0pt}{16pt} & $\mathfrak{K}_{+}$ & $P_{+}$ & $D_{+}$ & $\mathfrak{K}_{-}$ & $P_{-}$ & $D_{-}$ & $P_{1}$ & $P_{2}$ & $\mathfrak{K}_{1}$ & $\mathfrak{K}_{2}$ & $F^{1}$ & $F^{2}$ & $E^{1}$ & $E^{2}$ & $J^{3}$ \\
@@ -749,7 +751,7 @@ $\delta \to 0$ and $\delta \to \pi/4$, we find the corresponding number of kinem
 %
 \begin{table}[h!]
         %\centering
-        \scalebox{1}{ 
+        \resizebox{\textwidth}{!}{
         \begin{tabular}{|c||c|c|}
         \hline
              \rule{0pt}{16pt} Generators & $x^{\hat{+}\prime}$\\
@@ -791,6 +793,7 @@ $b^{\hat{\pm}}=\omega^{\hat{\pm},-2},c^{\hat{+}}=\omega^{-1\hat{+}}$ and $\alpha
     \end{table}
     \begin{table}[!htb]
         \begin{minipage}{.5\linewidth}
+      \resizebox{\linewidth}{!}{%
         \begin{tabular}{|c||c|c|}
         \hline
              \rule{0pt}{16pt} Generators & $x^{{0}\prime}$\\
@@ -826,11 +829,13 @@ $b^{\hat{\pm}}=\omega^{\hat{\pm},-2},c^{\hat{+}}=\omega^{-1\hat{+}}$ and $\alpha
                \hline
                \rule{0pt}{16pt} $J^{1}$ & $ x^{{0}\prime}=x^{{0}}$ \\
                \hline
-        \end{tabular}
+        \end{tabular}%
+        }
         \caption{Transformation of the IFD time in $(3+1)$d}
         \label{tablex0prime}
         \end{minipage}%
     \begin{minipage}{.5\linewidth}
+        \resizebox{\linewidth}{!}{%
         \begin{tabular}{|c||c|c|}
         \hline
              \rule{0pt}{16pt} Generators & $x^{{+}\prime}$\\
@@ -866,12 +871,14 @@ $b^{\hat{\pm}}=\omega^{\hat{\pm},-2},c^{\hat{+}}=\omega^{-1\hat{+}}$ and $\alpha
                \hline
                \rule{0pt}{16pt}$-E^{2}$ & $ x^{{+}\prime}=x^{{+}}$ \\
                \hline
-        \end{tabular}
+        \end{tabular}%
+        }
         \caption{Transformation of LFD time in $(3+1)$d}
         \label{tablexplusprime}
           \end{minipage} 
     \end{table}
     \begin{table}[h!]
+    \resizebox{\textwidth}{!}{%
     \begin{tabular}{lcc}
 	Interpolation angle & Kinematic & Dynamic \\
 	\hline
@@ -880,7 +887,8 @@ $b^{\hat{\pm}}=\omega^{\hat{\pm},-2},c^{\hat{+}}=\omega^{-1\hat{+}}$ and $\alpha
 	$\delta=\pi/4$ & $\mathcal{K}^{\hat{1}}=-E^{1},~ \mathcal{K}^{\hat{2}}=-E^{2},~ J^{3}, P^{1}, P^{2}$, $P_{-}$, $D_{+}$, $D_{-}$& $\mathcal{D}^{\hat{1}}=-F^{1},~ \mathcal{D}^{\hat{2}}=-F^{2},~ P_{+}$, $\mathfrak{K}_{{+}}$, $\mathfrak{K}_{{-}}$, $\mathfrak{K}_{{1}}$, $\mathfrak{K}_{{2}}$\\
 	%\hline
 	 %\hline
-      \end{tabular}
+      \end{tabular}%
+    }
     \caption{\label{tab:Kinematic_and_dynamic_generators_for_different_interoplation_angles_conformal1+1}Kinematic and dynamic conformal generators for different interpolation angles in $(3+1)$}
 \end{table}
 %
