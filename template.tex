@@ -405,7 +405,7 @@ The algebra Eq.\eqref{simplesrint} with the above interpolating $6\times6$ metri
 \resizebox{\textwidth}{!}{
 \begin{tabular}{ |c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c| }
 \hline
-\rule{0pt}{16pt} & $\mathfrak{K}_{\hat{+}}$ & $P_{\hat{+}}$ & $D_{\hat{+}}$ & $\mathfrak{K}_{\hat{-}}$ & $P_{\hat{-}}$ & $D_{\hat{-}}$ & $P_{1}$ & $P_{2}$ & $\mathfrak{K}_{1}$ & $\mathfrak{K}_{2}$ & $\mathcal{D}^{\hat{1}}$ & $\mathcal{D}^{\hat{2}}$ & $\mathcal{K}^{\hat{1}}$ & $\mathcal{K}^{\hat{2}}$ & $J^{3}$ \\
+\multicolumn{1}{c}{} & $\mathfrak{K}_{\hat{+}}$ & $P_{\hat{+}}$ & $D_{\hat{+}}$ & $\mathfrak{K}_{\hat{-}}$ & $P_{\hat{-}}$ & $D_{\hat{-}}$ & $P_{1}$ & $P_{2}$ & $\mathfrak{K}_{1}$ & $\mathfrak{K}_{2}$ & $\mathcal{D}^{\hat{1}}$ & $\mathcal{D}^{\hat{2}}$ & $\mathcal{K}^{\hat{1}}$ & $\mathcal{K}^{\hat{2}}$ & $J^{3}$ \\
 \hline
 \hline
 \rule{0pt}{16pt} $\mathfrak{K}_{\hat{+}}$ & $0$ & $-2i[(c+\mathbb{S}s)D_{\hat{+}}+(s-\mathbb{S}c)D_{\hat{-}}]$ & $-i[(c+\mathbb{S}s)\mathfrak{K}_{\hat{+}}+(s-\mathbb{S}c)\mathfrak{K}_{\hat{-}}]$ & $0$ & $2i\mathbb{C}[sD_{\hat{+}}-cD_{\hat{-}}]$ & $i\mathbb{C}[s\mathfrak{K}_{\hat{+}}-c\mathfrak{K}_{\hat{-}}]$ & $-2i[\mathbb{S}\mathcal{K}^{\hat{1}} + \mathbb{C}\mathcal{D}^{\hat{1}}]$ & $-2i[\mathbb{S}\mathcal{K}^{\hat{2}} + \mathbb{C}\mathcal{D}^{\hat{2}}]$ & $0$ & $0$ & $i\mathfrak{K}_{1}$ & $i\mathfrak{K}_{2}$ & $0$ & $0$ & $0$ \\
@@ -441,11 +441,10 @@ The algebra Eq.\eqref{simplesrint} with the above interpolating $6\times6$ metri
 \label{tabelinterpolation}
 \end{tabular}}
 \end{table}
-\endgroup
-\finishlandscape
-\begin{table}[h!]
-\caption{\label{tabelinterpolationifd}Full conformal algebra in IFD}
-\resizebox{\textwidth}{!}{
+\begin{minipage}[t]{.48\linewidth}
+\vspace{0pt}
+\captionof{table}{Conformal algebra $(3+1)$ in the IFD limit ($\delta \to 0$)}
+\resizebox{\linewidth}{!}{
 \begin{tabular}{ |c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c| } 
  \hline
  \rule{0pt}{16pt} & $\mathfrak{K}_{{0}}$ & $P_{{0}}$ & $D$ & $\mathfrak{K}_{{3}}$ & $P_{{3}}$ & $K_{{3}}$ & $P_{{1}}$ & $P_{{2}}$ & $\mathfrak{K}_{{1}}$ & $\mathfrak{K}_{{2}}$  & ${K}^{{1}}$ & ${K}^{{2}}$  & ${J}^{{2}}$ & ${J}^{{1}}$ & $J^{{3}}$ \\
@@ -483,12 +482,11 @@ The algebra Eq.\eqref{simplesrint} with the above interpolating $6\times6$ metri
  \hline 
 \end{tabular}}
 \label{tabelIFD}
-\end{table}
-\begin{table}[h!]
-\centering
-\setlength{\tabcolsep}{2pt}
-\caption{\label{tab:lfd_limit}Full $15 \times 15$ conformal algebra in the LFD limit ($\delta \rightarrow \pi/4$)}
-\resizebox{\textwidth}{!}{
+\end{minipage}\hfill
+\begin{minipage}[t]{.48\linewidth}
+\vspace{0pt}
+\captionof{table}{Conformal algebra $(3+1)$ in the LFD limit ($\delta \to \pi/4$)}
+\resizebox{\linewidth}{!}{
 \begin{tabular}{ |c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c| }
 \hline
 \rule{0pt}{16pt} & $\mathfrak{K}_{+}$ & $P_{+}$ & $D_{+}$ & $\mathfrak{K}_{-}$ & $P_{-}$ & $D_{-}$ & $P_{1}$ & $P_{2}$ & $\mathfrak{K}_{1}$ & $\mathfrak{K}_{2}$ & $F^{1}$ & $F^{2}$ & $E^{1}$ & $E^{2}$ & $J^{3}$ \\
@@ -526,7 +524,9 @@ The algebra Eq.\eqref{simplesrint} with the above interpolating $6\times6$ metri
 \hline
 \end{tabular}}
 \label{tabelLFD}
-\end{table}
+\end{minipage}
+\endgroup
+\finishlandscape
 where, $P_{\hat{+}}=P_0\cos{\delta}+P_3\sin{\delta}$, $P_{\hat{-}}=P_0\sin{\delta}-P_3\cos{\delta}$, $
 \mathfrak{K}^{\hat{+}}=\mathfrak{K}_0\cos{\delta}+\mathfrak{K}_3\sin{\delta}$, $\mathfrak{K}^{\hat{-}}=\mathfrak{K}_0\sin{\delta}-\mathfrak{K}_3\cos{\delta}$, $D_{\hat{+}}=D\cos\delta+K_3\sin\delta$, $D_{\hat{-}}=D\sin\delta-K_3\cos\delta$, and the perpendicular components remain the same. 
 With the IFD limit $\mathbb{C}\longrightarrow1~\&~\mathbb{S}\longrightarrow0$ and LFD limit $\mathbb{C}\longrightarrow0~\&~\mathbb{S}\longrightarrow1$, the algebra Eq.\eqref{simplesrint} will reproduce the explicit commutation relations mentioned in Table.~\ref{tabelIFD} and Table.~\ref{tabelLFD} respectively.
