@@ -1,0 +1,15 @@
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.toc
+*-eps-converted-to.pdf
+
+# Keep template assets that are sources
+!Definitions/logo-orcid.pdf

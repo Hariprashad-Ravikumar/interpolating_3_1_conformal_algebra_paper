@@ -87,6 +87,7 @@
 \newcommand{\Pp}{\mathbb{P}}
 \newcommand{\Qq}{\mathbb{Q}}
 \def\wh{\hat}
+\usepackage{adjustbox}
 
 %=================================================================
 % Please use the following mathematics environments: Theorem, Lemma, Corollary, Proposition, Characterization, Property, Problem, Example, ExamplesandDefinitions, Hypothesis, Remark, Definition, Notation, Assumption
@@ -399,10 +400,12 @@ The algebra Eq.\eqref{simplesrint} with the above interpolating $6\times6$ metri
 \fontsize{8}{9}\selectfont
 \setlength{\tabcolsep}{1pt}
 \renewcommand{\arraystretch}{1.1}
-\begin{table}[H]
+\noindent
+\begin{minipage}[t]{\textwidth}
 \centering
-\caption{\label{tab:full_interpolation}Full $15 \times 15$ conformal algebra in the interpolation form}
-\resizebox{\textwidth}{!}{
+\captionof{table}{Full $15 \times 15$ conformal algebra in the interpolation form}
+\label{tab:full_interpolation}
+\adjustbox{max width=\textwidth, max totalheight=0.56\textheight}{%
 \begin{tabular}{ |c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c| }
 \hline
 \multicolumn{1}{c}{} & $\mathfrak{K}_{\hat{+}}$ & $P_{\hat{+}}$ & $D_{\hat{+}}$ & $\mathfrak{K}_{\hat{-}}$ & $P_{\hat{-}}$ & $D_{\hat{-}}$ & $P_{1}$ & $P_{2}$ & $\mathfrak{K}_{1}$ & $\mathfrak{K}_{2}$ & $\mathcal{D}^{\hat{1}}$ & $\mathcal{D}^{\hat{2}}$ & $\mathcal{K}^{\hat{1}}$ & $\mathcal{K}^{\hat{2}}$ & $J^{3}$ \\
@@ -438,13 +441,18 @@ The algebra Eq.\eqref{simplesrint} with the above interpolating $6\times6$ metri
 \hline
 \rule{0pt}{16pt} $J^{3}$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $i P_{2}$ & $-i P_{1}$ & $i\mathfrak{K}_{2}$ & $-i\mathfrak{K}_{1}$ & $i\mathcal{D}^{\hat{2}}$ & $-i\mathcal{D}^{\hat{1}}$ & $i\mathcal{K}^{\hat{2}}$ & $-i\mathcal{K}^{\hat{1}}$ & $0$ \\
 \hline
-\label{tabelinterpolation}
 \end{tabular}}
-\end{table}
-\begin{minipage}[t]{.48\linewidth}
-\vspace{0pt}
+\label{tabelinterpolation}
+\end{minipage}
+
+\vspace{\baselineskip}
+
+\noindent
+\begin{minipage}[t]{.49\textwidth}
+\centering
 \captionof{table}{Conformal algebra $(3+1)$ in the IFD limit ($\delta \to 0$)}
-\resizebox{\linewidth}{!}{
+\label{tabelIFD}
+\adjustbox{max width=\linewidth, max totalheight=0.42\textheight}{%
 \begin{tabular}{ |c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c| } 
  \hline
  \rule{0pt}{16pt} & $\mathfrak{K}_{{0}}$ & $P_{{0}}$ & $D$ & $\mathfrak{K}_{{3}}$ & $P_{{3}}$ & $K_{{3}}$ & $P_{{1}}$ & $P_{{2}}$ & $\mathfrak{K}_{{1}}$ & $\mathfrak{K}_{{2}}$  & ${K}^{{1}}$ & ${K}^{{2}}$  & ${J}^{{2}}$ & ${J}^{{1}}$ & $J^{{3}}$ \\
@@ -481,12 +489,12 @@ The algebra Eq.\eqref{simplesrint} with the above interpolating $6\times6$ metri
  \rule{0pt}{16pt} $J^{{3}}$ &0&0&0&0&0&0&$iP_{{2}}$&$-iP_{{1}}$&$i\mathfrak{K}_{{2}}$&$-i\mathfrak{K}_{{1}}$&$i{K}^{{2}}$&$-i{K}^{{1}}$&$-i{J}^{{1}}$&$i{J}^{{2}}$&0\\
  \hline 
 \end{tabular}}
-\label{tabelIFD}
 \end{minipage}\hfill
-\begin{minipage}[t]{.48\linewidth}
-\vspace{0pt}
+\begin{minipage}[t]{.49\textwidth}
+\centering
 \captionof{table}{Conformal algebra $(3+1)$ in the LFD limit ($\delta \to \pi/4$)}
-\resizebox{\linewidth}{!}{
+\label{tabelLFD}
+\adjustbox{max width=\linewidth, max totalheight=0.42\textheight}{%
 \begin{tabular}{ |c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c| }
 \hline
 \rule{0pt}{16pt} & $\mathfrak{K}_{+}$ & $P_{+}$ & $D_{+}$ & $\mathfrak{K}_{-}$ & $P_{-}$ & $D_{-}$ & $P_{1}$ & $P_{2}$ & $\mathfrak{K}_{1}$ & $\mathfrak{K}_{2}$ & $F^{1}$ & $F^{2}$ & $E^{1}$ & $E^{2}$ & $J^{3}$ \\
@@ -523,7 +531,6 @@ The algebra Eq.\eqref{simplesrint} with the above interpolating $6\times6$ metri
 \rule{0pt}{16pt} $J^{3}$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $iP_{2}$ & $-iP_{1}$ & $i\mathfrak{K}_{2}$ & $-i\mathfrak{K}_{1}$ & $iF^{2}$ & $-iF^{1}$ & $iE^{2}$ & $-iE^{1}$ & $0$ \\
 \hline
 \end{tabular}}
-\label{tabelLFD}
 \end{minipage}
 \endgroup
 \finishlandscape
