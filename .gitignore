@@ -13,3 +13,7 @@
 
 # Keep template assets that are sources
 !Definitions/logo-orcid.pdf
+
+# Python and Markdown artifacts
+*.py
+*.md
