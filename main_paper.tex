@@ -365,7 +365,7 @@ To extend the interpolation to \texorpdfstring{$(3+1)$}{Lg} dimensions, we defin
     \frac{\mathfrak{K}_3}{\sqrt{2}}&\frac{-P_3}{\sqrt{2}}&-K_3 & J^{2} & -J^{1} & 0
   \end{pmatrix}_{6\times6}
 \end{align}
-where $J_{ab}=-J_{ba}$ and $a,b\in\{-2,-1,0,1,2,3\}$. These new generators obey the $SO(4+1,1)$ commutation relations:
+where $J_{ab}=-J_{ba}$ and $a,b\in\{-2,-1,0,1,2,3\}$. These new generators obey the $SO(4,2)$ commutation relations:
   \begin{align}\label{algebrasimp}
       \left[J_{{a}{b}},J_{{c}{d}}\right]=-i\left(g_{{b}{d}}J_{{a}{c}}-g_{{b}{c}}J_{{a}{d}}+g_{{a}{c}}J_{{b}{d}}-g_{{a}{d}}J_{{b}{c}}\right)
   \end{align}
@@ -803,10 +803,10 @@ The explicit $6\times6$ matrix representations are then given by
     \end{pmatrix}~;~~~~~~\mathcal{D}^{2}=\begin{pmatrix}
         0&0&0&0&0&0\\
         0&0&0&0&0&0\\
-        0&0&0&i\mathbb{C}&0&0\\
+        0&0&0&0&i\mathbb{C}&0\\
         0&0&0&0&0&0\\
         0&0&i&0&0&0\\
-        0&0&0&i\mathbb{S}&0&0
+        0&0&0&0&i\mathbb{S}&0
     \end{pmatrix}~;\nonumber
     \end{align}
     \begin{align}
@@ -904,8 +904,8 @@ Then, the inverse spacetime of $x^{\hat{\mu}}$ is given by $\frac{x_{\hat{\mu}}}
     x^{\hat{+}\prime}&=-\frac{1}{\sqrt{2}}\frac{{X}^{\hat{+}\prime}}{ {X}^{\prime}_{-1}},
 \end{align}
 for each and every interpolating conformal operation according to Eq.(\ref{exponential-conformal-tranf}). We summarized the results of our computation in Table~\ref{tablexprime}.
-From these results, we can determine which generators leave the interpolating time intact, i.e, $x^{\hat{+}\prime} = x^{\hat{+}}$ modulo a scale factor, before and after the transformation. These generators, which result in $x^{\hat{+}\prime}=x^{\hat{+}}$ modulo a scale factor, are the kinematic generators as we discussed earlier. For $0\leq \delta < \pi/4$, we find $P_{\hat -} = \sqrt{2}J_{-1\hat{-}}$ and $D=\left(D_{\hat{+}}c+D_{\hat{-}}s\right)=J_{-1 -2}$ are the only two kinematic generators which yield $x^{\hat{+}\prime}=x^{\hat{+}}$ modulo a scale factor.
-The scale factor for the interpolating longitudinal momentum $P_{\hat{-}}$ is one, while the scale factor for the dilatation $D$ is $e^{-\alpha}$ with $\alpha=\omega^{-1-2}$ in Eq.(\ref{exponential-conformal-tranf}) as one can find straightforwardly from the $6\times6$ matrix representations of $D_{\hat{+}}$ and $D_{\hat{-}}$ in Eq.(\ref{matrix-rep-conformal-generators}). 
+From these results, we can determine which generators leave the interpolating time intact. We call a generator kinematic when $x^{\hat{+}\prime}=\lambda x^{\hat{+}}$, where $\lambda$ is independent of the spacetime coordinates (and may depend on the group parameter). Transformations with coordinate-dependent multiplicative factors are therefore classified as dynamic. For $0\leq \delta < \pi/4$, the seven kinematic generators are $\mathcal{K}^{\hat{1}}$, $\mathcal{K}^{\hat{2}}$, $J^{3}$, $P_{1}$, $P_{2}$, $P_{\hat -}=\sqrt{2}J_{-1\hat{-}}$, and $D=\left(D_{\hat{+}}c+D_{\hat{-}}s\right)=J_{-1 -2}$.
+The first six of these generators leave $x^{\hat{+}}$ exactly unchanged. The scale factor for the dilatation $D$ is $e^{-\alpha}$, with $\alpha=\omega^{-1-2}$ in Eq.(\ref{exponential-conformal-tranf}), as follows straightforwardly from the $6\times6$ matrix representations of $D_{\hat{+}}$ and $D_{\hat{-}}$ in Eq.(\ref{matrix-rep-conformal-generators}).
 Taking the respective limit of the interpolating parameter $\delta$, namely,  
 $\delta \to 0$ and $\delta \to \pi/4$, we find the corresponding number of kinematic generators in the IFD and the LFD, respectively. 
 %
@@ -1051,20 +1051,19 @@ $b^{\hat{\pm}}=\omega^{\hat{\pm},-2},c^{\hat{+}}=\omega^{-1\hat{+}}$ and $\alpha
 	 %\hline
       \end{tabular}%
     }
-    \caption{\label{tab:Kinematic_and_dynamic_generators_for_different_interoplation_angles_conformal1+1}Kinematic and dynamic conformal generators for different interpolation angles in $(3+1)$}
+    \caption{\label{tab:Kinematic_and_dynamic_generators_for_different_interoplation_angles_conformal1+1}Kinematic and dynamic conformal generators for different interpolation angles in $(3+1)$ dimensions. Here kinematic means that the interpolating time is unchanged up to a scale factor independent of the spacetime coordinates.}
 \end{table}
 %
 
 
 In the limit to $\delta=0$, i.e., the IFD ($\mathbb{C}=1;~\mathbb{S}=0$), we find the results shown in Table~\ref{tablex0prime} for the transformed $x^{0\prime}$ 
-for every $(3+1)$d conformal generator. As expected from the results shown in Table~\ref{tablexprime} for the interpolating time transformations, we find the two kinematic generators $P^3 = - P_3$ and $D$ corresponding 
-to $P_{\hat -} = \sqrt{2}J_{-1\hat{-}}$ and $D=\left(D_{\hat{+}}c+D_{\hat{-}}s\right)=J_{-1 -2}$ for $\delta =0$, respectively.
+for every $(3+1)$d conformal generator. Consistent with Table~\ref{tablexprime}, the seven kinematic generators are $\mathcal{K}^{\hat{1}}=-J^{2}$, $\mathcal{K}^{\hat{2}}=J^{1}$, $J^{3}$, $P^{1}$, $P^{2}$, $P^{3}=-P_{3}$, and $D$.
 
-In the limit to $\delta=\pi/4$, i.e., the LFD ($\mathbb{C}=0;~\mathbb{S}=1$), we find the results shown in Table~\ref{tablexplusprime} for the transformed $x^{+\prime}$ for each $(3+1)$d conformal generator. As expected from the results shown in Table~\ref{tablexprime} for the interpolating time transformations, we find that the generators $P_{-} = \frac{P_{0}-P_{3}}{\sqrt{2}}$ and $D$ corresponding to $P_{\hat -} = \sqrt{2}J_{-1\hat{-}}$ and $D=\left(D_{\hat{+}}c+D_{\hat{-}}s\right)=J_{-1 -2}$ for $\delta =\pi/4$ are respectively kinematic. In addition, the light-front boost $K_3$ corresponding to $K_3=\left(D_{\hat{+}}s-D_{\hat{-}}c\right)=J_{\hat{-}\hat{+}}$ for $\delta =\pi/4$,  becomes kinematic. Therefore, the linear combinations of $D$ and $K_3$ in light-front, namely  $D_{+}=\frac{(D+K_3)}{\sqrt{2}} $ and $D_{-}=\frac{(D-K_3)}{\sqrt{2}}$, become kinematic. 
+In the limit to $\delta=\pi/4$, i.e., the LFD ($\mathbb{C}=0;~\mathbb{S}=1$), we find the results shown in Table~\ref{tablexplusprime} for the transformed $x^{+\prime}$ for each $(3+1)$d conformal generator. The eight kinematic generators are $\mathcal{K}^{\hat{1}}=-E^{1}$, $\mathcal{K}^{\hat{2}}=-E^{2}$, $J^{3}$, $P^{1}$, $P^{2}$, $P_{-}=\frac{P_{0}-P_{3}}{\sqrt{2}}$, $D_{+}=\frac{(D+K_3)}{\sqrt{2}}$, and $D_{-}=\frac{(D-K_3)}{\sqrt{2}}$. Equivalently, the latter two generators span the kinematic directions $D$ and $K_3$, where $K_3=\left(D_{\hat{+}}s-D_{\hat{-}}c\right)=J_{\hat{-}\hat{+}}$ at $\delta=\pi/4$.
 
 Finally, we contrast the behavior of the special conformal transformations (SCT) in $(3+1)$ dimensions with the $(1+1)$ dimensional case. In $(1+1)$ dimensions, the transverse coordinates vanish ($\vec{x}^{\perp} = 0$), and the transformation under $\mathfrak{K}_{-}$ simplifies to $x^{+\prime} = x^{+}$, making it an additional kinematic generator. However, in $(3+1)$ dimensions, the presence of the transverse term $\vec{x}^{\perp}\cdot\vec{x}^{\perp}$ in the numerator of $x^{+\prime}$ (as shown in Table 9) means that the light-front time is no longer invariant under $\mathfrak{K}_{-}$. Consequently, $\mathfrak{K}_{-}$ transforms from being kinematic in $(1+1)$d to becoming dynamical in $(3+1)$d. 
 
-As a result, when moving from IFD to LFD in $(3+1)$ dimensions, we gain exactly one additional kinematic generator, the longitudinal boost $K_3$. As summarized in Table~\ref{tab:Kinematic_and_dynamic_generators_for_different_interoplation_angles_conformal1+1}, out of the 15 conformal generators in $(3+1)$ dimensions, we find that 8 generators are kinematic in LFD, compared to 7 in IFD. This demonstrates that LFD still maximizes the total number of kinematic generators in $(3+1)$ dimensions, albeit with a different dynamical balance than in lower dimensions.
+As a result, when moving from IFD to LFD in $(3+1)$ dimensions, the kinematic subalgebra gains the longitudinal-boost direction $K_3$. As summarized in Table~\ref{tab:Kinematic_and_dynamic_generators_for_different_interoplation_angles_conformal1+1}, out of the 15 conformal generators in $(3+1)$ dimensions, 8 generators are kinematic in LFD, compared to 7 in IFD. This demonstrates that LFD still maximizes the total number of kinematic generators in $(3+1)$ dimensions, albeit with a different dynamical balance than in lower dimensions.
 
 
 \section{Summary and Conclusion}
