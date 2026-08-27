@@ -1087,12 +1087,11 @@ The National Energy Research Scientific Computing Center (NERSC) supported by th
 
 This appendix gives the essential derivations of the fifteen entries in
 Table~\ref{tablexprime}. For each individual transformation, we apply the
-corresponding matrix in Eq.~\eqref{matrix-rep-conformal-generators} to the
-projective vector. We first display the resulting finite $6\times6$ matrix
-action $\mathbf{X}'=M_G\mathbf{X}$ and then retain only $X_{-1}'$, $X_{\hat{+}}'$, and
-$X_{\hat{-}}'$, and then use the projective-coordinate relations given in
-Section~\ref{sec:projectivespace}. Thus, each calculation proceeds through
-$x_{\hat{+}}'$ and $x_{\hat{-}}'$ before obtaining $x^{\hat{+}\prime}$.
+corresponding matrix in Eq.~\eqref{matrix-rep-conformal-generators} directly
+to the projective vector. The resulting projective components are substituted
+in the defining ratios for $x_{\hat{+}}'$ and $x_{\hat{-}}'$, and then
+$x^{\hat{+}\prime}$ is obtained by raising the index as in
+Section~\ref{sec:projectivespace}.
 Only one generator parameter is nonzero in each subsection. Expressions
 containing $1/\sqrt{\mathbb{C}}$ are understood by continuity at the
 light-front limit.
@@ -1103,36 +1102,40 @@ light-front limit.
 
 For the parameter $b^{\hat{+}}$, the finite projective action is
 \begin{align}
-\mathbf{X}'=e^{-ib^{\hat{+}}\mathfrak{K}^{\hat{+}}}\mathbf{X}
-&=\begin{pmatrix}
-1&0&0&0&0&0\\
-\mathbb{C}(b^{\hat{+}})^2&1&\sqrt{2}b^{\hat{+}}&0&0&0\\
-\sqrt{2}\mathbb{C}b^{\hat{+}}&0&1&0&0&0\\
-0&0&0&1&0&0\\
-0&0&0&0&1&0\\
-\sqrt{2}\mathbb{S}b^{\hat{+}}&0&0&0&0&1
-\end{pmatrix}\mathbf{X}.
+\begin{pmatrix}
+X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
+\end{pmatrix}
+&=e^{-ib^{\hat{+}}\mathfrak{K}^{\hat{+}}}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}
+=\begin{pmatrix}
+X_{-2}\\
+X_{-1}+\sqrt{2}b^{\hat{+}}X_{\hat{+}}
++\mathbb{C}(b^{\hat{+}})^2X_{-2}\\
+X_{\hat{+}}+\sqrt{2}\mathbb{C}b^{\hat{+}}X_{-2}\\
+X_1\\
+X_2\\
+X_{\hat{-}}+\sqrt{2}\mathbb{S}b^{\hat{+}}X_{-2}
+\end{pmatrix}.
 \end{align}
-The required projective components are
 \begin{align}
-X_{-1}'&=X_{-1}+\sqrt{2}b^{\hat{+}}X_{\hat{+}}
-          +\mathbb{C}(b^{\hat{+}})^2X_{-2}, \nonumber\\
-X_{\hat{+}}'&=X_{\hat{+}}+\sqrt{2}\mathbb{C}b^{\hat{+}}X_{-2},
-\qquad
-X_{\hat{-}}'=X_{\hat{-}}+\sqrt{2}\mathbb{S}b^{\hat{+}}X_{-2}.
-\end{align}
-Writing
-\begin{align}
-\Delta_{\hat{+}}=
-1-2b^{\hat{+}}x_{\hat{+}}+\mathbb{C}(b^{\hat{+}})^2x^2,
-\end{align}
-the two lower components become
-\begin{align}
-x_{\hat{+}}'&=\frac{x_{\hat{+}}-\mathbb{C}b^{\hat{+}}x^2}
-{\Delta_{\hat{+}}},
-\qquad
-x_{\hat{-}}'=\frac{x_{\hat{-}}-\mathbb{S}b^{\hat{+}}x^2}
-{\Delta_{\hat{+}}}.
+x_{\hat{+}}'
+&=-\frac{1}{\sqrt{2}}\frac{X_{\hat{+}}'}{X_{-1}'}
+=-\frac{1}{\sqrt{2}}
+\frac{X_{\hat{+}}/X_{-1}+\sqrt{2}\mathbb{C}b^{\hat{+}}X_{-2}/X_{-1}}
+{1+\sqrt{2}b^{\hat{+}}X_{\hat{+}}/X_{-1}
+ +\mathbb{C}(b^{\hat{+}})^2X_{-2}/X_{-1}}\nonumber\\
+&=\frac{x_{\hat{+}}-\mathbb{C}b^{\hat{+}}x^2}
+{1-2b^{\hat{+}}x_{\hat{+}}+\mathbb{C}(b^{\hat{+}})^2x^2}, \nonumber\\
+x_{\hat{-}}'
+&=-\frac{1}{\sqrt{2}}\frac{X_{\hat{-}}'}{X_{-1}'}
+=-\frac{1}{\sqrt{2}}
+\frac{X_{\hat{-}}/X_{-1}+\sqrt{2}\mathbb{S}b^{\hat{+}}X_{-2}/X_{-1}}
+{1+\sqrt{2}b^{\hat{+}}X_{\hat{+}}/X_{-1}
+ +\mathbb{C}(b^{\hat{+}})^2X_{-2}/X_{-1}}\nonumber\\
+&=\frac{x_{\hat{-}}-\mathbb{S}b^{\hat{+}}x^2}
+{1-2b^{\hat{+}}x_{\hat{+}}+\mathbb{C}(b^{\hat{+}})^2x^2}.
 \end{align}
 Consequently,
 \begin{align}
@@ -1149,36 +1152,40 @@ which is the first entry of Table~\ref{tablexprime}.
 
 For the parameter $b^{\hat{-}}$, the finite projective action is
 \begin{align}
-\mathbf{X}'=e^{-ib^{\hat{-}}\mathfrak{K}^{\hat{-}}}\mathbf{X}
-&=\begin{pmatrix}
-1&0&0&0&0&0\\
--\mathbb{C}(b^{\hat{-}})^2&1&0&0&0&\sqrt{2}b^{\hat{-}}\\
-\sqrt{2}\mathbb{S}b^{\hat{-}}&0&1&0&0&0\\
-0&0&0&1&0&0\\
-0&0&0&0&1&0\\
--\sqrt{2}\mathbb{C}b^{\hat{-}}&0&0&0&0&1
-\end{pmatrix}\mathbf{X}.
+\begin{pmatrix}
+X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
+\end{pmatrix}
+&=e^{-ib^{\hat{-}}\mathfrak{K}^{\hat{-}}}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}
+=\begin{pmatrix}
+X_{-2}\\
+X_{-1}+\sqrt{2}b^{\hat{-}}X_{\hat{-}}
+-\mathbb{C}(b^{\hat{-}})^2X_{-2}\\
+X_{\hat{+}}+\sqrt{2}\mathbb{S}b^{\hat{-}}X_{-2}\\
+X_1\\
+X_2\\
+X_{\hat{-}}-\sqrt{2}\mathbb{C}b^{\hat{-}}X_{-2}
+\end{pmatrix}.
 \end{align}
-The nontrivial components are
 \begin{align}
-X_{-1}'&=X_{-1}+\sqrt{2}b^{\hat{-}}X_{\hat{-}}
-          -\mathbb{C}(b^{\hat{-}})^2X_{-2}, \nonumber\\
-X_{\hat{+}}'&=X_{\hat{+}}+\sqrt{2}\mathbb{S}b^{\hat{-}}X_{-2},
-\qquad
-X_{\hat{-}}'=X_{\hat{-}}-\sqrt{2}\mathbb{C}b^{\hat{-}}X_{-2}.
-\end{align}
-With
-\begin{align}
-\Delta_{\hat{-}}=
-1-2b^{\hat{-}}x_{\hat{-}}-\mathbb{C}(b^{\hat{-}})^2x^2,
-\end{align}
-we obtain
-\begin{align}
-x_{\hat{+}}'&=\frac{x_{\hat{+}}-\mathbb{S}b^{\hat{-}}x^2}
-{\Delta_{\hat{-}}},
-\qquad
-x_{\hat{-}}'=\frac{x_{\hat{-}}+\mathbb{C}b^{\hat{-}}x^2}
-{\Delta_{\hat{-}}}.
+x_{\hat{+}}'
+&=-\frac{1}{\sqrt{2}}\frac{X_{\hat{+}}'}{X_{-1}'}
+=-\frac{1}{\sqrt{2}}
+\frac{X_{\hat{+}}/X_{-1}+\sqrt{2}\mathbb{S}b^{\hat{-}}X_{-2}/X_{-1}}
+{1+\sqrt{2}b^{\hat{-}}X_{\hat{-}}/X_{-1}
+ -\mathbb{C}(b^{\hat{-}})^2X_{-2}/X_{-1}}\nonumber\\
+&=\frac{x_{\hat{+}}-\mathbb{S}b^{\hat{-}}x^2}
+{1-2b^{\hat{-}}x_{\hat{-}}-\mathbb{C}(b^{\hat{-}})^2x^2}, \nonumber\\
+x_{\hat{-}}'
+&=-\frac{1}{\sqrt{2}}\frac{X_{\hat{-}}'}{X_{-1}'}
+=-\frac{1}{\sqrt{2}}
+\frac{X_{\hat{-}}/X_{-1}-\sqrt{2}\mathbb{C}b^{\hat{-}}X_{-2}/X_{-1}}
+{1+\sqrt{2}b^{\hat{-}}X_{\hat{-}}/X_{-1}
+ -\mathbb{C}(b^{\hat{-}})^2X_{-2}/X_{-1}}\nonumber\\
+&=\frac{x_{\hat{-}}+\mathbb{C}b^{\hat{-}}x^2}
+{1-2b^{\hat{-}}x_{\hat{-}}-\mathbb{C}(b^{\hat{-}})^2x^2}.
 \end{align}
 The $b^{\hat{-}}x^2$ terms cancel when the index is raised:
 \begin{align}
@@ -1195,28 +1202,30 @@ x^{\hat{+}\prime}
 
 The finite projective action is
 \begin{align}
-\mathbf{X}'=e^{-ia^{\hat{+}}P_{\hat{+}}}\mathbf{X}
-&=\begin{pmatrix}
-1&\mathbb{C}(a^{\hat{+}})^2&-\sqrt{2}a^{\hat{+}}&0&0&0\\
-0&1&0&0&0&0\\
-0&-\sqrt{2}\mathbb{C}a^{\hat{+}}&1&0&0&0\\
-0&0&0&1&0&0\\
-0&0&0&0&1&0\\
-0&-\sqrt{2}\mathbb{S}a^{\hat{+}}&0&0&0&1
-\end{pmatrix}\mathbf{X}.
-\end{align}
-Consequently,
-\begin{align}
-X_{-1}'&=X_{-1},\qquad
-X_{\hat{+}}'=X_{\hat{+}}-\sqrt{2}\mathbb{C}a^{\hat{+}}X_{-1},
-\qquad
-X_{\hat{-}}'=X_{\hat{-}}-\sqrt{2}\mathbb{S}a^{\hat{+}}X_{-1}.
+\begin{pmatrix}
+X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
+\end{pmatrix}
+&=e^{-ia^{\hat{+}}P_{\hat{+}}}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}
+=\begin{pmatrix}
+X_{-2}+\mathbb{C}(a^{\hat{+}})^2X_{-1}
+-\sqrt{2}a^{\hat{+}}X_{\hat{+}}\\
+X_{-1}\\
+X_{\hat{+}}-\sqrt{2}\mathbb{C}a^{\hat{+}}X_{-1}\\
+X_1\\ X_2\\
+X_{\hat{-}}-\sqrt{2}\mathbb{S}a^{\hat{+}}X_{-1}
+\end{pmatrix}.
 \end{align}
 Therefore,
 \begin{align}
-x_{\hat{+}}'&=x_{\hat{+}}+\mathbb{C}a^{\hat{+}},
-\qquad
-x_{\hat{-}}'=x_{\hat{-}}+\mathbb{S}a^{\hat{+}}, \nonumber\\
+x_{\hat{+}}'
+&=-\frac{1}{\sqrt{2}}\frac{X_{\hat{+}}-\sqrt{2}\mathbb{C}a^{\hat{+}}X_{-1}}{X_{-1}}
+=x_{\hat{+}}+\mathbb{C}a^{\hat{+}}, \nonumber\\
+x_{\hat{-}}'
+&=-\frac{1}{\sqrt{2}}\frac{X_{\hat{-}}-\sqrt{2}\mathbb{S}a^{\hat{+}}X_{-1}}{X_{-1}}
+=x_{\hat{-}}+\mathbb{S}a^{\hat{+}}, \nonumber\\
 x^{\hat{+}\prime}
 &=\mathbb{C}x_{\hat{+}}'+\mathbb{S}x_{\hat{-}}'
 =x^{\hat{+}}+a^{\hat{+}}.
@@ -1226,28 +1235,30 @@ x^{\hat{+}\prime}
 
 Similarly, the finite projective action is
 \begin{align}
-\mathbf{X}'=e^{-ia^{\hat{-}}P_{\hat{-}}}\mathbf{X}
-&=\begin{pmatrix}
-1&-\mathbb{C}(a^{\hat{-}})^2&0&0&0&-\sqrt{2}a^{\hat{-}}\\
-0&1&0&0&0&0\\
-0&-\sqrt{2}\mathbb{S}a^{\hat{-}}&1&0&0&0\\
-0&0&0&1&0&0\\
-0&0&0&0&1&0\\
-0&\sqrt{2}\mathbb{C}a^{\hat{-}}&0&0&0&1
-\end{pmatrix}\mathbf{X}.
-\end{align}
-Thus,
-\begin{align}
-X_{-1}'&=X_{-1},\qquad
-X_{\hat{+}}'=X_{\hat{+}}-\sqrt{2}\mathbb{S}a^{\hat{-}}X_{-1},
-\qquad
-X_{\hat{-}}'=X_{\hat{-}}+\sqrt{2}\mathbb{C}a^{\hat{-}}X_{-1},
+\begin{pmatrix}
+X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
+\end{pmatrix}
+&=e^{-ia^{\hat{-}}P_{\hat{-}}}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}
+=\begin{pmatrix}
+X_{-2}-\mathbb{C}(a^{\hat{-}})^2X_{-1}
+-\sqrt{2}a^{\hat{-}}X_{\hat{-}}\\
+X_{-1}\\
+X_{\hat{+}}-\sqrt{2}\mathbb{S}a^{\hat{-}}X_{-1}\\
+X_1\\ X_2\\
+X_{\hat{-}}+\sqrt{2}\mathbb{C}a^{\hat{-}}X_{-1}
+\end{pmatrix}.
 \end{align}
 so that
 \begin{align}
-x_{\hat{+}}'&=x_{\hat{+}}+\mathbb{S}a^{\hat{-}},
-\qquad
-x_{\hat{-}}'=x_{\hat{-}}-\mathbb{C}a^{\hat{-}}, \nonumber\\
+x_{\hat{+}}'
+&=-\frac{1}{\sqrt{2}}\frac{X_{\hat{+}}-\sqrt{2}\mathbb{S}a^{\hat{-}}X_{-1}}{X_{-1}}
+=x_{\hat{+}}+\mathbb{S}a^{\hat{-}}, \nonumber\\
+x_{\hat{-}}'
+&=-\frac{1}{\sqrt{2}}\frac{X_{\hat{-}}+\sqrt{2}\mathbb{C}a^{\hat{-}}X_{-1}}{X_{-1}}
+=x_{\hat{-}}-\mathbb{C}a^{\hat{-}}, \nonumber\\
 x^{\hat{+}\prime}
 &=\mathbb{C}x_{\hat{+}}'+\mathbb{S}x_{\hat{-}}'
 =x^{\hat{+}}.
@@ -1340,25 +1351,23 @@ x^{\hat{+}\prime}
 
 For a rotation parameter $\theta$, the finite projective action is
 \begin{align}
-\mathbf{X}'=e^{-i\theta J^3}\mathbf{X}
-&=\begin{pmatrix}
-1&0&0&0&0&0\\
-0&1&0&0&0&0\\
-0&0&1&0&0&0\\
-0&0&0&\cos\theta&-\sin\theta&0\\
-0&0&0&\sin\theta&\cos\theta&0\\
-0&0&0&0&0&1
-\end{pmatrix}\mathbf{X}.
-\end{align}
-Therefore,
-\begin{align}
-X_{-1}'=X_{-1},\qquad X_{\hat{+}}'=X_{\hat{+}},\qquad
-X_{\hat{-}}'=X_{\hat{-}},
+\begin{pmatrix}
+X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
+\end{pmatrix}
+&=e^{-i\theta J^3}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}
+=\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\
+\cos\theta X_1-\sin\theta X_2\\
+\sin\theta X_1+\cos\theta X_2\\ X_{\hat{-}}
+\end{pmatrix}.
 \end{align}
 and
 \begin{align}
-x_{\hat{+}}'=x_{\hat{+}},\qquad
-x_{\hat{-}}'=x_{\hat{-}},\qquad
+x_{\hat{+}}'=-\frac{1}{\sqrt{2}}\frac{X_{\hat{+}}}{X_{-1}}=x_{\hat{+}},\qquad
+x_{\hat{-}}'=-\frac{1}{\sqrt{2}}\frac{X_{\hat{-}}}{X_{-1}}=x_{\hat{-}},\qquad
 x^{\hat{+}\prime}=x^{\hat{+}}.
 \end{align}
 
@@ -1366,65 +1375,76 @@ x^{\hat{+}\prime}=x^{\hat{+}}.
 
 For the parameter $b^1$, the finite projective action is
 \begin{align}
-\mathbf{X}'=e^{-ib^1\mathfrak{K}_1}\mathbf{X}
-&=\begin{pmatrix}
-1&0&0&0&0&0\\
--(b^1)^2&1&0&\sqrt{2}b^1&0&0\\
-0&0&1&0&0&0\\
--\sqrt{2}b^1&0&0&1&0&0\\
-0&0&0&0&1&0\\
-0&0&0&0&0&1
-\end{pmatrix}\mathbf{X}.
+\begin{pmatrix}
+X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
+\end{pmatrix}
+&=e^{-ib^1\mathfrak{K}_1}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}
+=\begin{pmatrix}
+X_{-2}\\
+X_{-1}+\sqrt{2}b^1X_1-(b^1)^2X_{-2}\\
+X_{\hat{+}}\\
+X_1-\sqrt{2}b^1X_{-2}\\
+X_2\\
+X_{\hat{-}}
+\end{pmatrix}.
 \end{align}
-The projective components required for the interpolating time are
 \begin{align}
-X_{-1}'&=X_{-1}+\sqrt{2}b^1X_1-(b^1)^2X_{-2}, \nonumber\\
-X_{\hat{+}}'&=X_{\hat{+}},\qquad
-X_{\hat{-}}'=X_{\hat{-}}.
-\end{align}
-Defining
-\begin{align}
-\Delta_1=1-2b^1x_1-(b^1)^2x^2,
-\end{align}
-we find
-\begin{align}
-x_{\hat{+}}'=\frac{x_{\hat{+}}}{\Delta_1},
-\qquad
-x_{\hat{-}}'=\frac{x_{\hat{-}}}{\Delta_1},
-\qquad
-x^{\hat{+}\prime}=\frac{x^{\hat{+}}}{\Delta_1}.
+x_{\hat{+}}'
+&=-\frac{1}{\sqrt{2}}\frac{X_{\hat{+}}'}{X_{-1}'}
+=-\frac{1}{\sqrt{2}}
+\frac{X_{\hat{+}}/X_{-1}}
+{1+\sqrt{2}b^1X_1/X_{-1}-(b^1)^2X_{-2}/X_{-1}}\nonumber\\
+&=\frac{x_{\hat{+}}}{1-2b^1x_1-(b^1)^2x^2}, \nonumber\\
+x_{\hat{-}}'
+&=-\frac{1}{\sqrt{2}}\frac{X_{\hat{-}}'}{X_{-1}'}
+=-\frac{1}{\sqrt{2}}
+\frac{X_{\hat{-}}/X_{-1}}
+{1+\sqrt{2}b^1X_1/X_{-1}-(b^1)^2X_{-2}/X_{-1}}\nonumber\\
+&=\frac{x_{\hat{-}}}{1-2b^1x_1-(b^1)^2x^2}, \nonumber\\
+x^{\hat{+}\prime}
+&=\mathbb{C}x_{\hat{+}}'+\mathbb{S}x_{\hat{-}}'
+=\frac{x^{\hat{+}}}{1-2b^1x_1-(b^1)^2x^2}.
 \end{align}
 
 \subsubsection{\texorpdfstring{$\mathfrak{K}_{2}$}{K2}}
 
 Likewise, for $b^2$, the finite projective action is
 \begin{align}
-\mathbf{X}'=e^{-ib^2\mathfrak{K}_2}\mathbf{X}
-&=\begin{pmatrix}
-1&0&0&0&0&0\\
--(b^2)^2&1&0&0&\sqrt{2}b^2&0\\
-0&0&1&0&0&0\\
-0&0&0&1&0&0\\
--\sqrt{2}b^2&0&0&0&1&0\\
-0&0&0&0&0&1
-\end{pmatrix}\mathbf{X}.
+\begin{pmatrix}
+X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
+\end{pmatrix}
+&=e^{-ib^2\mathfrak{K}_2}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}
+=\begin{pmatrix}
+X_{-2}\\
+X_{-1}+\sqrt{2}b^2X_2-(b^2)^2X_{-2}\\
+X_{\hat{+}}\\
+X_1\\
+X_2-\sqrt{2}b^2X_{-2}\\
+X_{\hat{-}}
+\end{pmatrix}.
 \end{align}
 \begin{align}
-X_{-1}'&=X_{-1}+\sqrt{2}b^2X_2-(b^2)^2X_{-2}, \nonumber\\
-X_{\hat{+}}'&=X_{\hat{+}},\qquad
-X_{\hat{-}}'=X_{\hat{-}},
-\end{align}
-and, with
-\begin{align}
-\Delta_2=1-2b^2x_2-(b^2)^2x^2,
-\end{align}
-the result is
-\begin{align}
-x_{\hat{+}}'=\frac{x_{\hat{+}}}{\Delta_2},
-\qquad
-x_{\hat{-}}'=\frac{x_{\hat{-}}}{\Delta_2},
-\qquad
-x^{\hat{+}\prime}=\frac{x^{\hat{+}}}{\Delta_2}.
+x_{\hat{+}}'
+&=-\frac{1}{\sqrt{2}}\frac{X_{\hat{+}}'}{X_{-1}'}
+=-\frac{1}{\sqrt{2}}
+\frac{X_{\hat{+}}/X_{-1}}
+{1+\sqrt{2}b^2X_2/X_{-1}-(b^2)^2X_{-2}/X_{-1}}\nonumber\\
+&=\frac{x_{\hat{+}}}{1-2b^2x_2-(b^2)^2x^2}, \nonumber\\
+x_{\hat{-}}'
+&=-\frac{1}{\sqrt{2}}\frac{X_{\hat{-}}'}{X_{-1}'}
+=-\frac{1}{\sqrt{2}}
+\frac{X_{\hat{-}}/X_{-1}}
+{1+\sqrt{2}b^2X_2/X_{-1}-(b^2)^2X_{-2}/X_{-1}}\nonumber\\
+&=\frac{x_{\hat{-}}}{1-2b^2x_2-(b^2)^2x^2}, \nonumber\\
+x^{\hat{+}\prime}
+&=\mathbb{C}x_{\hat{+}}'+\mathbb{S}x_{\hat{-}}'
+=\frac{x^{\hat{+}}}{1-2b^2x_2-(b^2)^2x^2}.
 \end{align}
 
 \subsection{Transverse translations}
@@ -1433,25 +1453,21 @@ x^{\hat{+}\prime}=\frac{x^{\hat{+}}}{\Delta_2}.
 
 For the parameter $a^1$, the finite projective action is
 \begin{align}
-\mathbf{X}'=e^{-ia^1P_1}\mathbf{X}
-&=\begin{pmatrix}
-1&-(a^1)^2&0&-\sqrt{2}a^1&0&0\\
-0&1&0&0&0&0\\
-0&0&1&0&0&0\\
-0&\sqrt{2}a^1&0&1&0&0\\
-0&0&0&0&1&0\\
-0&0&0&0&0&1
-\end{pmatrix}\mathbf{X}.
+\begin{pmatrix}
+X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
+\end{pmatrix}
+&=e^{-ia^1P_1}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}
+=\begin{pmatrix}
+X_{-2}-(a^1)^2X_{-1}-\sqrt{2}a^1X_1\\
+X_{-1}\\ X_{\hat{+}}\\ X_1+\sqrt{2}a^1X_{-1}\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}.
 \end{align}
-The action changes only $X_{-2}$ and $X_1$. In particular,
 \begin{align}
-X_{-1}'=X_{-1},\qquad X_{\hat{+}}'=X_{\hat{+}},\qquad
-X_{\hat{-}}'=X_{\hat{-}},
-\end{align}
-which gives
-\begin{align}
-x_{\hat{+}}'=x_{\hat{+}},\qquad
-x_{\hat{-}}'=x_{\hat{-}},\qquad
+x_{\hat{+}}'=-\frac{1}{\sqrt{2}}\frac{X_{\hat{+}}}{X_{-1}}=x_{\hat{+}},\qquad
+x_{\hat{-}}'=-\frac{1}{\sqrt{2}}\frac{X_{\hat{-}}}{X_{-1}}=x_{\hat{-}},\qquad
 x^{\hat{+}\prime}=x^{\hat{+}}.
 \end{align}
 
@@ -1459,25 +1475,21 @@ x^{\hat{+}\prime}=x^{\hat{+}}.
 
 For the parameter $a^2$, the finite projective action is
 \begin{align}
-\mathbf{X}'=e^{-ia^2P_2}\mathbf{X}
-&=\begin{pmatrix}
-1&-(a^2)^2&0&0&-\sqrt{2}a^2&0\\
-0&1&0&0&0&0\\
-0&0&1&0&0&0\\
-0&0&0&1&0&0\\
-0&\sqrt{2}a^2&0&0&1&0\\
-0&0&0&0&0&1
-\end{pmatrix}\mathbf{X}.
+\begin{pmatrix}
+X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
+\end{pmatrix}
+&=e^{-ia^2P_2}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}
+=\begin{pmatrix}
+X_{-2}-(a^2)^2X_{-1}-\sqrt{2}a^2X_2\\
+X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2+\sqrt{2}a^2X_{-1}\\ X_{\hat{-}}
+\end{pmatrix}.
 \end{align}
-Thus,
 \begin{align}
-X_{-1}'=X_{-1},\qquad X_{\hat{+}}'=X_{\hat{+}},\qquad
-X_{\hat{-}}'=X_{\hat{-}},
-\end{align}
-and therefore
-\begin{align}
-x_{\hat{+}}'=x_{\hat{+}},\qquad
-x_{\hat{-}}'=x_{\hat{-}},\qquad
+x_{\hat{+}}'=-\frac{1}{\sqrt{2}}\frac{X_{\hat{+}}}{X_{-1}}=x_{\hat{+}},\qquad
+x_{\hat{-}}'=-\frac{1}{\sqrt{2}}\frac{X_{\hat{-}}}{X_{-1}}=x_{\hat{-}},\qquad
 x^{\hat{+}\prime}=x^{\hat{+}}.
 \end{align}
 
