@@ -405,7 +405,7 @@ $J_{-1,\mu}=P_{\mu}/\sqrt{2}$. Its explicit component commutators are collected 
 
 \input{ifd_commutator_table}
 
-\subsection{Dirac-matrix realization of the IFD conformal algebra}
+\section{Isomorphism between Dirac matrices and the IFD conformal algebra}
 
 Our previous study of the $(1+1)$-dimensional interpolating conformal
 algebra constructed a $4\times4$ interpolating projective representation and
@@ -957,9 +957,9 @@ $\delta \to 0$ and $\delta \to \pi/4$, we find the corresponding number of kinem
              \hline
              \rule{0pt}{16pt} $P_{\hat{-}}$& $x^{\hat{+}\prime}=x^{\hat{+}}$  \\
              \hline
-             \rule{0pt}{16pt} $D_{\hat{+}}$ & $x^{\hat{+}\prime} = e^{-\alpha_{\hat{+}}\cos{(\delta)}}\left[\left(\cosh[\alpha_{\hat{+}}\sin{(\delta)}]-\mathbb{S} \sinh[\alpha_{\hat{+}}\sin{(\delta)}]\right)x^{\hat{+}} +\mathbb{C} \sinh[\alpha_{\hat{+}}\sin{(\delta)}]x^{\hat{-}}\right]$ \\
+             \rule{0pt}{16pt} $D_{\hat{+}}$ & $x^{\hat{+}\prime} = e^{-\alpha_{\hat{+}}\cos{(\delta)}}\left[\left(\cosh[\alpha_{\hat{+}}\sin{(\delta)}]+\mathbb{S} \sinh[\alpha_{\hat{+}}\sin{(\delta)}]\right)x^{\hat{+}} -\mathbb{C} \sinh[\alpha_{\hat{+}}\sin{(\delta)}]x^{\hat{-}}\right]$ \\
              \hline
-             \rule{0pt}{16pt} $D_{\hat{-}}$ & $x^{\hat{+}\prime} = e^{-\alpha_{\hat{-}}\sin{(\delta)}}\left[\left(\cosh[\alpha_{\hat{-}}\cos{(\delta)}]+\mathbb{S}\sinh[\alpha_{\hat{-}}\cos{(\delta)}]\right)x^{\hat{+}}-\mathbb{C}\sinh[\alpha_{\hat{-}}\cos{(\delta)}] x^{\hat{-}}\right]$ \\
+             \rule{0pt}{16pt} $D_{\hat{-}}$ & $x^{\hat{+}\prime} = e^{-\alpha_{\hat{-}}\sin{(\delta)}}\left[\left(\cosh[\alpha_{\hat{-}}\cos{(\delta)}]-\mathbb{S}\sinh[\alpha_{\hat{-}}\cos{(\delta)}]\right)x^{\hat{+}}+\mathbb{C}\sinh[\alpha_{\hat{-}}\cos{(\delta)}] x^{\hat{-}}\right]$ \\
              \hline
              \rule{0pt}{16pt} $J^{3}$ & $ x^{\hat{+}\prime}=x^{\hat{+}}$ \\
              \hline
@@ -1318,39 +1318,38 @@ x^{\hat{+}\prime}
 Let $u=\alpha_{\hat{+}}\sin\delta$. The transformation of the interpolating projective
 space-time vector by $D_{\hat{+}}$ is
 \begin{align}
-\mathbf{X}'=e^{-i\alpha_{\hat{+}} D_{\hat{+}}}\mathbf{X}
-&=\begin{pmatrix}
-e^{-\alpha_{\hat{+}}\cos\delta}&0&0&0&0&0\\
-0&e^{\alpha_{\hat{+}}\cos\delta}&0&0&0&0\\
-0&0&\cosh u+\mathbb{S}\sinh u&0&0&-\mathbb{C}\sinh u\\
-0&0&0&1&0&0\\
-0&0&0&0&1&0\\
-0&0&-\mathbb{C}\sinh u&0&0&\cosh u-\mathbb{S}\sinh u
-\end{pmatrix}\mathbf{X}.
-\end{align}
-Thus,
-\begin{align}
-X_{-1}'&=e^{\alpha_{\hat{+}}\cos\delta}X_{-1}, \nonumber\\
-X_{\hat{+}}'&=\left(\cosh u+\mathbb{S}\sinh u\right)X_{\hat{+}}
- -\mathbb{C}\sinh u\,X_{\hat{-}}, \nonumber\\
-X_{\hat{-}}'&=-\mathbb{C}\sinh u\,X_{\hat{+}}
- +\left(\cosh u-\mathbb{S}\sinh u\right)X_{\hat{-}}.
+\begin{pmatrix}
+X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
+\end{pmatrix}
+&=e^{-i\alpha_{\hat{+}}D_{\hat{+}}}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}
+=\begin{pmatrix}
+e^{-\alpha_{\hat{+}}\cos\delta}X_{-2}\\
+e^{\alpha_{\hat{+}}\cos\delta}X_{-1}\\
+\left(\cosh u-\mathbb{S}\sinh u\right)X_{\hat{+}}
+ +\mathbb{C}\sinh u\,X_{\hat{-}}\\
+X_1\\ X_2\\
+\mathbb{C}\sinh u\,X_{\hat{+}}
+ +\left(\cosh u+\mathbb{S}\sinh u\right)X_{\hat{-}}
+\end{pmatrix}.
 \end{align}
 It follows that
 \begin{align}
 x_{\hat{+}}'&=e^{-\alpha_{\hat{+}}\cos\delta}
-\left[\left(\cosh u+\mathbb{S}\sinh u\right)x_{\hat{+}}
- -\mathbb{C}\sinh u\,x_{\hat{-}}\right], \nonumber\\
+\left[\left(\cosh u-\mathbb{S}\sinh u\right)x_{\hat{+}}
+ +\mathbb{C}\sinh u\,x_{\hat{-}}\right], \nonumber\\
 x_{\hat{-}}'&=e^{-\alpha_{\hat{+}}\cos\delta}
-\left[-\mathbb{C}\sinh u\,x_{\hat{+}}
- +\left(\cosh u-\mathbb{S}\sinh u\right)x_{\hat{-}}\right].
+\left[\mathbb{C}\sinh u\,x_{\hat{+}}
+ +\left(\cosh u+\mathbb{S}\sinh u\right)x_{\hat{-}}\right].
 \end{align}
 Raising the index yields
 \begin{align}
 x^{\hat{+}\prime}
 =e^{-\alpha_{\hat{+}}\cos\delta}
-\left[\left(\cosh u-\mathbb{S}\sinh u\right)x^{\hat{+}}
- +\mathbb{C}\sinh u\,x^{\hat{-}}\right].
+\left[\left(\cosh u+\mathbb{S}\sinh u\right)x^{\hat{+}}
+ -\mathbb{C}\sinh u\,x^{\hat{-}}\right].
 \end{align}
 
 \subsubsection{\texorpdfstring{$D_{\hat{-}}$}{D hat minus}}
@@ -1358,39 +1357,38 @@ x^{\hat{+}\prime}
 Let $v=\alpha_{\hat{-}}\cos\delta$. The transformation of the interpolating projective
 space-time vector by $D_{\hat{-}}$ is
 \begin{align}
-\mathbf{X}'=e^{-i\alpha_{\hat{-}} D_{\hat{-}}}\mathbf{X}
-&=\begin{pmatrix}
-e^{-\alpha_{\hat{-}}\sin\delta}&0&0&0&0&0\\
-0&e^{\alpha_{\hat{-}}\sin\delta}&0&0&0&0\\
-0&0&\cosh v-\mathbb{S}\sinh v&0&0&\mathbb{C}\sinh v\\
-0&0&0&1&0&0\\
-0&0&0&0&1&0\\
-0&0&\mathbb{C}\sinh v&0&0&\cosh v+\mathbb{S}\sinh v
-\end{pmatrix}\mathbf{X}.
-\end{align}
-The corresponding components are
-\begin{align}
-X_{-1}'&=e^{\alpha_{\hat{-}}\sin\delta}X_{-1}, \nonumber\\
-X_{\hat{+}}'&=\left(\cosh v-\mathbb{S}\sinh v\right)X_{\hat{+}}
- +\mathbb{C}\sinh v\,X_{\hat{-}}, \nonumber\\
-X_{\hat{-}}'&=\mathbb{C}\sinh v\,X_{\hat{+}}
- +\left(\cosh v+\mathbb{S}\sinh v\right)X_{\hat{-}}.
+\begin{pmatrix}
+X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
+\end{pmatrix}
+&=e^{-i\alpha_{\hat{-}}D_{\hat{-}}}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}
+=\begin{pmatrix}
+e^{-\alpha_{\hat{-}}\sin\delta}X_{-2}\\
+e^{\alpha_{\hat{-}}\sin\delta}X_{-1}\\
+\left(\cosh v+\mathbb{S}\sinh v\right)X_{\hat{+}}
+ -\mathbb{C}\sinh v\,X_{\hat{-}}\\
+X_1\\ X_2\\
+-\mathbb{C}\sinh v\,X_{\hat{+}}
+ +\left(\cosh v-\mathbb{S}\sinh v\right)X_{\hat{-}}
+\end{pmatrix}.
 \end{align}
 Thus,
 \begin{align}
 x_{\hat{+}}'&=e^{-\alpha_{\hat{-}}\sin\delta}
-\left[\left(\cosh v-\mathbb{S}\sinh v\right)x_{\hat{+}}
- +\mathbb{C}\sinh v\,x_{\hat{-}}\right], \nonumber\\
+\left[\left(\cosh v+\mathbb{S}\sinh v\right)x_{\hat{+}}
+ -\mathbb{C}\sinh v\,x_{\hat{-}}\right], \nonumber\\
 x_{\hat{-}}'&=e^{-\alpha_{\hat{-}}\sin\delta}
-\left[\mathbb{C}\sinh v\,x_{\hat{+}}
- +\left(\cosh v+\mathbb{S}\sinh v\right)x_{\hat{-}}\right],
+\left[-\mathbb{C}\sinh v\,x_{\hat{+}}
+ +\left(\cosh v-\mathbb{S}\sinh v\right)x_{\hat{-}}\right],
 \end{align}
 and hence
 \begin{align}
 x^{\hat{+}\prime}
 =e^{-\alpha_{\hat{-}}\sin\delta}
-\left[\left(\cosh v+\mathbb{S}\sinh v\right)x^{\hat{+}}
- -\mathbb{C}\sinh v\,x^{\hat{-}}\right].
+\left[\left(\cosh v-\mathbb{S}\sinh v\right)x^{\hat{+}}
+ +\mathbb{C}\sinh v\,x^{\hat{-}}\right].
 \end{align}
 
 \subsection{Rotation and transverse special conformal transformations}
