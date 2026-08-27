@@ -236,6 +236,23 @@ describe hadrons by saving significant dynamical effort in obtaining QCD solutio
 
 In our previous work, we thoroughly investigated the interpolating conformal algebra between IFD and LFD in $(1+1)$ dimensions \cite{Ji-Hari-2026-PRD}. We constructed a $4\times4$ interpolating projective spacetime matrix representation to map the algebraic structures seamlessly across all interpolation angles. Furthermore, we explored quantum mechanical operator representations by expressing the conformal generators in terms of the creation and annihilation operators of a simple harmonic oscillator, along with providing a $2\times2$ Pauli matrix representation for the $(1+0)$ and $(0+1)$ conformal groups. Notably, we demonstrated that out of the six generators in the $(1+1)$-dimensional conformal algebra, the number of kinematic generators is dramatically maximized from two in IFD to four in the LFD limit. This outcome concretely signifies the utility of LFD by mathematically proving its capacity to save substantial dynamical efforts in solving $(1+1)$-dimensional relativistic quantum field theories. Building on this foundation, we extend our analysis to $(3+1)$ dimensions in this work.
 
+{\color{red}
+The conformal transformation $x\longmapsto x'$ can be defined as \cite{Francesco,Blumenhagen}, 
+\begin{align}
+    \frac{\partial x'^{\alpha}}{\partial x^{\mu}}\frac{\partial x'^{\beta}}{\partial x^{\nu}}g'_{\alpha\beta}=\Lambda(x)g_{\mu\nu}
+\end{align}
+meaning the metric is preserved up to a scale factor $\Lambda(x)$ under conformal transformations. 
+Consider an infinitesimal transformation, $x'^{\mu}=x^{\mu}+\epsilon^{\mu}(x)+\mathcal{O}(\epsilon^2)$. Then the metric changes by $\delta g_{\mu\nu}=\partial_{\mu}\epsilon_{\nu}(x)+\partial_{\nu}\epsilon_{\mu}(x)$. The conformality condition then requires $\partial_{\mu}\epsilon_{\nu}(x)+\partial_{\nu}\epsilon_{\mu}(x)=F(x)\delta_{\mu\nu}$, where $F(x)=\Lambda(x)-1-\mathcal{O}(\epsilon^2)$, which is known as the conformal Killing equation. Contraction with $\delta^{\mu\nu}$ yields $F(x)=\frac{2}{d}\partial_{\mu}\epsilon^{\mu}$. For $d\geq3$, there are only four classes of solutions for $\epsilon_{\mu}(x)$, which are: $\epsilon^{\mu}(x)=a^{\mu}$ (infinitesimal translations), $\epsilon^{\mu}(x)=M^{\mu}_{~\nu}x^{\nu}$ (infinitesimal rotations and Lorentz transformations), $\epsilon^{\mu}(x)=\lambda x^{\mu}$ (infinitesimal scaling), and $\epsilon^{\mu}(x)=2(b.x) x^{\mu}-x^2b^{\mu}$ (infinitesimal special conformal transformations or SCT). The generators of conformal transformations are: $P_{{\mu}}=i\partial_{{\mu}}$ (translation), $M_{{\mu}{\nu}}=i\left(x_{{\mu}}\partial_{{\nu}}-x_{{\nu}}\partial_{{\mu}}\right)$ (rotation), $D=ix_{{\mu}}\partial^{{\mu}}$ (dilation or scaling), and $\mathfrak{K}_{{\mu}}=i\left(2x_{{\mu}}x_{{\nu}}\partial^{{\nu}}-x^2\partial_{{\mu}}\right)$ (SCT). In finite form, the SCT is given by $x'^{\mu }={\frac {x^{\mu }-b^{\mu }x^{2}}{1-2b\cdot x+b^{2}x^{2}}}$. This can be understood as an inversion of $x^\mu$, followed by a translation by $b^\mu$, and followed again by an inversion \cite{Blumenhagen}. From these generators, we obtain the full conformal algebra, a closed group that includes the Poincaré group as a subgroup.
+\begin{align}\label{conformalalgebra}
+    \left[P_{{\mu}},P_{{\nu}}\right]&=0;~\left[\mathfrak{K}_{{\mu}},\mathfrak{K}_{{\nu}}\right]=0;\nonumber\\
+ \left[D, P_{{\mu}}\right]&=iP_{{\mu}};~\left[D, \mathfrak{K}_{{\mu}}\right]=-i\mathfrak{K}_{{\mu}};\nonumber\\
+ \left[P_{{\rho}},M_{{\mu}{\nu}}\right]&=i\left(g_{{\rho}{\mu}}P_{{\nu}}-g_{{\rho}{\nu}}P_{{\mu}}\right);\nonumber\\
+ \left[\mathfrak{K}_{{\rho}},M_{{\mu}{\nu}}\right]&=i\left(g_{{\rho}{\mu}}\mathfrak{K}_{{\nu}}-g_{{\rho}{\nu}}\mathfrak{K}_{{\mu}}\right);\nonumber\\
+ \left[M_{{\alpha}{\beta}},M_{{\rho}{\sigma}}\right]&=-i\left(g_{{\beta}{\sigma}}M_{{\alpha}{\rho}}-g_{{\beta}{\rho}}M_{{\alpha}{\sigma}}+g_{{\alpha}{\rho}}M_{{\beta}{\sigma}}-g_{{\alpha}{\sigma}}M_{{\beta}{\rho}}\right);\nonumber\\
+ \left[\mathfrak{K}_{{\mu}},P_{{\nu}}\right]&=2i\left(g_{{\mu}{\nu}}D-M_{{\mu}{\nu}}\right);~\left[D, M_{{\mu}{\nu}}\right]=0.
+\end{align} 
+where, $g_{\mu\nu}$ is the metric tensor.
+
 %%%%%%%%%%%%%%
 To interpolate the forms of relativistic quantum field theory between IFD and LFD, we take the following interpolating space-time coordinates  \cite{Ji2001, Hornbostel1992, Ji1996, Ji2012, Ji2015EM, Ji2015SP, Ji2018QED, Ji2021QCD} which is defined as a transformation from the ordinary space-time coordinates $x^{\muT}=\mathcal{R}^{\muT}_{\phantom{\mu}{\nu}}x^{\nu}$, i.e.,
 \begin{align}\label{eqn:interpolation_angle_definition}
@@ -332,24 +349,10 @@ The set of kinematic and dynamic generators depending on the interpolation angle
 Since the kinematic transformations do not alter $x^{\pT}$, the individual time-ordered amplitude must be invariant under the kinematic transformations \cite{Ji2018QED}.
 
 In the following sections, we extend this interpolation method to the conformal group, which has the Poincar\'e group as a subgroup. In Section~\ref{sec:conformal}, we review the conformal algebra in IFD. The interpolation method for the conformal group $SO(4,2)$ is proposed in Section~\ref{conformalsimpler}. To characterize the individual properties of the conformal generators, the $6\times6$ interpolating projective spacetime matrix representation is constructed in Section~\ref{sec:projectivespace}, where we systematically classify the kinematic and dynamic generators across the interpolation angles. Finally, a summary and conclusion are presented in Section~\ref{summary-conclusion}.
+}
 
-\section{Conformal algebra in IFD}
+\section{Conformal algebra in general}
 \label{sec:conformal}
-The conformal transformation $x\longmapsto x'$ can be defined as \cite{Francesco,Blumenhagen}, 
-\begin{align}
-    \frac{\partial x'^{\alpha}}{\partial x^{\mu}}\frac{\partial x'^{\beta}}{\partial x^{\nu}}g'_{\alpha\beta}=\Lambda(x)g_{\mu\nu}
-\end{align}
-meaning the metric is preserved up to a scale factor $\Lambda(x)$ under conformal transformations. 
-Consider an infinitesimal transformation, $x'^{\mu}=x^{\mu}+\epsilon^{\mu}(x)+\mathcal{O}(\epsilon^2)$. Then the metric changes by $\delta g_{\mu\nu}=\partial_{\mu}\epsilon_{\nu}(x)+\partial_{\nu}\epsilon_{\mu}(x)$. The conformality condition then requires $\partial_{\mu}\epsilon_{\nu}(x)+\partial_{\nu}\epsilon_{\mu}(x)=F(x)\delta_{\mu\nu}$, where $F(x)=\Lambda(x)-1-\mathcal{O}(\epsilon^2)$, which is known as the conformal Killing equation. Contraction with $\delta^{\mu\nu}$ yields $F(x)=\frac{2}{d}\partial_{\mu}\epsilon^{\mu}$. For $d\geq3$, there are only four classes of solutions for $\epsilon_{\mu}(x)$, which are: $\epsilon^{\mu}(x)=a^{\mu}$ (infinitesimal translations), $\epsilon^{\mu}(x)=M^{\mu}_{~\nu}x^{\nu}$ (infinitesimal rotations and Lorentz transformations), $\epsilon^{\mu}(x)=\lambda x^{\mu}$ (infinitesimal scaling), and $\epsilon^{\mu}(x)=2(b.x) x^{\mu}-x^2b^{\mu}$ (infinitesimal special conformal transformations or SCT). The generators of conformal transformations are: $P_{{\mu}}=i\partial_{{\mu}}$ (translation), $M_{{\mu}{\nu}}=i\left(x_{{\mu}}\partial_{{\nu}}-x_{{\nu}}\partial_{{\mu}}\right)$ (rotation), $D=ix_{{\mu}}\partial^{{\mu}}$ (dilation or scaling), and $\mathfrak{K}_{{\mu}}=i\left(2x_{{\mu}}x_{{\nu}}\partial^{{\nu}}-x^2\partial_{{\mu}}\right)$ (SCT). In finite form, the SCT is given by $x'^{\mu }={\frac {x^{\mu }-b^{\mu }x^{2}}{1-2b\cdot x+b^{2}x^{2}}}$. This can be understood as an inversion of $x^\mu$, followed by a translation by $b^\mu$, and followed again by an inversion \cite{Blumenhagen}. From these generators, we obtain the full conformal algebra, a closed group that includes the Poincaré group as a subgroup.
-\begin{align}\label{conformalalgebra}
-    \left[P_{{\mu}},P_{{\nu}}\right]&=0;~\left[\mathfrak{K}_{{\mu}},\mathfrak{K}_{{\nu}}\right]=0;\nonumber\\
- \left[D, P_{{\mu}}\right]&=iP_{{\mu}};~\left[D, \mathfrak{K}_{{\mu}}\right]=-i\mathfrak{K}_{{\mu}};\nonumber\\
- \left[P_{{\rho}},M_{{\mu}{\nu}}\right]&=i\left(g_{{\rho}{\mu}}P_{{\nu}}-g_{{\rho}{\nu}}P_{{\mu}}\right);\nonumber\\
- \left[\mathfrak{K}_{{\rho}},M_{{\mu}{\nu}}\right]&=i\left(g_{{\rho}{\mu}}\mathfrak{K}_{{\nu}}-g_{{\rho}{\nu}}\mathfrak{K}_{{\mu}}\right);\nonumber\\
- \left[M_{{\alpha}{\beta}},M_{{\rho}{\sigma}}\right]&=-i\left(g_{{\beta}{\sigma}}M_{{\alpha}{\rho}}-g_{{\beta}{\rho}}M_{{\alpha}{\sigma}}+g_{{\alpha}{\rho}}M_{{\beta}{\sigma}}-g_{{\alpha}{\sigma}}M_{{\beta}{\rho}}\right);\nonumber\\
- \left[\mathfrak{K}_{{\mu}},P_{{\nu}}\right]&=2i\left(g_{{\mu}{\nu}}D-M_{{\mu}{\nu}}\right);~\left[D, M_{{\mu}{\nu}}\right]=0.
-\end{align} 
-where, $g_{\mu\nu}$ is the metric tensor.
 
 \section{Interpolating conformal algebra in \texorpdfstring{$(3+1)$}{Lg} dimensions}
 \label{conformalsimpler}
