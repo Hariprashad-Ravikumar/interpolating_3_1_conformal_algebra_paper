@@ -1202,6 +1202,17 @@ X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}
 =\begin{pmatrix}
+1 & 0 & 0 & 0 & 0 & 0\\
+\mathbb{C} (b^{\hat{+}})^{2} & 1 & \sqrt{2} b^{\hat{+}} & 0 & 0 & 0\\
+\sqrt{2} \mathbb{C} b^{\hat{+}} & 0 & 1 & 0 & 0 & 0\\
+0 & 0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 1 & 0\\
+\sqrt{2} \mathbb{S} b^{\hat{+}} & 0 & 0 & 0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}\\
+&=\begin{pmatrix}
 X_{-2}\\
 X_{-1}+\sqrt{2}b^{\hat{+}}X_{\hat{+}}
 +\mathbb{C}(b^{\hat{+}})^2X_{-2}\\
@@ -1253,6 +1264,17 @@ X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}
 =\begin{pmatrix}
+1 & 0 & 0 & 0 & 0 & 0\\
+- \mathbb{C} (b^{\hat{-}})^{2} & 1 & 0 & 0 & 0 & \sqrt{2} b^{\hat{-}}\\
+\sqrt{2} \mathbb{S} b^{\hat{-}} & 0 & 1 & 0 & 0 & 0\\
+0 & 0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 1 & 0\\
+- \sqrt{2} \mathbb{C} b^{\hat{-}} & 0 & 0 & 0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}\\
+&=\begin{pmatrix}
 X_{-2}\\
 X_{-1}+\sqrt{2}b^{\hat{-}}X_{\hat{-}}
 -\mathbb{C}(b^{\hat{-}})^2X_{-2}\\
@@ -1304,6 +1326,17 @@ X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}
 =\begin{pmatrix}
+1 & \mathbb{C} (a^{\hat{+}})^{2} & - \sqrt{2} a^{\hat{+}} & 0 & 0 & 0\\
+0 & 1 & 0 & 0 & 0 & 0\\
+0 & - \sqrt{2} \mathbb{C} a^{\hat{+}} & 1 & 0 & 0 & 0\\
+0 & 0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 1 & 0\\
+0 & - \sqrt{2} \mathbb{S} a^{\hat{+}} & 0 & 0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}\\
+&=\begin{pmatrix}
 X_{-2}+\mathbb{C}(a^{\hat{+}})^2X_{-1}
 -\sqrt{2}a^{\hat{+}}X_{\hat{+}}\\
 X_{-1}\\
@@ -1338,6 +1371,17 @@ X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}
 =\begin{pmatrix}
+1 & - \mathbb{C} (a^{\hat{-}})^{2} & 0 & 0 & 0 & - \sqrt{2} a^{\hat{-}}\\
+0 & 1 & 0 & 0 & 0 & 0\\
+0 & - \sqrt{2} \mathbb{S} a^{\hat{-}} & 1 & 0 & 0 & 0\\
+0 & 0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 1 & 0\\
+0 & \sqrt{2} \mathbb{C} a^{\hat{-}} & 0 & 0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}\\
+&=\begin{pmatrix}
 X_{-2}-\mathbb{C}(a^{\hat{-}})^2X_{-1}
 -\sqrt{2}a^{\hat{-}}X_{\hat{-}}\\
 X_{-1}\\
@@ -1374,6 +1418,17 @@ X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}
 =\begin{pmatrix}
+e^{-\alpha_{\hat{+}}\cos\delta} & 0 & 0 & 0 & 0 & 0\\
+0 & e^{\alpha_{\hat{+}}\cos\delta} & 0 & 0 & 0 & 0\\
+0 & 0 & \cosh u-\mathbb{S}\sinh u & 0 & 0 & \mathbb{C}\sinh u\\
+0 & 0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 1 & 0\\
+0 & 0 & \mathbb{C}\sinh u & 0 & 0 & \cosh u+\mathbb{S}\sinh u
+\end{pmatrix}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}\\
+&=\begin{pmatrix}
 e^{-\alpha_{\hat{+}}\cos\delta}X_{-2}\\
 e^{\alpha_{\hat{+}}\cos\delta}X_{-1}\\
 \left(\cosh u-\mathbb{S}\sinh u\right)X_{\hat{+}}
@@ -1413,6 +1468,17 @@ X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}
 =\begin{pmatrix}
+e^{-\alpha_{\hat{-}}\sin\delta} & 0 & 0 & 0 & 0 & 0\\
+0 & e^{\alpha_{\hat{-}}\sin\delta} & 0 & 0 & 0 & 0\\
+0 & 0 & \cosh v+\mathbb{S}\sinh v & 0 & 0 & -\mathbb{C}\sinh v\\
+0 & 0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 1 & 0\\
+0 & 0 & -\mathbb{C}\sinh v & 0 & 0 & \cosh v-\mathbb{S}\sinh v
+\end{pmatrix}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}\\
+&=\begin{pmatrix}
 e^{-\alpha_{\hat{-}}\sin\delta}X_{-2}\\
 e^{\alpha_{\hat{-}}\sin\delta}X_{-1}\\
 \left(\cosh v+\mathbb{S}\sinh v\right)X_{\hat{+}}
@@ -1454,9 +1520,23 @@ X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}
 =\begin{pmatrix}
-X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\
+1 & 0 & 0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0 & 0\\
+0 & 0 & 0 & \cos\theta & -\sin\theta & 0\\
+0 & 0 & 0 & \sin\theta & \cos\theta & 0\\
+0 & 0 & 0 & 0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}\\
+&=\begin{pmatrix}
+X_{-2}\\
+X_{-1}\\
+X_{\hat{+}}\\
 \cos\theta X_1-\sin\theta X_2\\
-\sin\theta X_1+\cos\theta X_2\\ X_{\hat{-}}
+\sin\theta X_1+\cos\theta X_2\\
+X_{\hat{-}}
 \end{pmatrix}.
 \end{align}
 and
@@ -1479,6 +1559,17 @@ X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}
 =\begin{pmatrix}
+1 & 0 & 0 & 0 & 0 & 0\\
+- (b^{1})^{2} & 1 & 0 & \sqrt{2} b^{1} & 0 & 0\\
+0 & 0 & 1 & 0 & 0 & 0\\
+- \sqrt{2} b^{1} & 0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}\\
+&=\begin{pmatrix}
 X_{-2}\\
 X_{-1}+\sqrt{2}b^1X_1-(b^1)^2X_{-2}\\
 X_{\hat{+}}\\
@@ -1518,6 +1609,17 @@ X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}
 =\begin{pmatrix}
+1 & 0 & 0 & 0 & 0 & 0\\
+- (b^{2})^{2} & 1 & 0 & 0 & \sqrt{2} b^{2} & 0\\
+0 & 0 & 1 & 0 & 0 & 0\\
+0 & 0 & 0 & 1 & 0 & 0\\
+- \sqrt{2} b^{2} & 0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}\\
+&=\begin{pmatrix}
 X_{-2}\\
 X_{-1}+\sqrt{2}b^2X_2-(b^2)^2X_{-2}\\
 X_{\hat{+}}\\
@@ -1559,6 +1661,17 @@ X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}
 =\begin{pmatrix}
+1 & - (a^{1})^{2} & 0 & - \sqrt{2} a^{1} & 0 & 0\\
+0 & 1 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0 & 0\\
+0 & \sqrt{2} a^{1} & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}\\
+&=\begin{pmatrix}
 X_{-2}-(a^1)^2X_{-1}-\sqrt{2}a^1X_1\\
 X_{-1}\\ X_{\hat{+}}\\ X_1+\sqrt{2}a^1X_{-1}\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}.
@@ -1582,6 +1695,17 @@ X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}
 =\begin{pmatrix}
+1 & - (a^{2})^{2} & 0 & 0 & - \sqrt{2} a^{2} & 0\\
+0 & 1 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & 0 & 0\\
+0 & 0 & 0 & 1 & 0 & 0\\
+0 & \sqrt{2} a^{2} & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & 0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}\\
+&=\begin{pmatrix}
 X_{-2}-(a^2)^2X_{-1}-\sqrt{2}a^2X_2\\
 X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2+\sqrt{2}a^2X_{-1}\\ X_{\hat{-}}
 \end{pmatrix}.
@@ -1607,6 +1731,17 @@ X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}
 =\begin{pmatrix}
+1 & 0 & 0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 & 0 & 0\\
+0 & 0 & \cosh q_1 & \sqrt{\mathbb{C}}\sinh q_1 & 0 & 0\\
+0 & 0 & \dfrac{\sinh q_1}{\sqrt{\mathbb{C}}} & \cosh q_1 & 0 & 0\\
+0 & 0 & 0 & 0 & 1 & 0\\
+0 & 0 & \dfrac{\mathbb{S}(\cosh q_1-1)}{\mathbb{C}} & \dfrac{\mathbb{S}\sinh q_1}{\sqrt{\mathbb{C}}} & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}\\
+&=\begin{pmatrix}
 X_{-2}\\ X_{-1}\\
 \cosh q_1\,X_{\hat{+}}+\sqrt{\mathbb{C}}\sinh q_1\,X_1\\
 \dfrac{\sinh q_1}{\sqrt{\mathbb{C}}}X_{\hat{+}}+\cosh q_1\,X_1\\
@@ -1644,6 +1779,17 @@ X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}
 =\begin{pmatrix}
+1 & 0 & 0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 & 0 & 0\\
+0 & 0 & \cosh q_2 & 0 & \sqrt{\mathbb{C}}\sinh q_2 & 0\\
+0 & 0 & 0 & 1 & 0 & 0\\
+0 & 0 & \dfrac{\sinh q_2}{\sqrt{\mathbb{C}}} & 0 & \cosh q_2 & 0\\
+0 & 0 & \dfrac{\mathbb{S}(\cosh q_2-1)}{\mathbb{C}} & 0 & \dfrac{\mathbb{S}\sinh q_2}{\sqrt{\mathbb{C}}} & 1
+\end{pmatrix}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}\\
+&=\begin{pmatrix}
 X_{-2}\\ X_{-1}\\
 \cosh q_2\,X_{\hat{+}}+\sqrt{\mathbb{C}}\sinh q_2\,X_2\\
 X_1\\
@@ -1683,6 +1829,17 @@ X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}
 =\begin{pmatrix}
+1 & 0 & 0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & \dfrac{\mathbb{S}\sin r_1}{\sqrt{\mathbb{C}}} & 0 & \dfrac{\mathbb{S}(1-\cos r_1)}{\mathbb{C}}\\
+0 & 0 & 0 & \cos r_1 & 0 & \dfrac{\sin r_1}{\sqrt{\mathbb{C}}}\\
+0 & 0 & 0 & 0 & 1 & 0\\
+0 & 0 & 0 & -\sqrt{\mathbb{C}}\sin r_1 & 0 & \cos r_1
+\end{pmatrix}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}\\
+&=\begin{pmatrix}
 X_{-2}\\ X_{-1}\\
 X_{\hat{+}}+\dfrac{\mathbb{S}\sin r_1}{\sqrt{\mathbb{C}}}X_1
 +\dfrac{\mathbb{S}(1-\cos r_1)}{\mathbb{C}}X_{\hat{-}}\\
@@ -1721,6 +1878,17 @@ X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}
 =\begin{pmatrix}
+1 & 0 & 0 & 0 & 0 & 0\\
+0 & 1 & 0 & 0 & 0 & 0\\
+0 & 0 & 1 & 0 & \dfrac{\mathbb{S}\sin r_2}{\sqrt{\mathbb{C}}} & \dfrac{\mathbb{S}(1-\cos r_2)}{\mathbb{C}}\\
+0 & 0 & 0 & 1 & 0 & 0\\
+0 & 0 & 0 & 0 & \cos r_2 & \dfrac{\sin r_2}{\sqrt{\mathbb{C}}}\\
+0 & 0 & 0 & 0 & -\sqrt{\mathbb{C}}\sin r_2 & \cos r_2
+\end{pmatrix}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}\\
+&=\begin{pmatrix}
 X_{-2}\\ X_{-1}\\
 X_{\hat{+}}+\dfrac{\mathbb{S}\sin r_2}{\sqrt{\mathbb{C}}}X_2
 +\dfrac{\mathbb{S}(1-\cos r_2)}{\mathbb{C}}X_{\hat{-}}\\

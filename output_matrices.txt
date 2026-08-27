@@ -1,0 +1,90 @@
+--- Generator: P_{\hat{+}} ---
+Intermediate Matrix:
+\left[\begin{matrix}1 & \mathbb{C} \left(a^{\hat{+}}\right)^{2} & - \sqrt{2} a^{\hat{+}} & 0 & 0 & 0\\0 & 1 & 0 & 0 & 0 & 0\\0 & - \sqrt{2} \mathbb{C} a^{\hat{+}} & 1 & 0 & 0 & 0\\0 & 0 & 0 & 1 & 0 & 0\\0 & 0 & 0 & 0 & 1 & 0\\0 & - \sqrt{2} \mathbb{S} a^{\hat{+}} & 0 & 0 & 0 & 1\end{matrix}\right]
+Final Vector:
+\left[\begin{matrix}X_{-1} \mathbb{C} \left(a^{\hat{+}}\right)^{2} + X_{-2} - \sqrt{2} X_{\hat{+}} a^{\hat{+}}\\X_{-1}\\- \sqrt{2} X_{-1} \mathbb{C} a^{\hat{+}} + X_{\hat{+}}\\X_{1}\\X_{2}\\- \sqrt{2} X_{-1} \mathbb{S} a^{\hat{+}} + X_{\hat{-}}\end{matrix}\right]
+
+--- Generator: P_{\hat{-}} ---
+Intermediate Matrix:
+\left[\begin{matrix}1 & - \mathbb{C} \left(a^{\hat{-}}\right)^{2} & 0 & 0 & 0 & - \sqrt{2} a^{\hat{-}}\\0 & 1 & 0 & 0 & 0 & 0\\0 & - \sqrt{2} \mathbb{S} a^{\hat{-}} & 1 & 0 & 0 & 0\\0 & 0 & 0 & 1 & 0 & 0\\0 & 0 & 0 & 0 & 1 & 0\\0 & \sqrt{2} \mathbb{C} a^{\hat{-}} & 0 & 0 & 0 & 1\end{matrix}\right]
+Final Vector:
+\left[\begin{matrix}- X_{-1} \mathbb{C} \left(a^{\hat{-}}\right)^{2} + X_{-2} - \sqrt{2} X_{\hat{-}} a^{\hat{-}}\\X_{-1}\\- \sqrt{2} X_{-1} \mathbb{S} a^{\hat{-}} + X_{\hat{+}}\\X_{1}\\X_{2}\\\sqrt{2} X_{-1} \mathbb{C} a^{\hat{-}} + X_{\hat{-}}\end{matrix}\right]
+
+--- Generator: P_1 ---
+Intermediate Matrix:
+\left[\begin{matrix}1 & - \left(a^{1}\right)^{2} & 0 & - \sqrt{2} a^{1} & 0 & 0\\0 & 1 & 0 & 0 & 0 & 0\\0 & 0 & 1 & 0 & 0 & 0\\0 & \sqrt{2} a^{1} & 0 & 1 & 0 & 0\\0 & 0 & 0 & 0 & 1 & 0\\0 & 0 & 0 & 0 & 0 & 1\end{matrix}\right]
+Final Vector:
+\left[\begin{matrix}- \sqrt{2} X_{1} a^{1} - X_{-1} \left(a^{1}\right)^{2} + X_{-2}\\X_{-1}\\X_{\hat{+}}\\X_{1} + \sqrt{2} X_{-1} a^{1}\\X_{2}\\X_{\hat{-}}\end{matrix}\right]
+
+--- Generator: P_2 ---
+Intermediate Matrix:
+\left[\begin{matrix}1 & - \left(a^{2}\right)^{2} & 0 & 0 & - \sqrt{2} a^{2} & 0\\0 & 1 & 0 & 0 & 0 & 0\\0 & 0 & 1 & 0 & 0 & 0\\0 & 0 & 0 & 1 & 0 & 0\\0 & \sqrt{2} a^{2} & 0 & 0 & 1 & 0\\0 & 0 & 0 & 0 & 0 & 1\end{matrix}\right]
+Final Vector:
+\left[\begin{matrix}- \sqrt{2} X_{2} a^{2} - X_{-1} \left(a^{2}\right)^{2} + X_{-2}\\X_{-1}\\X_{\hat{+}}\\X_{1}\\X_{2} + \sqrt{2} X_{-1} a^{2}\\X_{\hat{-}}\end{matrix}\right]
+
+--- Generator: \mathfrak{K}^{\hat{+}} ---
+Intermediate Matrix:
+\left[\begin{matrix}1 & 0 & 0 & 0 & 0 & 0\\\mathbb{C} b_{\hat{+}}^{2} & 1 & \sqrt{2} b_{\hat{+}} & 0 & 0 & 0\\\sqrt{2} \mathbb{C} b_{\hat{+}} & 0 & 1 & 0 & 0 & 0\\0 & 0 & 0 & 1 & 0 & 0\\0 & 0 & 0 & 0 & 1 & 0\\\sqrt{2} \mathbb{S} b_{\hat{+}} & 0 & 0 & 0 & 0 & 1\end{matrix}\right]
+Final Vector:
+\left[\begin{matrix}X_{-2}\\X_{-1} + X_{-2} \mathbb{C} b_{\hat{+}}^{2} + \sqrt{2} X_{\hat{+}} b_{\hat{+}}\\\sqrt{2} X_{-2} \mathbb{C} b_{\hat{+}} + X_{\hat{+}}\\X_{1}\\X_{2}\\\sqrt{2} X_{-2} \mathbb{S} b_{\hat{+}} + X_{\hat{-}}\end{matrix}\right]
+
+--- Generator: \mathfrak{K}^{\hat{-}} ---
+Intermediate Matrix:
+\left[\begin{matrix}1 & 0 & 0 & 0 & 0 & 0\\- \mathbb{C} b_{\hat{-}}^{2} & 1 & 0 & 0 & 0 & \sqrt{2} b_{\hat{-}}\\\sqrt{2} \mathbb{S} b_{\hat{-}} & 0 & 1 & 0 & 0 & 0\\0 & 0 & 0 & 1 & 0 & 0\\0 & 0 & 0 & 0 & 1 & 0\\- \sqrt{2} \mathbb{C} b_{\hat{-}} & 0 & 0 & 0 & 0 & 1\end{matrix}\right]
+Final Vector:
+\left[\begin{matrix}X_{-2}\\X_{-1} - X_{-2} \mathbb{C} b_{\hat{-}}^{2} + \sqrt{2} X_{\hat{-}} b_{\hat{-}}\\\sqrt{2} X_{-2} \mathbb{S} b_{\hat{-}} + X_{\hat{+}}\\X_{1}\\X_{2}\\- \sqrt{2} X_{-2} \mathbb{C} b_{\hat{-}} + X_{\hat{-}}\end{matrix}\right]
+
+--- Generator: \mathfrak{K}_1 ---
+Intermediate Matrix:
+\left[\begin{matrix}1 & 0 & 0 & 0 & 0 & 0\\- \left(b^{1}\right)^{2} & 1 & 0 & \sqrt{2} b^{1} & 0 & 0\\0 & 0 & 1 & 0 & 0 & 0\\- \sqrt{2} b^{1} & 0 & 0 & 1 & 0 & 0\\0 & 0 & 0 & 0 & 1 & 0\\0 & 0 & 0 & 0 & 0 & 1\end{matrix}\right]
+Final Vector:
+\left[\begin{matrix}X_{-2}\\\sqrt{2} X_{1} b^{1} + X_{-1} - X_{-2} \left(b^{1}\right)^{2}\\X_{\hat{+}}\\X_{1} - \sqrt{2} X_{-2} b^{1}\\X_{2}\\X_{\hat{-}}\end{matrix}\right]
+
+--- Generator: \mathfrak{K}_2 ---
+Intermediate Matrix:
+\left[\begin{matrix}1 & 0 & 0 & 0 & 0 & 0\\- \left(b^{2}\right)^{2} & 1 & 0 & 0 & \sqrt{2} b^{2} & 0\\0 & 0 & 1 & 0 & 0 & 0\\0 & 0 & 0 & 1 & 0 & 0\\- \sqrt{2} b^{2} & 0 & 0 & 0 & 1 & 0\\0 & 0 & 0 & 0 & 0 & 1\end{matrix}\right]
+Final Vector:
+\left[\begin{matrix}X_{-2}\\\sqrt{2} X_{2} b^{2} + X_{-1} - X_{-2} \left(b^{2}\right)^{2}\\X_{\hat{+}}\\X_{1}\\X_{2} - \sqrt{2} X_{-2} b^{2}\\X_{\hat{-}}\end{matrix}\right]
+
+--- Generator: D_{\hat{+}} ---
+Intermediate Matrix:
+\left[\begin{matrix}e^{- \cos(\delta) \lambda^{\hat{+}}} & 0 & 0 & 0 & 0 & 0\\0 & e^{\cos(\delta) \lambda^{\hat{+}}} & 0 & 0 & 0 & 0\\0 & 0 & \frac{\left(\mathbb{C}^{2} \mathbb{S} - \frac{\mathbb{C}^{2} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} e^{2 \lambda^{\hat{+}} \sin(\delta) \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}}{2} - \frac{\mathbb{C}^{2} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}{2} + \mathbb{S}^{3} - \mathbb{S}^{2} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}\right) e^{- \lambda^{\hat{+}} \sin(\delta) \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}}{\mathbb{C}^{2} \mathbb{S} - \mathbb{C}^{2} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} + \mathbb{S}^{3} - \mathbb{S}^{2} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}} & 0 & 0 & - \frac{\mathbb{C} \sinh{\left(\lambda^{\hat{+}} \sin(\delta) \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} \right)}}{\sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}\\0 & 0 & 0 & 1 & 0 & 0\\0 & 0 & 0 & 0 & 1 & 0\\0 & 0 & \frac{\mathbb{C} \left(\sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} \left(- \mathbb{S} + \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}\right) - \left(\mathbb{C}^{2} + \mathbb{S}^{2} - \mathbb{S} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}\right) e^{2 \lambda^{\hat{+}} \sin(\delta) \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}\right) e^{- \lambda^{\hat{+}} \sin(\delta) \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}}{2 \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} \left(\mathbb{C}^{2} + \mathbb{S}^{2} - \mathbb{S} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}\right)} & 0 & 0 & \frac{\left(\mathbb{C}^{2} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} e^{2 \lambda^{\hat{+}} \sin(\delta) \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}} + \left(\mathbb{S} + \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}\right) \left(\mathbb{C}^{2} + \mathbb{S}^{2} + \mathbb{S} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}\right)\right) e^{- \lambda^{\hat{+}} \sin(\delta) \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}}{2 \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} \left(\mathbb{C}^{2} + \mathbb{S}^{2} + \mathbb{S} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}\right)}\end{matrix}\right]
+Final Vector:
+\left[\begin{matrix}X_{-2} e^{- \cos(\delta) \lambda^{\hat{+}}}\\X_{-1} e^{\cos(\delta) \lambda^{\hat{+}}}\\\frac{\left(\frac{X_{\hat{+}} \mathbb{C}^{2} e^{2 \lambda^{\hat{+}} \sin(\delta) \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}}{2} + \frac{X_{\hat{+}} \mathbb{C}^{2}}{2} + X_{\hat{+}} \mathbb{S}^{2} - X_{\hat{+}} \mathbb{S} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} + X_{\hat{-}} \mathbb{C} \mathbb{S} e^{\lambda^{\hat{+}} \sin(\delta) \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}} \sinh{\left(\lambda^{\hat{+}} \sin(\delta) \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} \right)} - X_{\hat{-}} \mathbb{C} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} e^{\lambda^{\hat{+}} \sin(\delta) \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}} \sinh{\left(\lambda^{\hat{+}} \sin(\delta) \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} \right)}\right) e^{- \lambda^{\hat{+}} \sin(\delta) \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}}{\mathbb{C}^{2} + \mathbb{S}^{2} - \mathbb{S} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}\\X_{1}\\X_{2}\\\frac{\left(- X_{\hat{+}} \mathbb{C} e^{2 \lambda^{\hat{+}} \sin(\delta) \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}} + X_{\hat{+}} \mathbb{C} - X_{\hat{-}} \mathbb{S} e^{2 \lambda^{\hat{+}} \sin(\delta) \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}} + X_{\hat{-}} \mathbb{S} + X_{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} e^{2 \lambda^{\hat{+}} \sin(\delta) \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}} + X_{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}\right) e^{- \lambda^{\hat{+}} \sin(\delta) \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}}{2 \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}\end{matrix}\right]
+
+--- Generator: D_{\hat{-}} ---
+Intermediate Matrix:
+\left[\begin{matrix}e^{- \lambda^{\hat{-}} \sin(\delta)} & 0 & 0 & 0 & 0 & 0\\0 & e^{\lambda^{\hat{-}} \sin(\delta)} & 0 & 0 & 0 & 0\\0 & 0 & \frac{\left(\mathbb{C}^{2} \mathbb{S} + \frac{\mathbb{C}^{2} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} e^{2 \cos(\delta) \lambda^{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}}{2} + \frac{\mathbb{C}^{2} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}{2} + \mathbb{S}^{3} + \mathbb{S}^{2} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}\right) e^{- \cos(\delta) \lambda^{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}}{\mathbb{C}^{2} \mathbb{S} + \mathbb{C}^{2} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} + \mathbb{S}^{3} + \mathbb{S}^{2} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}} & 0 & 0 & \frac{\mathbb{C} \sinh{\left(\cos(\delta) \lambda^{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} \right)}}{\sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}\\0 & 0 & 0 & 1 & 0 & 0\\0 & 0 & 0 & 0 & 1 & 0\\0 & 0 & \frac{\mathbb{C} \left(- \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} \left(\mathbb{S} + \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}\right) + \left(\mathbb{C}^{2} + \mathbb{S}^{2} + \mathbb{S} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}\right) e^{2 \cos(\delta) \lambda^{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}\right) e^{- \cos(\delta) \lambda^{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}}{2 \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} \left(\mathbb{C}^{2} + \mathbb{S}^{2} + \mathbb{S} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}\right)} & 0 & 0 & \frac{\left(\mathbb{C}^{2} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} e^{2 \cos(\delta) \lambda^{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}} + \left(- \mathbb{S} + \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}\right) \left(\mathbb{C}^{2} + \mathbb{S}^{2} - \mathbb{S} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}\right)\right) e^{- \cos(\delta) \lambda^{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}}{2 \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} \left(\mathbb{C}^{2} + \mathbb{S}^{2} - \mathbb{S} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}\right)}\end{matrix}\right]
+Final Vector:
+\left[\begin{matrix}X_{-2} e^{- \lambda^{\hat{-}} \sin(\delta)}\\X_{-1} e^{\lambda^{\hat{-}} \sin(\delta)}\\\frac{\left(\frac{X_{\hat{+}} \mathbb{C}^{2} e^{2 \cos(\delta) \lambda^{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}}{2} + \frac{X_{\hat{+}} \mathbb{C}^{2}}{2} + X_{\hat{+}} \mathbb{S}^{2} + X_{\hat{+}} \mathbb{S} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} + X_{\hat{-}} \mathbb{C} \mathbb{S} e^{\cos(\delta) \lambda^{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}} \sinh{\left(\cos(\delta) \lambda^{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} \right)} + X_{\hat{-}} \mathbb{C} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} e^{\cos(\delta) \lambda^{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}} \sinh{\left(\cos(\delta) \lambda^{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} \right)}\right) e^{- \cos(\delta) \lambda^{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}}{\mathbb{C}^{2} + \mathbb{S}^{2} + \mathbb{S} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}\\X_{1}\\X_{2}\\\frac{\left(X_{\hat{+}} \mathbb{C} e^{2 \cos(\delta) \lambda^{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}} - X_{\hat{+}} \mathbb{C} + X_{\hat{-}} \mathbb{S} e^{2 \cos(\delta) \lambda^{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}} - X_{\hat{-}} \mathbb{S} + X_{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}} e^{2 \cos(\delta) \lambda^{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}} + X_{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}\right) e^{- \cos(\delta) \lambda^{\hat{-}} \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}}{2 \sqrt{\mathbb{C}^{2} + \mathbb{S}^{2}}}\end{matrix}\right]
+
+--- Generator: \mathcal{D}^1 ---
+Intermediate Matrix:
+\left[\begin{matrix}1 & 0 & 0 & 0 & 0 & 0\\0 & 1 & 0 & 0 & 0 & 0\\0 & 0 & \cosh{\left(\eta_{1} \sqrt{\mathbb{C}} \right)} & \sqrt{\mathbb{C}} \sinh{\left(\eta_{1} \sqrt{\mathbb{C}} \right)} & 0 & 0\\0 & 0 & \frac{\sinh{\left(\eta_{1} \sqrt{\mathbb{C}} \right)}}{\sqrt{\mathbb{C}}} & \cosh{\left(\eta_{1} \sqrt{\mathbb{C}} \right)} & 0 & 0\\0 & 0 & 0 & 0 & 1 & 0\\0 & 0 & \frac{\mathbb{S} e^{\eta_{1} \sqrt{\mathbb{C}}}}{2 \mathbb{C}} - \frac{\mathbb{S}}{\mathbb{C}} + \frac{\mathbb{S} e^{- \eta_{1} \sqrt{\mathbb{C}}}}{2 \mathbb{C}} & \frac{\mathbb{S} \sinh{\left(\eta_{1} \sqrt{\mathbb{C}} \right)}}{\sqrt{\mathbb{C}}} & 0 & 1\end{matrix}\right]
+Final Vector:
+\left[\begin{matrix}X_{-2}\\X_{-1}\\X_{1} \sqrt{\mathbb{C}} \sinh{\left(\eta_{1} \sqrt{\mathbb{C}} \right)} + X_{\hat{+}} \cosh{\left(\eta_{1} \sqrt{\mathbb{C}} \right)}\\X_{1} \cosh{\left(\eta_{1} \sqrt{\mathbb{C}} \right)} + \frac{X_{\hat{+}} \sinh{\left(\eta_{1} \sqrt{\mathbb{C}} \right)}}{\sqrt{\mathbb{C}}}\\X_{2}\\\frac{X_{1} \mathbb{S} \sinh{\left(\eta_{1} \sqrt{\mathbb{C}} \right)}}{\sqrt{\mathbb{C}}} + \frac{X_{\hat{+}} \mathbb{S} e^{\eta_{1} \sqrt{\mathbb{C}}}}{2 \mathbb{C}} - \frac{X_{\hat{+}} \mathbb{S}}{\mathbb{C}} + \frac{X_{\hat{+}} \mathbb{S} e^{- \eta_{1} \sqrt{\mathbb{C}}}}{2 \mathbb{C}} + X_{\hat{-}}\end{matrix}\right]
+
+--- Generator: \mathcal{D}^2 ---
+Intermediate Matrix:
+\left[\begin{matrix}1 & 0 & 0 & 0 & 0 & 0\\0 & 1 & 0 & 0 & 0 & 0\\0 & 0 & \cosh{\left(\eta_{2} \sqrt{\mathbb{C}} \right)} & 0 & \sqrt{\mathbb{C}} \sinh{\left(\eta_{2} \sqrt{\mathbb{C}} \right)} & 0\\0 & 0 & 0 & 1 & 0 & 0\\0 & 0 & \frac{\sinh{\left(\eta_{2} \sqrt{\mathbb{C}} \right)}}{\sqrt{\mathbb{C}}} & 0 & \cosh{\left(\eta_{2} \sqrt{\mathbb{C}} \right)} & 0\\0 & 0 & \frac{\mathbb{S} e^{\eta_{2} \sqrt{\mathbb{C}}}}{2 \mathbb{C}} - \frac{\mathbb{S}}{\mathbb{C}} + \frac{\mathbb{S} e^{- \eta_{2} \sqrt{\mathbb{C}}}}{2 \mathbb{C}} & 0 & \frac{\mathbb{S} \sinh{\left(\eta_{2} \sqrt{\mathbb{C}} \right)}}{\sqrt{\mathbb{C}}} & 1\end{matrix}\right]
+Final Vector:
+\left[\begin{matrix}X_{-2}\\X_{-1}\\X_{2} \sqrt{\mathbb{C}} \sinh{\left(\eta_{2} \sqrt{\mathbb{C}} \right)} + X_{\hat{+}} \cosh{\left(\eta_{2} \sqrt{\mathbb{C}} \right)}\\X_{1}\\X_{2} \cosh{\left(\eta_{2} \sqrt{\mathbb{C}} \right)} + \frac{X_{\hat{+}} \sinh{\left(\eta_{2} \sqrt{\mathbb{C}} \right)}}{\sqrt{\mathbb{C}}}\\\frac{X_{2} \mathbb{S} \sinh{\left(\eta_{2} \sqrt{\mathbb{C}} \right)}}{\sqrt{\mathbb{C}}} + \frac{X_{\hat{+}} \mathbb{S} e^{\eta_{2} \sqrt{\mathbb{C}}}}{2 \mathbb{C}} - \frac{X_{\hat{+}} \mathbb{S}}{\mathbb{C}} + \frac{X_{\hat{+}} \mathbb{S} e^{- \eta_{2} \sqrt{\mathbb{C}}}}{2 \mathbb{C}} + X_{\hat{-}}\end{matrix}\right]
+
+--- Generator: \mathcal{K}^1 ---
+Intermediate Matrix:
+\left[\begin{matrix}1 & 0 & 0 & 0 & 0 & 0\\0 & 1 & 0 & 0 & 0 & 0\\0 & 0 & 1 & \frac{\mathbb{S} \sin{\left(\sqrt{\mathbb{C}} \zeta_{1} \right)}}{\sqrt{\mathbb{C}}} & 0 & \frac{\mathbb{S} \left(1 - \cos{\left(\sqrt{\mathbb{C}} \zeta_{1} \right)}\right)}{\mathbb{C}}\\0 & 0 & 0 & \cos{\left(\sqrt{\mathbb{C}} \zeta_{1} \right)} & 0 & \frac{\sin{\left(\sqrt{\mathbb{C}} \zeta_{1} \right)}}{\sqrt{\mathbb{C}}}\\0 & 0 & 0 & 0 & 1 & 0\\0 & 0 & 0 & - \sqrt{\mathbb{C}} \sin{\left(\sqrt{\mathbb{C}} \zeta_{1} \right)} & 0 & \cos{\left(\sqrt{\mathbb{C}} \zeta_{1} \right)}\end{matrix}\right]
+Final Vector:
+\left[\begin{matrix}X_{-2}\\X_{-1}\\\frac{X_{1} \mathbb{S} \sin{\left(\sqrt{\mathbb{C}} \zeta_{1} \right)}}{\sqrt{\mathbb{C}}} + X_{\hat{+}} - \frac{X_{\hat{-}} \mathbb{S} \cos{\left(\sqrt{\mathbb{C}} \zeta_{1} \right)}}{\mathbb{C}} + \frac{X_{\hat{-}} \mathbb{S}}{\mathbb{C}}\\X_{1} \cos{\left(\sqrt{\mathbb{C}} \zeta_{1} \right)} + \frac{X_{\hat{-}} \sin{\left(\sqrt{\mathbb{C}} \zeta_{1} \right)}}{\sqrt{\mathbb{C}}}\\X_{2}\\- X_{1} \sqrt{\mathbb{C}} \sin{\left(\sqrt{\mathbb{C}} \zeta_{1} \right)} + X_{\hat{-}} \cos{\left(\sqrt{\mathbb{C}} \zeta_{1} \right)}\end{matrix}\right]
+
+--- Generator: \mathcal{K}^2 ---
+Intermediate Matrix:
+\left[\begin{matrix}1 & 0 & 0 & 0 & 0 & 0\\0 & 1 & 0 & 0 & 0 & 0\\0 & 0 & 1 & 0 & \frac{\mathbb{S} \sin{\left(\sqrt{\mathbb{C}} \zeta_{2} \right)}}{\sqrt{\mathbb{C}}} & \frac{\mathbb{S} \left(1 - \cos{\left(\sqrt{\mathbb{C}} \zeta_{2} \right)}\right)}{\mathbb{C}}\\0 & 0 & 0 & 1 & 0 & 0\\0 & 0 & 0 & 0 & \cos{\left(\sqrt{\mathbb{C}} \zeta_{2} \right)} & \frac{\sin{\left(\sqrt{\mathbb{C}} \zeta_{2} \right)}}{\sqrt{\mathbb{C}}}\\0 & 0 & 0 & 0 & - \sqrt{\mathbb{C}} \sin{\left(\sqrt{\mathbb{C}} \zeta_{2} \right)} & \cos{\left(\sqrt{\mathbb{C}} \zeta_{2} \right)}\end{matrix}\right]
+Final Vector:
+\left[\begin{matrix}X_{-2}\\X_{-1}\\\frac{X_{2} \mathbb{S} \sin{\left(\sqrt{\mathbb{C}} \zeta_{2} \right)}}{\sqrt{\mathbb{C}}} + X_{\hat{+}} - \frac{X_{\hat{-}} \mathbb{S} \cos{\left(\sqrt{\mathbb{C}} \zeta_{2} \right)}}{\mathbb{C}} + \frac{X_{\hat{-}} \mathbb{S}}{\mathbb{C}}\\X_{1}\\X_{2} \cos{\left(\sqrt{\mathbb{C}} \zeta_{2} \right)} + \frac{X_{\hat{-}} \sin{\left(\sqrt{\mathbb{C}} \zeta_{2} \right)}}{\sqrt{\mathbb{C}}}\\- X_{2} \sqrt{\mathbb{C}} \sin{\left(\sqrt{\mathbb{C}} \zeta_{2} \right)} + X_{\hat{-}} \cos{\left(\sqrt{\mathbb{C}} \zeta_{2} \right)}\end{matrix}\right]
+
+--- Generator: J^3 ---
+Intermediate Matrix:
+\left[\begin{matrix}1 & 0 & 0 & 0 & 0 & 0\\0 & 1 & 0 & 0 & 0 & 0\\0 & 0 & 1 & 0 & 0 & 0\\0 & 0 & 0 & \cos{\left(\theta \right)} & - \sin{\left(\theta \right)} & 0\\0 & 0 & 0 & \sin{\left(\theta \right)} & \cos{\left(\theta \right)} & 0\\0 & 0 & 0 & 0 & 0 & 1\end{matrix}\right]
+Final Vector:
+\left[\begin{matrix}X_{-2}\\X_{-1}\\X_{\hat{+}}\\X_{1} \cos{\left(\theta \right)} - X_{2} \sin{\left(\theta \right)}\\X_{1} \sin{\left(\theta \right)} + X_{2} \cos{\left(\theta \right)}\\X_{\hat{-}}\end{matrix}\right]
+
