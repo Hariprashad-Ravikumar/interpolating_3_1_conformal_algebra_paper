@@ -466,14 +466,16 @@ in later sections.
 
 The Dirac matrices obey the Clifford algebra
 \begin{align}
-\{\gamma^\mu,\gamma^\nu\}=2g^{\mu\nu}I_4,\qquad
+\{\gamma^\mu,\gamma^\nu\}=2g^{\mu\nu}\mathbb{1},\qquad
 \gamma_\mu=g_{\mu\nu}\gamma^\nu,\qquad
-\gamma_5=i\gamma^0\gamma^1\gamma^2\gamma^3.
+\gamma_5=i\gamma^0\gamma^1\gamma^2\gamma^3,
 \end{align}
+where $\mathbb{1}$ is the $4\times 4$ identity matrix. While this algebra and the resulting isomorphism hold for any general basis, we use the standard Dirac basis as an explicit example. The explicit $4\times 4$ matrix representations are provided in Appendix~\ref{app:explicit_matrices}.
+
 The following dictionary realizes all fifteen IFD conformal generators:
 \begin{align}
-P_\mu&=\frac{i}{2}(1+\gamma_5)\gamma_\mu,
-&\mathfrak{K}_\mu&=-\frac{i}{2}(1-\gamma_5)\gamma_\mu,\nonumber\\
+P_\mu&=\frac{i}{2}(\mathbb{1}+\gamma_5)\gamma_\mu,
+&\mathfrak{K}_\mu&=-\frac{i}{2}(\mathbb{1}-\gamma_5)\gamma_\mu,\nonumber\\
 D&=\frac{i}{2}\gamma_5,
 &K^i&=\frac{i}{2}\gamma_i\gamma_0,\qquad i=1,2,3,\nonumber\\
 J^1&=\frac{i}{2}\gamma_2\gamma_3,
@@ -1174,6 +1176,104 @@ The National Energy Research Scientific Computing Center (NERSC) supported by th
 }
 \appendix
 \setcounter{section}{0}
+\section{Explicit \texorpdfstring{$4\times 4$}{4x4} Matrix Representations}
+\label{app:explicit_matrices}
+
+The standard Dirac basis for the $\gamma$ matrices is given by:
+\begin{align*}
+\gamma^0&=\begin{pmatrix}1&0&0&0\\0&1&0&0\\0&0&-1&0\\0&0&0&-1\end{pmatrix}~;~~~~~~
+\gamma^1=\begin{pmatrix}0&0&0&1\\0&0&1&0\\0&-1&0&0\\-1&0&0&0\end{pmatrix}~;~~~~~~
+\gamma^2=\begin{pmatrix}0&0&0&-i\\0&0&i&0\\0&i&0&0\\-i&0&0&0\end{pmatrix};\\
+\gamma^3&=\begin{pmatrix}0&0&1&0\\0&0&0&-1\\-1&0&0&0\\0&1&0&0\end{pmatrix}~;~~~~~~
+\gamma_5=\begin{pmatrix}0&0&1&0\\0&0&0&1\\1&0&0&0\\0&1&0&0\end{pmatrix}~;~~~~~~
+\mathbb{1}=\begin{pmatrix}1&0&0&0\\0&1&0&0\\0&0&1&0\\0&0&0&1\end{pmatrix}.
+\end{align*}
+
+Using the dictionary in Eq.~\eqref{eq:ifd-dirac-dictionary}, the explicit $4\times 4$ representations for the fifteen conformal generators are:
+\begin{align*}
+    J^{1}&=\frac{1}{2}\begin{pmatrix}
+    0&1&0&0\\
+    1&0&0&0\\
+    0&0&0&1\\
+    0&0&1&0
+    \end{pmatrix}~;~~~~~~J^{2}=\frac{1}{2}\begin{pmatrix}
+    0&-i&0&0\\
+    i&0&0&0\\
+    0&0&0&-i\\
+    0&0&i&0
+    \end{pmatrix}~;~~~~~~J^{3}=\frac{1}{2}\begin{pmatrix}
+    1&0&0&0\\
+    0&-1&0&0\\
+    0&0&1&0\\
+    0&0&0&-1
+    \end{pmatrix};\\
+    K^{1}&=\frac{i}{2}\begin{pmatrix}
+    0&0&0&1\\
+    0&0&1&0\\
+    0&1&0&0\\
+    1&0&0&0
+    \end{pmatrix}~;~~~~~~K^{2}=\frac{1}{2}\begin{pmatrix}
+    0&0&0&1\\
+    0&0&-1&0\\
+    0&1&0&0\\
+    -1&0&0&0
+    \end{pmatrix}~;~~~~~~K^{3}=\frac{i}{2}\begin{pmatrix}
+    0&0&1&0\\
+    0&0&0&-1\\
+    1&0&0&0\\
+    0&-1&0&0
+    \end{pmatrix};\\
+    P_0&=\frac{i}{2}\begin{pmatrix}
+    1&0&-1&0\\
+    0&1&0&-1\\
+    1&0&-1&0\\
+    0&1&0&-1
+    \end{pmatrix}~;~~~~~~P_1=\frac{i}{2}\begin{pmatrix}
+    0&1&0&-1\\
+    1&0&-1&0\\
+    0&1&0&-1\\
+    1&0&-1&0
+    \end{pmatrix}~;~~~~~~P_2=\frac{1}{2}\begin{pmatrix}
+    0&1&0&-1\\
+    -1&0&1&0\\
+    0&1&0&-1\\
+    -1&0&1&0
+    \end{pmatrix}~;~~~~~~P_3=\frac{i}{2}\begin{pmatrix}
+    1&0&-1&0\\
+    0&-1&0&1\\
+    1&0&-1&0\\
+    0&-1&0&1
+    \end{pmatrix}\\
+    \mathfrak{K}_0&=\frac{i}{2}\begin{pmatrix}
+    -1&0&-1&0\\
+    0&-1&0&-1\\
+    1&0&1&0\\
+    0&1&0&1
+    \end{pmatrix}~;~~~~~~\mathfrak{K}_1=\frac{i}{2}\begin{pmatrix}
+    0&1&0&1\\
+    1&0&1&0\\
+    0&-1&0&-1\\
+    -1&0&-1&0
+    \end{pmatrix}~;~~~~~~\mathfrak{K}_2=\frac{1}{2}\begin{pmatrix}
+    0&1&0&1\\
+    -1&0&-1&0\\
+    0&-1&0&-1\\
+    1&0&1&0
+    \end{pmatrix}~;~~~~~~\mathfrak{K}_3=\frac{i}{2}\begin{pmatrix}
+    1&0&1&0\\
+    0&-1&0&-1\\
+    -1&0&-1&0\\
+    0&1&0&1
+    \end{pmatrix}\\
+    D&=\frac{i}{2}\begin{pmatrix}
+    0&0&1&0\\
+    0&0&0&1\\
+    1&0&0&0\\
+    0&1&0&0
+    \end{pmatrix}.
+\end{align*}
+
+
 \section{Derivation of the Interpolating-Time Transformations}
 \label{app:interpolating-time-derivations}
 
