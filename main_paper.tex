@@ -941,16 +941,16 @@ $\delta \to 0$ and $\delta \to \pi/4$, we find the corresponding number of kinem
               \hline
               \rule{0pt}{16pt} $P_{2}$ & $ x^{\hat{+}\prime}=x^{\hat{+}}$  \\
               \hline
-               \rule{0pt}{16pt} $\mathcal{D}^{1}$ &  $ x^{\hat{+}\prime}=\cosh{(\sqrt{\mathbb{C}}\eta_{\mathcal{D}^{1}})}x^{\hat{+}}+\frac{\mathbb{S}}{\mathbb{C}}\left(\cosh{(\sqrt{\mathbb{C}}\eta_{\mathcal{D}^{1}})}-1\right)x^{\hat{-}}+\frac{1}{\sqrt{\mathbb{C}}}\sinh{(\sqrt{\mathbb{C}}\eta_{\mathcal{D}^{1}})}x_{{1}}$ \\
+               \rule{0pt}{16pt} $\mathcal{D}^{1}$ &  $ x^{\hat{+}\prime}=\cosh{(\sqrt{\mathbb{C}}\eta^{1})}x^{\hat{+}}+\frac{\mathbb{S}}{\mathbb{C}}\left(\cosh{(\sqrt{\mathbb{C}}\eta^{1})}-1\right)x^{\hat{-}}+\frac{1}{\sqrt{\mathbb{C}}}\sinh{(\sqrt{\mathbb{C}}\eta^{1})}x_{{1}}$ \\
                \hline
-               \rule{0pt}{16pt} $\mathcal{D}^{2}$ & $ x^{\hat{+}\prime}=\cosh{(\sqrt{\mathbb{C}}\eta_{\mathcal{D}^{2}})}x^{\hat{+}}+\frac{\mathbb{S}}{\mathbb{C}}\left(\cosh{(\sqrt{\mathbb{C}}\eta_{\mathcal{D}^{2}})}-1\right)x^{\hat{-}}+\frac{1}{\sqrt{\mathbb{C}}}\sinh{(\sqrt{\mathbb{C}}\eta_{\mathcal{D}^{2}})}x_{{2}}$ \\
+               \rule{0pt}{16pt} $\mathcal{D}^{2}$ & $ x^{\hat{+}\prime}=\cosh{(\sqrt{\mathbb{C}}\eta^{2})}x^{\hat{+}}+\frac{\mathbb{S}}{\mathbb{C}}\left(\cosh{(\sqrt{\mathbb{C}}\eta^{2})}-1\right)x^{\hat{-}}+\frac{1}{\sqrt{\mathbb{C}}}\sinh{(\sqrt{\mathbb{C}}\eta^{2})}x_{{2}}$ \\
                \hline
                \rule{0pt}{16pt} $\mathcal{K}^{1}$ & $ x^{\hat{+}\prime}=x^{\hat{+}}$ \\
                \hline
                \rule{0pt}{16pt} $\mathcal{K}^{2}$ & $ x^{\hat{+}\prime}=x^{\hat{+}}$ \\
                \hline
         \end{tabular}}
-        \caption{Transformation of interpolating time under each conformal generator in $(3+1)$ dimensions. Each row denotes a one-parameter transformation $X'=e^{-i\lambda_G G}X$, with the parameter associated with the displayed generator $G$: $b^{\hat{\pm}}$, $b^1$, and $b^2$ for special conformal transformations; $a^{\hat{\pm}}$, $a^1$, and $a^2$ for translations; $\alpha_{\hat{\pm}}$ for $D_{\hat{\pm}}$; $\eta_{\mathcal{D}^{1}}$ and $\eta_{\mathcal{D}^{2}}$ for $\mathcal{D}^{1}$ and $\mathcal{D}^{2}$; $\eta_{\mathcal{K}^{1}}$ and $\eta_{\mathcal{K}^{2}}$ for $\mathcal{K}^{1}$ and $\mathcal{K}^{2}$; and $\theta$ for $J^3$. The interpolating parameter between IFD and LFD is $\delta$.}
+        \caption{Transformation of interpolating time under each conformal generator in $(3+1)$ dimensions. Each row denotes a one-parameter transformation $X'=e^{-i\lambda_G G}X$, with the parameter associated with the displayed generator $G$: $b^{\hat{\pm}}$, $b^1$, and $b^2$ for special conformal transformations; $a^{\hat{\pm}}$, $a^1$, and $a^2$ for translations; $\alpha_{\hat{\pm}}$ for $D_{\hat{\pm}}$; $\eta^1$ and $\eta^2$ for $\mathcal{D}^{1}$ and $\mathcal{D}^{2}$; $\phi^1$ and $\phi^2$ for $\mathcal{K}^{1}$ and $\mathcal{K}^{2}$; and $\theta$ for $J^3$. The interpolating parameter between IFD and LFD is $\delta$.}
         \label{tablexprime}
     \end{table}
     \begin{table}[!htb]
@@ -1505,28 +1505,24 @@ x^{\hat{+}\prime}=x^{\hat{+}}.
 
 \subsubsection{\texorpdfstring{$\mathcal{D}^{1}$}{D1}}
 
-Set $q_1=\sqrt{\mathbb{C}}\eta_{\mathcal{D}^{1}}$. The transformation of the interpolating
+Set $q_1=\sqrt{\mathbb{C}}\eta^{1}$. The transformation of the interpolating
 projective space-time vector by $\mathcal{D}^{1}$ is
 \begin{align}
-\mathbf{X}'=e^{-i\eta_{\mathcal{D}^{1}}\mathcal{D}^{1}}\mathbf{X}
-&=\begin{pmatrix}
-1&0&0&0&0&0\\
-0&1&0&0&0&0\\
-0&0&\cosh q_1&\sqrt{\mathbb{C}}\sinh q_1&0&0\\
-0&0&\dfrac{\sinh q_1}{\sqrt{\mathbb{C}}}&\cosh q_1&0&0\\
-0&0&0&0&1&0\\
-0&0&\dfrac{\mathbb{S}(\cosh q_1-1)}{\mathbb{C}}&
-\dfrac{\mathbb{S}\sinh q_1}{\sqrt{\mathbb{C}}}&0&1
-\end{pmatrix}\mathbf{X}.
-\end{align}
-The relevant projective components are
-\begin{align}
-X_{-1}'&=X_{-1}, \nonumber\\
-X_{\hat{+}}'&=\cosh q_1\,X_{\hat{+}}
- +\sqrt{\mathbb{C}}\sinh q_1\,X_1, \nonumber\\
-X_{\hat{-}}'&=X_{\hat{-}}
- +\frac{\mathbb{S}(\cosh q_1-1)}{\mathbb{C}}X_{\hat{+}}
- +\frac{\mathbb{S}\sinh q_1}{\sqrt{\mathbb{C}}}X_1.
+\begin{pmatrix}
+X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
+\end{pmatrix}
+&=e^{-i\eta^{1}\mathcal{D}^{1}}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}
+=\begin{pmatrix}
+X_{-2}\\ X_{-1}\\
+\cosh q_1\,X_{\hat{+}}+\sqrt{\mathbb{C}}\sinh q_1\,X_1\\
+\dfrac{\sinh q_1}{\sqrt{\mathbb{C}}}X_{\hat{+}}+\cosh q_1\,X_1\\
+X_2\\
+X_{\hat{-}}+\dfrac{\mathbb{S}(\cosh q_1-1)}{\mathbb{C}}X_{\hat{+}}
++\dfrac{\mathbb{S}\sinh q_1}{\sqrt{\mathbb{C}}}X_1
+\end{pmatrix}.
 \end{align}
 Therefore,
 \begin{align}
@@ -1546,28 +1542,24 @@ x^{\hat{+}\prime}
 
 \subsubsection{\texorpdfstring{$\mathcal{D}^{2}$}{D2}}
 
-With $q_2=\sqrt{\mathbb{C}}\eta_{\mathcal{D}^{2}}$, the transformation of the interpolating
+With $q_2=\sqrt{\mathbb{C}}\eta^{2}$, the transformation of the interpolating
 projective space-time vector by $\mathcal{D}^{2}$ is
 \begin{align}
-\mathbf{X}'=e^{-i\eta_{\mathcal{D}^{2}}\mathcal{D}^{2}}\mathbf{X}
-&=\begin{pmatrix}
-1&0&0&0&0&0\\
-0&1&0&0&0&0\\
-0&0&\cosh q_2&0&\sqrt{\mathbb{C}}\sinh q_2&0\\
-0&0&0&1&0&0\\
-0&0&\dfrac{\sinh q_2}{\sqrt{\mathbb{C}}}&0&\cosh q_2&0\\
-0&0&\dfrac{\mathbb{S}(\cosh q_2-1)}{\mathbb{C}}&0&
-\dfrac{\mathbb{S}\sinh q_2}{\sqrt{\mathbb{C}}}&1
-\end{pmatrix}\mathbf{X}.
-\end{align}
-The corresponding components are
-\begin{align}
-X_{-1}'&=X_{-1}, \nonumber\\
-X_{\hat{+}}'&=\cosh q_2\,X_{\hat{+}}
- +\sqrt{\mathbb{C}}\sinh q_2\,X_2, \nonumber\\
-X_{\hat{-}}'&=X_{\hat{-}}
- +\frac{\mathbb{S}(\cosh q_2-1)}{\mathbb{C}}X_{\hat{+}}
- +\frac{\mathbb{S}\sinh q_2}{\sqrt{\mathbb{C}}}X_2.
+\begin{pmatrix}
+X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
+\end{pmatrix}
+&=e^{-i\eta^{2}\mathcal{D}^{2}}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}
+=\begin{pmatrix}
+X_{-2}\\ X_{-1}\\
+\cosh q_2\,X_{\hat{+}}+\sqrt{\mathbb{C}}\sinh q_2\,X_2\\
+X_1\\
+\dfrac{\sinh q_2}{\sqrt{\mathbb{C}}}X_{\hat{+}}+\cosh q_2\,X_2\\
+X_{\hat{-}}+\dfrac{\mathbb{S}(\cosh q_2-1)}{\mathbb{C}}X_{\hat{+}}
++\dfrac{\mathbb{S}\sinh q_2}{\sqrt{\mathbb{C}}}X_2
+\end{pmatrix}.
 \end{align}
 Hence,
 \begin{align}
@@ -1589,30 +1581,26 @@ x^{\hat{+}\prime}
 
 \subsubsection{\texorpdfstring{$\mathcal{K}^{1}$}{K1}}
 
-Let $r_1=\sqrt{\mathbb{C}}\eta_{\mathcal{K}^{1}}$. The transformation of the interpolating
+Let $r_1=\sqrt{\mathbb{C}}\phi^{1}$. The transformation of the interpolating
 projective space-time vector by $\mathcal{K}^{1}$ is
 \begin{align}
-\mathbf{X}'=e^{-i\eta_{\mathcal{K}^{1}}\mathcal{K}^{1}}\mathbf{X}
-&=\begin{pmatrix}
-1&0&0&0&0&0\\
-0&1&0&0&0&0\\
-0&0&1&\dfrac{\mathbb{S}\sin r_1}{\sqrt{\mathbb{C}}}&0&
-\dfrac{\mathbb{S}(1-\cos r_1)}{\mathbb{C}}\\
-0&0&0&\cos r_1&0&\dfrac{\sin r_1}{\sqrt{\mathbb{C}}}\\
-0&0&0&0&1&0\\
-0&0&0&-\sqrt{\mathbb{C}}\sin r_1&0&\cos r_1
-\end{pmatrix}\mathbf{X}.
+\begin{pmatrix}
+X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
+\end{pmatrix}
+&=e^{-i\phi^{1}\mathcal{K}^{1}}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}
+=\begin{pmatrix}
+X_{-2}\\ X_{-1}\\
+X_{\hat{+}}+\dfrac{\mathbb{S}\sin r_1}{\sqrt{\mathbb{C}}}X_1
++\dfrac{\mathbb{S}(1-\cos r_1)}{\mathbb{C}}X_{\hat{-}}\\
+\cos r_1\,X_1+\dfrac{\sin r_1}{\sqrt{\mathbb{C}}}X_{\hat{-}}\\
+X_2\\
+-\sqrt{\mathbb{C}}\sin r_1\,X_1+\cos r_1\,X_{\hat{-}}
+\end{pmatrix}.
 \end{align}
-Thus,
-\begin{align}
-X_{-1}'&=X_{-1}, \nonumber\\
-X_{\hat{+}}'&=X_{\hat{+}}
- +\frac{\mathbb{S}\sin r_1}{\sqrt{\mathbb{C}}}X_1
- +\frac{\mathbb{S}(1-\cos r_1)}{\mathbb{C}}X_{\hat{-}}, \nonumber\\
-X_{\hat{-}}'&=-\sqrt{\mathbb{C}}\sin r_1\,X_1
- +\cos r_1\,X_{\hat{-}}.
-\end{align}
-The lower components are
+The transformed lower coordinates are
 \begin{align}
 x_{\hat{+}}'&=x_{\hat{+}}
  +\frac{\mathbb{S}\sin r_1}{\sqrt{\mathbb{C}}}x_1
@@ -1631,30 +1619,25 @@ x^{\hat{+}\prime}
 
 \subsubsection{\texorpdfstring{$\mathcal{K}^{2}$}{K2}}
 
-For $r_2=\sqrt{\mathbb{C}}\eta_{\mathcal{K}^{2}}$, the transformation of the interpolating
+For $r_2=\sqrt{\mathbb{C}}\phi^{2}$, the transformation of the interpolating
 projective space-time vector by $\mathcal{K}^{2}$ is
 \begin{align}
-\mathbf{X}'=e^{-i\eta_{\mathcal{K}^{2}}\mathcal{K}^{2}}\mathbf{X}
-&=\begin{pmatrix}
-1&0&0&0&0&0\\
-0&1&0&0&0&0\\
-0&0&1&0&\dfrac{\mathbb{S}\sin r_2}{\sqrt{\mathbb{C}}}&
-\dfrac{\mathbb{S}(1-\cos r_2)}{\mathbb{C}}\\
-0&0&0&1&0&0\\
-0&0&0&0&\cos r_2&\dfrac{\sin r_2}{\sqrt{\mathbb{C}}}\\
-0&0&0&0&-\sqrt{\mathbb{C}}\sin r_2&\cos r_2
-\end{pmatrix}\mathbf{X}.
+\begin{pmatrix}
+X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
+\end{pmatrix}
+&=e^{-i\phi^{2}\mathcal{K}^{2}}
+\begin{pmatrix}
+X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
+\end{pmatrix}
+=\begin{pmatrix}
+X_{-2}\\ X_{-1}\\
+X_{\hat{+}}+\dfrac{\mathbb{S}\sin r_2}{\sqrt{\mathbb{C}}}X_2
++\dfrac{\mathbb{S}(1-\cos r_2)}{\mathbb{C}}X_{\hat{-}}\\
+X_1\\
+\cos r_2\,X_2+\dfrac{\sin r_2}{\sqrt{\mathbb{C}}}X_{\hat{-}}\\
+-\sqrt{\mathbb{C}}\sin r_2\,X_2+\cos r_2\,X_{\hat{-}}
+\end{pmatrix}.
 \end{align}
-The $1\leftrightarrow2$ counterpart is
-\begin{align}
-X_{-1}'&=X_{-1}, \nonumber\\
-X_{\hat{+}}'&=X_{\hat{+}}
- +\frac{\mathbb{S}\sin r_2}{\sqrt{\mathbb{C}}}X_2
- +\frac{\mathbb{S}(1-\cos r_2)}{\mathbb{C}}X_{\hat{-}}, \nonumber\\
-X_{\hat{-}}'&=-\sqrt{\mathbb{C}}\sin r_2\,X_2
- +\cos r_2\,X_{\hat{-}},
-\end{align}
-and therefore
 \begin{align}
 x_{\hat{+}}'&=x_{\hat{+}}
  +\frac{\mathbb{S}\sin r_2}{\sqrt{\mathbb{C}}}x_2
