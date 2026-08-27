@@ -927,9 +927,9 @@ $\delta \to 0$ and $\delta \to \pi/4$, we find the corresponding number of kinem
              \hline
              \rule{0pt}{16pt} $P_{\hat{-}}$& $x^{\hat{+}\prime}=x^{\hat{+}}$  \\
              \hline
-             \rule{0pt}{16pt} $D_{\hat{+}}$ & $x^{\hat{+}\prime} = e^{-\alpha\cos{(\delta)}}\left[\left(\cosh[\alpha\sin{(\delta)}]-\mathbb{S} \sinh[\alpha\sin{(\delta)}]\right)x^{\hat{+}} +\mathbb{C} \sinh[\alpha\sin{(\delta)}]x^{\hat{-}}\right]$ \\
+             \rule{0pt}{16pt} $D_{\hat{+}}$ & $x^{\hat{+}\prime} = e^{-\alpha_{\hat{+}}\cos{(\delta)}}\left[\left(\cosh[\alpha_{\hat{+}}\sin{(\delta)}]-\mathbb{S} \sinh[\alpha_{\hat{+}}\sin{(\delta)}]\right)x^{\hat{+}} +\mathbb{C} \sinh[\alpha_{\hat{+}}\sin{(\delta)}]x^{\hat{-}}\right]$ \\
              \hline
-             \rule{0pt}{16pt} $D_{\hat{-}}$ & $x^{\hat{+}\prime} = e^{-\alpha\sin{(\delta)}}\left[\left(\cosh[\alpha\cos{(\delta)}]+\mathbb{S}\sinh[\alpha\cos{(\delta)}]\right)x^{\hat{+}}-\mathbb{C}\sinh[\alpha\cos{(\delta)}] x^{\hat{-}}\right]$ \\
+             \rule{0pt}{16pt} $D_{\hat{-}}$ & $x^{\hat{+}\prime} = e^{-\alpha_{\hat{-}}\sin{(\delta)}}\left[\left(\cosh[\alpha_{\hat{-}}\cos{(\delta)}]+\mathbb{S}\sinh[\alpha_{\hat{-}}\cos{(\delta)}]\right)x^{\hat{+}}-\mathbb{C}\sinh[\alpha_{\hat{-}}\cos{(\delta)}] x^{\hat{-}}\right]$ \\
              \hline
              \rule{0pt}{16pt} $J^{3}$ & $ x^{\hat{+}\prime}=x^{\hat{+}}$ \\
              \hline
@@ -941,17 +941,16 @@ $\delta \to 0$ and $\delta \to \pi/4$, we find the corresponding number of kinem
               \hline
               \rule{0pt}{16pt} $P_{2}$ & $ x^{\hat{+}\prime}=x^{\hat{+}}$  \\
               \hline
-               \rule{0pt}{16pt} $\mathcal{D}^{1}$ &  $ x^{\hat{+}\prime}=\cosh{(\sqrt{\mathbb{C}}\eta_{1})}x^{\hat{+}}+\frac{\mathbb{S}}{\mathbb{C}}\left(\cosh{(\sqrt{\mathbb{C}}\eta_{1})}-1\right)x^{\hat{-}}+\frac{1}{\sqrt{\mathbb{C}}}\sinh{(\sqrt{\mathbb{C}}\eta_{1})}x_{{1}}$ \\
+               \rule{0pt}{16pt} $\mathcal{D}^{1}$ &  $ x^{\hat{+}\prime}=\cosh{(\sqrt{\mathbb{C}}\eta_{\mathcal{D}^{1}})}x^{\hat{+}}+\frac{\mathbb{S}}{\mathbb{C}}\left(\cosh{(\sqrt{\mathbb{C}}\eta_{\mathcal{D}^{1}})}-1\right)x^{\hat{-}}+\frac{1}{\sqrt{\mathbb{C}}}\sinh{(\sqrt{\mathbb{C}}\eta_{\mathcal{D}^{1}})}x_{{1}}$ \\
                \hline
-               \rule{0pt}{16pt} $\mathcal{D}^{2}$ & $ x^{\hat{+}\prime}=\cosh{(\sqrt{\mathbb{C}}\eta_{2})}x^{\hat{+}}+\frac{\mathbb{S}}{\mathbb{C}}\left(\cosh{(\sqrt{\mathbb{C}}\eta_{2})}-1\right)x^{\hat{-}}+\frac{1}{\sqrt{\mathbb{C}}}\sinh{(\sqrt{\mathbb{C}}\eta_{2})}x_{{2}}$ \\
+               \rule{0pt}{16pt} $\mathcal{D}^{2}$ & $ x^{\hat{+}\prime}=\cosh{(\sqrt{\mathbb{C}}\eta_{\mathcal{D}^{2}})}x^{\hat{+}}+\frac{\mathbb{S}}{\mathbb{C}}\left(\cosh{(\sqrt{\mathbb{C}}\eta_{\mathcal{D}^{2}})}-1\right)x^{\hat{-}}+\frac{1}{\sqrt{\mathbb{C}}}\sinh{(\sqrt{\mathbb{C}}\eta_{\mathcal{D}^{2}})}x_{{2}}$ \\
                \hline
                \rule{0pt}{16pt} $\mathcal{K}^{1}$ & $ x^{\hat{+}\prime}=x^{\hat{+}}$ \\
                \hline
                \rule{0pt}{16pt} $\mathcal{K}^{2}$ & $ x^{\hat{+}\prime}=x^{\hat{+}}$ \\
                \hline
         \end{tabular}}
-        \caption{Transformation of interpolating time under each conformal generator in $(3+1)$ dimensions. The parameters $\omega^{\hat{c}\hat{d}}$ in Eq.(\ref{exponential-conformal-tranf}) surviving in this transformation are denoted by  
-$b^{\hat{\pm}}=\omega^{\hat{\pm},-2},a^{\hat{\pm}}=\omega^{-1\hat{\pm}}$ and $\alpha=\omega^{-1-2}=\omega^{\hat{-}\hat{+}}$, respectively, while the interpolating parameter between IFD and LFD is denoted by $\delta$.}
+        \caption{Transformation of interpolating time under each conformal generator in $(3+1)$ dimensions. Each row denotes a one-parameter transformation $X'=e^{-i\lambda_G G}X$, with the parameter associated with the displayed generator $G$: $b^{\hat{\pm}}$, $b^1$, and $b^2$ for special conformal transformations; $a^{\hat{\pm}}$, $a^1$, and $a^2$ for translations; $\alpha_{\hat{\pm}}$ for $D_{\hat{\pm}}$; $\eta_{\mathcal{D}^{1}}$ and $\eta_{\mathcal{D}^{2}}$ for $\mathcal{D}^{1}$ and $\mathcal{D}^{2}$; $\eta_{\mathcal{K}^{1}}$ and $\eta_{\mathcal{K}^{2}}$ for $\mathcal{K}^{1}$ and $\mathcal{K}^{2}$; and $\theta$ for $J^3$. The interpolating parameter between IFD and LFD is $\delta$.}
         \label{tablexprime}
     \end{table}
     \begin{table}[!htb]
@@ -1088,19 +1087,19 @@ The National Energy Research Scientific Computing Center (NERSC) supported by th
 This appendix gives the essential derivations of the fifteen entries in
 Table~\ref{tablexprime}. For each individual transformation, we apply the
 corresponding matrix in Eq.~\eqref{matrix-rep-conformal-generators} directly
-to the projective vector. The resulting projective components are substituted
+to the interpolating projective space-time vector. The resulting interpolating
+projective space-time components are substituted
 in the defining ratios for $x_{\hat{+}}'$ and $x_{\hat{-}}'$, and then
 $x^{\hat{+}\prime}$ is obtained by raising the index as in
 Section~\ref{sec:projectivespace}.
-Only one generator parameter is nonzero in each subsection. Expressions
-containing $1/\sqrt{\mathbb{C}}$ are understood by continuity at the
-light-front limit.
+Only one generator parameter is nonzero in each subsection.
 
 \subsection{Longitudinal special conformal transformations}
 
 \subsubsection{\texorpdfstring{$\mathfrak{K}^{\hat{+}}$}{K hat plus}}
 
-For the parameter $b^{\hat{+}}$, the finite projective action is
+The transformation of the interpolating projective space-time vector by
+$\mathfrak{K}^{\hat{+}}$ is
 \begin{align}
 \begin{pmatrix}
 X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
@@ -1150,7 +1149,8 @@ which is the first entry of Table~\ref{tablexprime}.
 
 \subsubsection{\texorpdfstring{$\mathfrak{K}^{\hat{-}}$}{K hat minus}}
 
-For the parameter $b^{\hat{-}}$, the finite projective action is
+The transformation of the interpolating projective space-time vector by
+$\mathfrak{K}^{\hat{-}}$ is
 \begin{align}
 \begin{pmatrix}
 X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
@@ -1200,7 +1200,8 @@ x^{\hat{+}\prime}
 
 \subsubsection{\texorpdfstring{$P_{\hat{+}}$}{P hat plus}}
 
-The finite projective action is
+The transformation of the interpolating projective space-time vector by
+$P_{\hat{+}}$ is
 \begin{align}
 \begin{pmatrix}
 X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
@@ -1233,7 +1234,8 @@ x^{\hat{+}\prime}
 
 \subsubsection{\texorpdfstring{$P_{\hat{-}}$}{P hat minus}}
 
-Similarly, the finite projective action is
+The transformation of the interpolating projective space-time vector by
+$P_{\hat{-}}$ is
 \begin{align}
 \begin{pmatrix}
 X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
@@ -1268,13 +1270,13 @@ x^{\hat{+}\prime}
 
 \subsubsection{\texorpdfstring{$D_{\hat{+}}$}{D hat plus}}
 
-Let $u=\alpha\sin\delta$. The finite action generated by the current
-$D_{\hat{+}}$ matrix is
+Let $u=\alpha_{\hat{+}}\sin\delta$. The transformation of the interpolating projective
+space-time vector by $D_{\hat{+}}$ is
 \begin{align}
-\mathbf{X}'=e^{-i\alpha D_{\hat{+}}}\mathbf{X}
+\mathbf{X}'=e^{-i\alpha_{\hat{+}} D_{\hat{+}}}\mathbf{X}
 &=\begin{pmatrix}
-e^{-\alpha\cos\delta}&0&0&0&0&0\\
-0&e^{\alpha\cos\delta}&0&0&0&0\\
+e^{-\alpha_{\hat{+}}\cos\delta}&0&0&0&0&0\\
+0&e^{\alpha_{\hat{+}}\cos\delta}&0&0&0&0\\
 0&0&\cosh u+\mathbb{S}\sinh u&0&0&-\mathbb{C}\sinh u\\
 0&0&0&1&0&0\\
 0&0&0&0&1&0\\
@@ -1283,7 +1285,7 @@ e^{-\alpha\cos\delta}&0&0&0&0&0\\
 \end{align}
 Thus,
 \begin{align}
-X_{-1}'&=e^{\alpha\cos\delta}X_{-1}, \nonumber\\
+X_{-1}'&=e^{\alpha_{\hat{+}}\cos\delta}X_{-1}, \nonumber\\
 X_{\hat{+}}'&=\left(\cosh u+\mathbb{S}\sinh u\right)X_{\hat{+}}
  -\mathbb{C}\sinh u\,X_{\hat{-}}, \nonumber\\
 X_{\hat{-}}'&=-\mathbb{C}\sinh u\,X_{\hat{+}}
@@ -1291,29 +1293,30 @@ X_{\hat{-}}'&=-\mathbb{C}\sinh u\,X_{\hat{+}}
 \end{align}
 It follows that
 \begin{align}
-x_{\hat{+}}'&=e^{-\alpha\cos\delta}
+x_{\hat{+}}'&=e^{-\alpha_{\hat{+}}\cos\delta}
 \left[\left(\cosh u+\mathbb{S}\sinh u\right)x_{\hat{+}}
  -\mathbb{C}\sinh u\,x_{\hat{-}}\right], \nonumber\\
-x_{\hat{-}}'&=e^{-\alpha\cos\delta}
+x_{\hat{-}}'&=e^{-\alpha_{\hat{+}}\cos\delta}
 \left[-\mathbb{C}\sinh u\,x_{\hat{+}}
  +\left(\cosh u-\mathbb{S}\sinh u\right)x_{\hat{-}}\right].
 \end{align}
 Raising the index yields
 \begin{align}
 x^{\hat{+}\prime}
-=e^{-\alpha\cos\delta}
+=e^{-\alpha_{\hat{+}}\cos\delta}
 \left[\left(\cosh u-\mathbb{S}\sinh u\right)x^{\hat{+}}
  +\mathbb{C}\sinh u\,x^{\hat{-}}\right].
 \end{align}
 
 \subsubsection{\texorpdfstring{$D_{\hat{-}}$}{D hat minus}}
 
-Let $v=\alpha\cos\delta$. The finite projective action is
+Let $v=\alpha_{\hat{-}}\cos\delta$. The transformation of the interpolating projective
+space-time vector by $D_{\hat{-}}$ is
 \begin{align}
-\mathbf{X}'=e^{-i\alpha D_{\hat{-}}}\mathbf{X}
+\mathbf{X}'=e^{-i\alpha_{\hat{-}} D_{\hat{-}}}\mathbf{X}
 &=\begin{pmatrix}
-e^{-\alpha\sin\delta}&0&0&0&0&0\\
-0&e^{\alpha\sin\delta}&0&0&0&0\\
+e^{-\alpha_{\hat{-}}\sin\delta}&0&0&0&0&0\\
+0&e^{\alpha_{\hat{-}}\sin\delta}&0&0&0&0\\
 0&0&\cosh v-\mathbb{S}\sinh v&0&0&\mathbb{C}\sinh v\\
 0&0&0&1&0&0\\
 0&0&0&0&1&0\\
@@ -1322,7 +1325,7 @@ e^{-\alpha\sin\delta}&0&0&0&0&0\\
 \end{align}
 The corresponding components are
 \begin{align}
-X_{-1}'&=e^{\alpha\sin\delta}X_{-1}, \nonumber\\
+X_{-1}'&=e^{\alpha_{\hat{-}}\sin\delta}X_{-1}, \nonumber\\
 X_{\hat{+}}'&=\left(\cosh v-\mathbb{S}\sinh v\right)X_{\hat{+}}
  +\mathbb{C}\sinh v\,X_{\hat{-}}, \nonumber\\
 X_{\hat{-}}'&=\mathbb{C}\sinh v\,X_{\hat{+}}
@@ -1330,17 +1333,17 @@ X_{\hat{-}}'&=\mathbb{C}\sinh v\,X_{\hat{+}}
 \end{align}
 Thus,
 \begin{align}
-x_{\hat{+}}'&=e^{-\alpha\sin\delta}
+x_{\hat{+}}'&=e^{-\alpha_{\hat{-}}\sin\delta}
 \left[\left(\cosh v-\mathbb{S}\sinh v\right)x_{\hat{+}}
  +\mathbb{C}\sinh v\,x_{\hat{-}}\right], \nonumber\\
-x_{\hat{-}}'&=e^{-\alpha\sin\delta}
+x_{\hat{-}}'&=e^{-\alpha_{\hat{-}}\sin\delta}
 \left[\mathbb{C}\sinh v\,x_{\hat{+}}
  +\left(\cosh v+\mathbb{S}\sinh v\right)x_{\hat{-}}\right],
 \end{align}
 and hence
 \begin{align}
 x^{\hat{+}\prime}
-=e^{-\alpha\sin\delta}
+=e^{-\alpha_{\hat{-}}\sin\delta}
 \left[\left(\cosh v+\mathbb{S}\sinh v\right)x^{\hat{+}}
  -\mathbb{C}\sinh v\,x^{\hat{-}}\right].
 \end{align}
@@ -1349,7 +1352,8 @@ x^{\hat{+}\prime}
 
 \subsubsection{\texorpdfstring{$J^{3}$}{J3}}
 
-For a rotation parameter $\theta$, the finite projective action is
+The transformation of the interpolating projective space-time vector by
+$J^3$ is
 \begin{align}
 \begin{pmatrix}
 X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
@@ -1373,7 +1377,8 @@ x^{\hat{+}\prime}=x^{\hat{+}}.
 
 \subsubsection{\texorpdfstring{$\mathfrak{K}_{1}$}{K1}}
 
-For the parameter $b^1$, the finite projective action is
+The transformation of the interpolating projective space-time vector by
+$\mathfrak{K}_1$ is
 \begin{align}
 \begin{pmatrix}
 X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
@@ -1411,7 +1416,8 @@ x^{\hat{+}\prime}
 
 \subsubsection{\texorpdfstring{$\mathfrak{K}_{2}$}{K2}}
 
-Likewise, for $b^2$, the finite projective action is
+The transformation of the interpolating projective space-time vector by
+$\mathfrak{K}_2$ is
 \begin{align}
 \begin{pmatrix}
 X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
@@ -1451,7 +1457,8 @@ x^{\hat{+}\prime}
 
 \subsubsection{\texorpdfstring{$P_{1}$}{P1}}
 
-For the parameter $a^1$, the finite projective action is
+The transformation of the interpolating projective space-time vector by
+$P_1$ is
 \begin{align}
 \begin{pmatrix}
 X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
@@ -1473,7 +1480,8 @@ x^{\hat{+}\prime}=x^{\hat{+}}.
 
 \subsubsection{\texorpdfstring{$P_{2}$}{P2}}
 
-For the parameter $a^2$, the finite projective action is
+The transformation of the interpolating projective space-time vector by
+$P_2$ is
 \begin{align}
 \begin{pmatrix}
 X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
@@ -1497,9 +1505,10 @@ x^{\hat{+}\prime}=x^{\hat{+}}.
 
 \subsubsection{\texorpdfstring{$\mathcal{D}^{1}$}{D1}}
 
-Set $q_1=\sqrt{\mathbb{C}}\eta_1$. The finite projective action is
+Set $q_1=\sqrt{\mathbb{C}}\eta_{\mathcal{D}^{1}}$. The transformation of the interpolating
+projective space-time vector by $\mathcal{D}^{1}$ is
 \begin{align}
-\mathbf{X}'=e^{-i\eta_1\mathcal{D}^{1}}\mathbf{X}
+\mathbf{X}'=e^{-i\eta_{\mathcal{D}^{1}}\mathcal{D}^{1}}\mathbf{X}
 &=\begin{pmatrix}
 1&0&0&0&0&0\\
 0&1&0&0&0&0\\
@@ -1537,9 +1546,10 @@ x^{\hat{+}\prime}
 
 \subsubsection{\texorpdfstring{$\mathcal{D}^{2}$}{D2}}
 
-With $q_2=\sqrt{\mathbb{C}}\eta_2$, the finite projective action is
+With $q_2=\sqrt{\mathbb{C}}\eta_{\mathcal{D}^{2}}$, the transformation of the interpolating
+projective space-time vector by $\mathcal{D}^{2}$ is
 \begin{align}
-\mathbf{X}'=e^{-i\eta_2\mathcal{D}^{2}}\mathbf{X}
+\mathbf{X}'=e^{-i\eta_{\mathcal{D}^{2}}\mathcal{D}^{2}}\mathbf{X}
 &=\begin{pmatrix}
 1&0&0&0&0&0\\
 0&1&0&0&0&0\\
@@ -1579,9 +1589,10 @@ x^{\hat{+}\prime}
 
 \subsubsection{\texorpdfstring{$\mathcal{K}^{1}$}{K1}}
 
-Let $r_1=\sqrt{\mathbb{C}}\eta_1$. The finite projective action is
+Let $r_1=\sqrt{\mathbb{C}}\eta_{\mathcal{K}^{1}}$. The transformation of the interpolating
+projective space-time vector by $\mathcal{K}^{1}$ is
 \begin{align}
-\mathbf{X}'=e^{-i\eta_1\mathcal{K}^{1}}\mathbf{X}
+\mathbf{X}'=e^{-i\eta_{\mathcal{K}^{1}}\mathcal{K}^{1}}\mathbf{X}
 &=\begin{pmatrix}
 1&0&0&0&0&0\\
 0&1&0&0&0&0\\
@@ -1620,9 +1631,10 @@ x^{\hat{+}\prime}
 
 \subsubsection{\texorpdfstring{$\mathcal{K}^{2}$}{K2}}
 
-For $r_2=\sqrt{\mathbb{C}}\eta_2$, the finite projective action is
+For $r_2=\sqrt{\mathbb{C}}\eta_{\mathcal{K}^{2}}$, the transformation of the interpolating
+projective space-time vector by $\mathcal{K}^{2}$ is
 \begin{align}
-\mathbf{X}'=e^{-i\eta_2\mathcal{K}^{2}}\mathbf{X}
+\mathbf{X}'=e^{-i\eta_{\mathcal{K}^{2}}\mathcal{K}^{2}}\mathbf{X}
 &=\begin{pmatrix}
 1&0&0&0&0&0\\
 0&1&0&0&0&0\\
