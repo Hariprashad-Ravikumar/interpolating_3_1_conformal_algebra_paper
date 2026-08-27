@@ -930,9 +930,9 @@ $\delta \to 0$ and $\delta \to \pi/4$, we find the corresponding number of kinem
              \hline
              \rule{0pt}{16pt} $J^{3}$ & $ x^{\hat{+}\prime}=x^{\hat{+}}$ \\
              \hline
-             \rule{0pt}{16pt} $\mathfrak{K}_{1}$ & $x^{\hat{+}\prime}=\frac{x^{{\hat{+}}}}{ \sqrt{2}(b^{1})^{2}(x)^2+1-2b^{1}x_{1}}$ \\
+             \rule{0pt}{16pt} $\mathfrak{K}_{1}$ & $x^{\hat{+}\prime}=\frac{x^{{\hat{+}}}}{1-2b^{1}x_{1}-(b^{1})^{2}(x)^2}$ \\
              \hline
-             \rule{0pt}{16pt} $\mathfrak{K}_{2}$ &  $x^{\hat{+}\prime}=\frac{x^{{\hat{+}}}}{ \sqrt{2}(b^{2})^{2}(x)^2+1-2b^{2}x_{2}}$ \\
+             \rule{0pt}{16pt} $\mathfrak{K}_{2}$ &  $x^{\hat{+}\prime}=\frac{x^{{\hat{+}}}}{1-2b^{2}x_{2}-(b^{2})^{2}(x)^2}$ \\
              \hline
               \rule{0pt}{16pt} $P_{1}$ & $ x^{\hat{+}\prime}=x^{\hat{+}}$  \\
               \hline
@@ -948,7 +948,7 @@ $\delta \to 0$ and $\delta \to \pi/4$, we find the corresponding number of kinem
                \hline
         \end{tabular}}
         \caption{Transformation of interpolating time under each conformal generator in $(3+1)$ dimensions. The parameters $\omega^{\hat{c}\hat{d}}$ in Eq.(\ref{exponential-conformal-tranf}) surviving in this transformation are denoted by  
-$b^{\hat{\pm}}=\omega^{\hat{\pm},-2},c^{\hat{+}}=\omega^{-1\hat{+}}$ and $\alpha=\omega^{-1-2}=\omega^{\hat{-}\hat{+}}$, respectively, while the interpolating parameter between IFD and LFD is denoted by $\delta$.}
+$b^{\hat{\pm}}=\omega^{\hat{\pm},-2},a^{\hat{\pm}}=\omega^{-1\hat{\pm}}$ and $\alpha=\omega^{-1-2}=\omega^{\hat{-}\hat{+}}$, respectively, while the interpolating parameter between IFD and LFD is denoted by $\delta$.}
         \label{tablexprime}
     \end{table}
     \begin{table}[!htb]
@@ -974,9 +974,9 @@ $b^{\hat{\pm}}=\omega^{\hat{\pm},-2},c^{\hat{+}}=\omega^{-1\hat{+}}$ and $\alpha
              \hline
              \rule{0pt}{16pt} $J^{3}$ & $ x^{{0}\prime}=x^{{0}}$ \\
              \hline
-             \rule{0pt}{16pt} $\mathfrak{K}_{1}$ & $x^{{0}\prime}=\frac{x^{{{0}}}}{ \sqrt{2}(b^{1})^{2}(x)^2+1-2b^{1}x_{1}}$ \\
+             \rule{0pt}{16pt} $\mathfrak{K}_{1}$ & $x^{{0}\prime}=\frac{x^{{{0}}}}{1-2b^{1}x_{1}-(b^{1})^{2}(x)^2}$ \\
              \hline
-             \rule{0pt}{16pt} $\mathfrak{K}_{2}$ &  $x^{{0}\prime}=\frac{x^{{{0}}}}{ \sqrt{2}(b^{2})^{2}(x)^2+1-2b^{2}x_{2}}$ \\
+             \rule{0pt}{16pt} $\mathfrak{K}_{2}$ &  $x^{{0}\prime}=\frac{x^{{{0}}}}{1-2b^{2}x_{2}-(b^{2})^{2}(x)^2}$ \\
              \hline
               \rule{0pt}{16pt} $P_{1}$ & $ x^{{0}\prime}=x^{{0}}$  \\
               \hline
@@ -1017,9 +1017,9 @@ $b^{\hat{\pm}}=\omega^{\hat{\pm},-2},c^{\hat{+}}=\omega^{-1\hat{+}}$ and $\alpha
              \hline
              \rule{0pt}{16pt} $J^{3}$ & $ x^{{+}\prime}=x^{{+}}$ \\
              \hline
-             \rule{0pt}{16pt} $\mathfrak{K}_{1}$ & $x^{{+}\prime}=\frac{x^{{{+}}}}{ \sqrt{2}(b^{1})^{2}(x)^2+1-2b^{1}x_{1}}$ \\
+             \rule{0pt}{16pt} $\mathfrak{K}_{1}$ & $x^{{+}\prime}=\frac{x^{{{+}}}}{1-2b^{1}x_{1}-(b^{1})^{2}(x)^2}$ \\
              \hline
-             \rule{0pt}{16pt} $\mathfrak{K}_{2}$ &  $x^{{+}\prime}=\frac{x^{{{+}}}}{ \sqrt{2}(b^{2})^{2}(x)^2+1-2b^{2}x_{2}}$ \\
+             \rule{0pt}{16pt} $\mathfrak{K}_{2}$ &  $x^{{+}\prime}=\frac{x^{{{+}}}}{1-2b^{2}x_{2}-(b^{2})^{2}(x)^2}$ \\
              \hline
               \rule{0pt}{16pt} $P_{1}$ & $ x^{{+}\prime}=x^{{+}}$  \\
               \hline
@@ -1078,9 +1078,383 @@ Building on the correspondence between $(1+1)$d quantum field theory and AdS$_3$
 The National Energy Research Scientific Computing Center (NERSC) supported by the Office of Science of the U.S. Department of Energy under Contract No. DE-AC02-05CH11231 is also acknowledged. 
 }
 \appendix
+\setcounter{section}{0}
+\section{Derivation of the Interpolating-Time Transformations}
+\label{app:interpolating-time-derivations}
 
+This appendix gives the essential derivations of the fifteen entries in
+Table~\ref{tablexprime}. For each individual transformation, we apply the
+corresponding matrix in Eq.~\eqref{matrix-rep-conformal-generators} to the
+projective vector, retain only $X_{-1}'$, $X_{\hat{+}}'$, and
+$X_{\hat{-}}'$, and then use the projective-coordinate relations given in
+Section~\ref{sec:projectivespace}. Thus, each calculation proceeds through
+$x_{\hat{+}}'$ and $x_{\hat{-}}'$ before obtaining $x^{\hat{+}\prime}$.
+Only one generator parameter is nonzero in each subsection. Expressions
+containing $1/\sqrt{\mathbb{C}}$ are understood by continuity at the
+light-front limit.
 
+\subsection{Longitudinal special conformal transformations}
 
+\subsubsection{\texorpdfstring{$\mathfrak{K}^{\hat{+}}$}{K hat plus}}
+
+For the parameter $b^{\hat{+}}$, the required projective components are
+\begin{align}
+X_{-1}'&=X_{-1}+\sqrt{2}b^{\hat{+}}X_{\hat{+}}
+          +\mathbb{C}(b^{\hat{+}})^2X_{-2}, \nonumber\\
+X_{\hat{+}}'&=X_{\hat{+}}+\sqrt{2}\mathbb{C}b^{\hat{+}}X_{-2},
+\qquad
+X_{\hat{-}}'=X_{\hat{-}}+\sqrt{2}\mathbb{S}b^{\hat{+}}X_{-2}.
+\end{align}
+Writing
+\begin{align}
+\Delta_{\hat{+}}=
+1-2b^{\hat{+}}x_{\hat{+}}+\mathbb{C}(b^{\hat{+}})^2x^2,
+\end{align}
+the two lower components become
+\begin{align}
+x_{\hat{+}}'&=\frac{x_{\hat{+}}-\mathbb{C}b^{\hat{+}}x^2}
+{\Delta_{\hat{+}}},
+\qquad
+x_{\hat{-}}'=\frac{x_{\hat{-}}-\mathbb{S}b^{\hat{+}}x^2}
+{\Delta_{\hat{+}}}.
+\end{align}
+Consequently,
+\begin{align}
+x^{\hat{+}\prime}
+&=\mathbb{C}x_{\hat{+}}'+\mathbb{S}x_{\hat{-}}'\nonumber\\
+&=\frac{x^{\hat{+}}-b^{\hat{+}}x^2}
+{1-2\mathbb{C}b^{\hat{+}}x^{\hat{+}}
+ -2\mathbb{S}b^{\hat{+}}x^{\hat{-}}
+ +\mathbb{C}(b^{\hat{+}})^2x^2},
+\end{align}
+which is the first entry of Table~\ref{tablexprime}.
+
+\subsubsection{\texorpdfstring{$\mathfrak{K}^{\hat{-}}$}{K hat minus}}
+
+For the parameter $b^{\hat{-}}$, the nontrivial components are
+\begin{align}
+X_{-1}'&=X_{-1}+\sqrt{2}b^{\hat{-}}X_{\hat{-}}
+          -\mathbb{C}(b^{\hat{-}})^2X_{-2}, \nonumber\\
+X_{\hat{+}}'&=X_{\hat{+}}+\sqrt{2}\mathbb{S}b^{\hat{-}}X_{-2},
+\qquad
+X_{\hat{-}}'=X_{\hat{-}}-\sqrt{2}\mathbb{C}b^{\hat{-}}X_{-2}.
+\end{align}
+With
+\begin{align}
+\Delta_{\hat{-}}=
+1-2b^{\hat{-}}x_{\hat{-}}-\mathbb{C}(b^{\hat{-}})^2x^2,
+\end{align}
+we obtain
+\begin{align}
+x_{\hat{+}}'&=\frac{x_{\hat{+}}-\mathbb{S}b^{\hat{-}}x^2}
+{\Delta_{\hat{-}}},
+\qquad
+x_{\hat{-}}'=\frac{x_{\hat{-}}+\mathbb{C}b^{\hat{-}}x^2}
+{\Delta_{\hat{-}}}.
+\end{align}
+The $b^{\hat{-}}x^2$ terms cancel when the index is raised:
+\begin{align}
+x^{\hat{+}\prime}
+&=\frac{x^{\hat{+}}}
+{1+2\mathbb{C}b^{\hat{-}}x^{\hat{-}}
+ -2\mathbb{S}b^{\hat{-}}x^{\hat{+}}
+ -\mathbb{C}(b^{\hat{-}})^2x^2}.
+\end{align}
+
+\subsection{Translations}
+
+\subsubsection{\texorpdfstring{$P_{\hat{+}}$}{P hat plus}}
+
+The finite action gives
+\begin{align}
+X_{-1}'&=X_{-1},\qquad
+X_{\hat{+}}'=X_{\hat{+}}-\sqrt{2}\mathbb{C}a^{\hat{+}}X_{-1},
+\qquad
+X_{\hat{-}}'=X_{\hat{-}}-\sqrt{2}\mathbb{S}a^{\hat{+}}X_{-1}.
+\end{align}
+Therefore,
+\begin{align}
+x_{\hat{+}}'&=x_{\hat{+}}+\mathbb{C}a^{\hat{+}},
+\qquad
+x_{\hat{-}}'=x_{\hat{-}}+\mathbb{S}a^{\hat{+}}, \nonumber\\
+x^{\hat{+}\prime}
+&=\mathbb{C}x_{\hat{+}}'+\mathbb{S}x_{\hat{-}}'
+=x^{\hat{+}}+a^{\hat{+}}.
+\end{align}
+
+\subsubsection{\texorpdfstring{$P_{\hat{-}}$}{P hat minus}}
+
+Similarly,
+\begin{align}
+X_{-1}'&=X_{-1},\qquad
+X_{\hat{+}}'=X_{\hat{+}}-\sqrt{2}\mathbb{S}a^{\hat{-}}X_{-1},
+\qquad
+X_{\hat{-}}'=X_{\hat{-}}+\sqrt{2}\mathbb{C}a^{\hat{-}}X_{-1},
+\end{align}
+so that
+\begin{align}
+x_{\hat{+}}'&=x_{\hat{+}}+\mathbb{S}a^{\hat{-}},
+\qquad
+x_{\hat{-}}'=x_{\hat{-}}-\mathbb{C}a^{\hat{-}}, \nonumber\\
+x^{\hat{+}\prime}
+&=\mathbb{C}x_{\hat{+}}'+\mathbb{S}x_{\hat{-}}'
+=x^{\hat{+}}.
+\end{align}
+
+\subsection{Interpolating dilatation transformations}
+
+\subsubsection{\texorpdfstring{$D_{\hat{+}}$}{D hat plus}}
+
+Let $u=\alpha\sin\delta$. The finite action generated by the current
+$D_{\hat{+}}$ matrix is
+\begin{align}
+X_{-1}'&=e^{\alpha\cos\delta}X_{-1}, \nonumber\\
+X_{\hat{+}}'&=\left(\cosh u+\mathbb{S}\sinh u\right)X_{\hat{+}}
+ -\mathbb{C}\sinh u\,X_{\hat{-}}, \nonumber\\
+X_{\hat{-}}'&=-\mathbb{C}\sinh u\,X_{\hat{+}}
+ +\left(\cosh u-\mathbb{S}\sinh u\right)X_{\hat{-}}.
+\end{align}
+It follows that
+\begin{align}
+x_{\hat{+}}'&=e^{-\alpha\cos\delta}
+\left[\left(\cosh u+\mathbb{S}\sinh u\right)x_{\hat{+}}
+ -\mathbb{C}\sinh u\,x_{\hat{-}}\right], \nonumber\\
+x_{\hat{-}}'&=e^{-\alpha\cos\delta}
+\left[-\mathbb{C}\sinh u\,x_{\hat{+}}
+ +\left(\cosh u-\mathbb{S}\sinh u\right)x_{\hat{-}}\right].
+\end{align}
+Raising the index yields
+\begin{align}
+x^{\hat{+}\prime}
+=e^{-\alpha\cos\delta}
+\left[\left(\cosh u-\mathbb{S}\sinh u\right)x^{\hat{+}}
+ +\mathbb{C}\sinh u\,x^{\hat{-}}\right].
+\end{align}
+
+\subsubsection{\texorpdfstring{$D_{\hat{-}}$}{D hat minus}}
+
+Let $v=\alpha\cos\delta$. The corresponding components are
+\begin{align}
+X_{-1}'&=e^{\alpha\sin\delta}X_{-1}, \nonumber\\
+X_{\hat{+}}'&=\left(\cosh v-\mathbb{S}\sinh v\right)X_{\hat{+}}
+ +\mathbb{C}\sinh v\,X_{\hat{-}}, \nonumber\\
+X_{\hat{-}}'&=\mathbb{C}\sinh v\,X_{\hat{+}}
+ +\left(\cosh v+\mathbb{S}\sinh v\right)X_{\hat{-}}.
+\end{align}
+Thus,
+\begin{align}
+x_{\hat{+}}'&=e^{-\alpha\sin\delta}
+\left[\left(\cosh v-\mathbb{S}\sinh v\right)x_{\hat{+}}
+ +\mathbb{C}\sinh v\,x_{\hat{-}}\right], \nonumber\\
+x_{\hat{-}}'&=e^{-\alpha\sin\delta}
+\left[\mathbb{C}\sinh v\,x_{\hat{+}}
+ +\left(\cosh v+\mathbb{S}\sinh v\right)x_{\hat{-}}\right],
+\end{align}
+and hence
+\begin{align}
+x^{\hat{+}\prime}
+=e^{-\alpha\sin\delta}
+\left[\left(\cosh v+\mathbb{S}\sinh v\right)x^{\hat{+}}
+ -\mathbb{C}\sinh v\,x^{\hat{-}}\right].
+\end{align}
+
+\subsection{Rotation and transverse special conformal transformations}
+
+\subsubsection{\texorpdfstring{$J^{3}$}{J3}}
+
+The $J^3$ matrix acts only on the transverse projective components. Therefore,
+\begin{align}
+X_{-1}'=X_{-1},\qquad X_{\hat{+}}'=X_{\hat{+}},\qquad
+X_{\hat{-}}'=X_{\hat{-}},
+\end{align}
+and
+\begin{align}
+x_{\hat{+}}'=x_{\hat{+}},\qquad
+x_{\hat{-}}'=x_{\hat{-}},\qquad
+x^{\hat{+}\prime}=x^{\hat{+}}.
+\end{align}
+
+\subsubsection{\texorpdfstring{$\mathfrak{K}_{1}$}{K1}}
+
+For the parameter $b^1$, the projective components required for the
+interpolating time are
+\begin{align}
+X_{-1}'&=X_{-1}+\sqrt{2}b^1X_1-(b^1)^2X_{-2}, \nonumber\\
+X_{\hat{+}}'&=X_{\hat{+}},\qquad
+X_{\hat{-}}'=X_{\hat{-}}.
+\end{align}
+Defining
+\begin{align}
+\Delta_1=1-2b^1x_1-(b^1)^2x^2,
+\end{align}
+we find
+\begin{align}
+x_{\hat{+}}'=\frac{x_{\hat{+}}}{\Delta_1},
+\qquad
+x_{\hat{-}}'=\frac{x_{\hat{-}}}{\Delta_1},
+\qquad
+x^{\hat{+}\prime}=\frac{x^{\hat{+}}}{\Delta_1}.
+\end{align}
+
+\subsubsection{\texorpdfstring{$\mathfrak{K}_{2}$}{K2}}
+
+Likewise, for $b^2$,
+\begin{align}
+X_{-1}'&=X_{-1}+\sqrt{2}b^2X_2-(b^2)^2X_{-2}, \nonumber\\
+X_{\hat{+}}'&=X_{\hat{+}},\qquad
+X_{\hat{-}}'=X_{\hat{-}},
+\end{align}
+and, with
+\begin{align}
+\Delta_2=1-2b^2x_2-(b^2)^2x^2,
+\end{align}
+the result is
+\begin{align}
+x_{\hat{+}}'=\frac{x_{\hat{+}}}{\Delta_2},
+\qquad
+x_{\hat{-}}'=\frac{x_{\hat{-}}}{\Delta_2},
+\qquad
+x^{\hat{+}\prime}=\frac{x^{\hat{+}}}{\Delta_2}.
+\end{align}
+
+\subsection{Transverse translations}
+
+\subsubsection{\texorpdfstring{$P_{1}$}{P1}}
+
+The action of $P_1$ changes only $X_{-2}$ and $X_1$. In particular,
+\begin{align}
+X_{-1}'=X_{-1},\qquad X_{\hat{+}}'=X_{\hat{+}},\qquad
+X_{\hat{-}}'=X_{\hat{-}},
+\end{align}
+which gives
+\begin{align}
+x_{\hat{+}}'=x_{\hat{+}},\qquad
+x_{\hat{-}}'=x_{\hat{-}},\qquad
+x^{\hat{+}\prime}=x^{\hat{+}}.
+\end{align}
+
+\subsubsection{\texorpdfstring{$P_{2}$}{P2}}
+
+Similarly,
+\begin{align}
+X_{-1}'=X_{-1},\qquad X_{\hat{+}}'=X_{\hat{+}},\qquad
+X_{\hat{-}}'=X_{\hat{-}},
+\end{align}
+and therefore
+\begin{align}
+x_{\hat{+}}'=x_{\hat{+}},\qquad
+x_{\hat{-}}'=x_{\hat{-}},\qquad
+x^{\hat{+}\prime}=x^{\hat{+}}.
+\end{align}
+
+\subsection{Transverse interpolating boosts}
+
+\subsubsection{\texorpdfstring{$\mathcal{D}^{1}$}{D1}}
+
+Set $q_1=\sqrt{\mathbb{C}}\eta_1$. The relevant projective components are
+\begin{align}
+X_{-1}'&=X_{-1}, \nonumber\\
+X_{\hat{+}}'&=\cosh q_1\,X_{\hat{+}}
+ +\sqrt{\mathbb{C}}\sinh q_1\,X_1, \nonumber\\
+X_{\hat{-}}'&=X_{\hat{-}}
+ +\frac{\mathbb{S}(\cosh q_1-1)}{\mathbb{C}}X_{\hat{+}}
+ +\frac{\mathbb{S}\sinh q_1}{\sqrt{\mathbb{C}}}X_1.
+\end{align}
+Therefore,
+\begin{align}
+x_{\hat{+}}'&=\cosh q_1\,x_{\hat{+}}
+ +\sqrt{\mathbb{C}}\sinh q_1\,x_1, \nonumber\\
+x_{\hat{-}}'&=x_{\hat{-}}
+ +\frac{\mathbb{S}(\cosh q_1-1)}{\mathbb{C}}x_{\hat{+}}
+ +\frac{\mathbb{S}\sinh q_1}{\sqrt{\mathbb{C}}}x_1.
+\end{align}
+Using the interpolating metric to raise the index gives
+\begin{align}
+x^{\hat{+}\prime}
+&=\cosh q_1\,x^{\hat{+}}
+ +\frac{\mathbb{S}}{\mathbb{C}}\left(\cosh q_1-1\right)x^{\hat{-}}
+ +\frac{\sinh q_1}{\sqrt{\mathbb{C}}}x_1.
+\end{align}
+
+\subsubsection{\texorpdfstring{$\mathcal{D}^{2}$}{D2}}
+
+With $q_2=\sqrt{\mathbb{C}}\eta_2$, the corresponding components are
+\begin{align}
+X_{-1}'&=X_{-1}, \nonumber\\
+X_{\hat{+}}'&=\cosh q_2\,X_{\hat{+}}
+ +\sqrt{\mathbb{C}}\sinh q_2\,X_2, \nonumber\\
+X_{\hat{-}}'&=X_{\hat{-}}
+ +\frac{\mathbb{S}(\cosh q_2-1)}{\mathbb{C}}X_{\hat{+}}
+ +\frac{\mathbb{S}\sinh q_2}{\sqrt{\mathbb{C}}}X_2.
+\end{align}
+Hence,
+\begin{align}
+x_{\hat{+}}'&=\cosh q_2\,x_{\hat{+}}
+ +\sqrt{\mathbb{C}}\sinh q_2\,x_2, \nonumber\\
+x_{\hat{-}}'&=x_{\hat{-}}
+ +\frac{\mathbb{S}(\cosh q_2-1)}{\mathbb{C}}x_{\hat{+}}
+ +\frac{\mathbb{S}\sinh q_2}{\sqrt{\mathbb{C}}}x_2,
+\end{align}
+and
+\begin{align}
+x^{\hat{+}\prime}
+&=\cosh q_2\,x^{\hat{+}}
+ +\frac{\mathbb{S}}{\mathbb{C}}\left(\cosh q_2-1\right)x^{\hat{-}}
+ +\frac{\sinh q_2}{\sqrt{\mathbb{C}}}x_2.
+\end{align}
+
+\subsection{Transverse interpolating rotations}
+
+\subsubsection{\texorpdfstring{$\mathcal{K}^{1}$}{K1}}
+
+Let $r_1=\sqrt{\mathbb{C}}\eta_1$. The finite action gives
+\begin{align}
+X_{-1}'&=X_{-1}, \nonumber\\
+X_{\hat{+}}'&=X_{\hat{+}}
+ +\frac{\mathbb{S}\sin r_1}{\sqrt{\mathbb{C}}}X_1
+ +\frac{\mathbb{S}(1-\cos r_1)}{\mathbb{C}}X_{\hat{-}}, \nonumber\\
+X_{\hat{-}}'&=-\sqrt{\mathbb{C}}\sin r_1\,X_1
+ +\cos r_1\,X_{\hat{-}}.
+\end{align}
+The lower components are
+\begin{align}
+x_{\hat{+}}'&=x_{\hat{+}}
+ +\frac{\mathbb{S}\sin r_1}{\sqrt{\mathbb{C}}}x_1
+ +\frac{\mathbb{S}(1-\cos r_1)}{\mathbb{C}}x_{\hat{-}}, \nonumber\\
+x_{\hat{-}}'&=-\sqrt{\mathbb{C}}\sin r_1\,x_1
+ +\cos r_1\,x_{\hat{-}}.
+\end{align}
+The transverse and $x_{\hat{-}}$ contributions cancel after raising the
+index:
+\begin{align}
+x^{\hat{+}\prime}
+&=\mathbb{C}x_{\hat{+}}'+\mathbb{S}x_{\hat{-}}'
+=\mathbb{C}x_{\hat{+}}+\mathbb{S}x_{\hat{-}}
+=x^{\hat{+}}.
+\end{align}
+
+\subsubsection{\texorpdfstring{$\mathcal{K}^{2}$}{K2}}
+
+For $r_2=\sqrt{\mathbb{C}}\eta_2$, the $1\leftrightarrow2$ counterpart is
+\begin{align}
+X_{-1}'&=X_{-1}, \nonumber\\
+X_{\hat{+}}'&=X_{\hat{+}}
+ +\frac{\mathbb{S}\sin r_2}{\sqrt{\mathbb{C}}}X_2
+ +\frac{\mathbb{S}(1-\cos r_2)}{\mathbb{C}}X_{\hat{-}}, \nonumber\\
+X_{\hat{-}}'&=-\sqrt{\mathbb{C}}\sin r_2\,X_2
+ +\cos r_2\,X_{\hat{-}},
+\end{align}
+and therefore
+\begin{align}
+x_{\hat{+}}'&=x_{\hat{+}}
+ +\frac{\mathbb{S}\sin r_2}{\sqrt{\mathbb{C}}}x_2
+ +\frac{\mathbb{S}(1-\cos r_2)}{\mathbb{C}}x_{\hat{-}}, \nonumber\\
+x_{\hat{-}}'&=-\sqrt{\mathbb{C}}\sin r_2\,x_2
+ +\cos r_2\,x_{\hat{-}}, \nonumber\\
+x^{\hat{+}\prime}
+&=\mathbb{C}x_{\hat{+}}'+\mathbb{S}x_{\hat{-}}'
+=x^{\hat{+}}.
+\end{align}
 
 \reftitle{References}
 \bibliography{BibTeXList}
