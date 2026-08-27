@@ -92,6 +92,7 @@
 \usepackage{amssymb}   % For math symbols like \mathfrak
 \usepackage{booktabs}  % For professional table lines (\toprule, \midrule, etc.)
 \usepackage{makecell}  % For forcing line breaks in table headers
+\usepackage{placeins}  % For keeping tables with their discussion
 \captionsetup{hypcap=false}
 
 %=================================================================
@@ -191,7 +192,43 @@ $^{2}$ \quad Department of Physics, North Carolina State University, Raleigh, No
 \section{Introduction}
 \label{sec:introduction}
 
-It is essential to study the conformal symmetry in discussing the fundamental properties of spacetime in analyzing the relativistic quantum field theories~\cite{Wess1960, Kastrup1966, SalamMack1969, Gross1970} as well as developing characteristics of duality as exemplified in AdS/CFT correspondence~\cite {Weinberg_2010, Brodsky_2015, Maldacena2016}. In the early 20th century, Cunningham  \cite{Cunningham1910} and Bateman  \cite{Bateman1910} demonstrated that the Maxwell equations are invariant under conformal transformations. Later, Dirac  \cite{Dirac1936} proved that the massless version of his well-known equation in relativistic quantum mechanics also exhibits invariance under conformal transformations. In the 1960s, Gross \cite{Gross1970} explored the scale invariance as an asymptotic (high-energy) symmetry of scattering amplitudes, demonstrating that the scale invariance of Lagrangian field theories implies conformal invariance. A partial list of literature discussing the physical significance and potential applications of scale and conformal invariance can be found in Refs. \cite{Wess1960, Gürsey1956, Fulton1962, Kastrup1966, SalamMack1969, Wilson1969, Gross1970}. Additionally, a historical review in Ref. \cite{Kastrup2008} provides further early references on this topic. Aspects of the conformal group in two-dimensional Minkowski spacetime, with representations of the algebra and of the group within a field-theoretic Schrodinger representation for bosons and fermions, were reviewed in Ref. \cite{Jackiw1990}.
+%Conformal symmetry and scope of this work
+
+It is essential to study the conformal symmetry in discussing the fundamental properties of spacetime in analyzing the relativistic quantum field theories~\cite{Wess1960, Kastrup1966, SalamMack1969, Gross1970} as well as developing characteristics of duality as exemplified in the anti-de Sitter/conformal field theory (AdS/CFT) correspondence~\cite {Weinberg_2010, Brodsky_2015, Maldacena2016}. In the early 20th century, Cunningham  \cite{Cunningham1910} and Bateman  \cite{Bateman1910} demonstrated that the Maxwell equations are invariant under conformal transformations. Later, Dirac  \cite{Dirac1936} proved that the massless version of his well-known equation in relativistic quantum mechanics also exhibits invariance under conformal transformations. In the 1960s, Gross \cite{Gross1970} explored the scale invariance as an asymptotic (high-energy) symmetry of scattering amplitudes, demonstrating that the scale invariance of Lagrangian field theories implies conformal invariance. A partial list of literature discussing the physical significance and potential applications of scale and conformal invariance can be found in Refs. \cite{Wess1960, Gürsey1956, Fulton1962, Kastrup1966, SalamMack1969, Wilson1969, Gross1970}. Additionally, a historical review in Ref. \cite{Kastrup2008} provides further early references on this topic. Aspects of the conformal group in two-dimensional Minkowski spacetime, with representations of the algebra and of the group within a field-theoretic Schrodinger representation for bosons and fermions, were reviewed in Ref. \cite{Jackiw1990}.
+
+In our previous work, we investigated the interpolating conformal algebra between instant-form dynamics (IFD) and light-front dynamics (LFD) in $(1+1)$ dimensions \cite{Ji-Hari-2026-PRD}. We constructed a $4\times4$ interpolating projective spacetime matrix representation to map the algebraic structures seamlessly across all interpolation angles. Furthermore, we explored quantum mechanical operator representations by expressing the conformal generators in terms of the creation and annihilation operators of a simple harmonic oscillator, along with providing a $2\times2$ Pauli matrix representation for the $(1+0)$ and $(0+1)$ conformal groups. Notably, we demonstrated that out of the six generators in the $(1+1)$-dimensional conformal algebra, the number of kinematic generators is dramatically maximized from two in IFD to four in the LFD limit. This outcome concretely signifies the utility of LFD by mathematically proving its capacity to save substantial dynamical efforts in solving $(1+1)$-dimensional relativistic quantum field theories. Building on this foundation, we extend our analysis to $(3+1)$ dimensions in this work.
+
+In general, the conformal transformation $x\longmapsto x'$ in $d$ dimensions can be defined as \cite{Francesco,Blumenhagen,Ji-Hari-2026-PRD},
+\begin{align}
+\frac{\partial x'^{\alpha}}{\partial x^{\mu}}\frac{\partial x'^{\beta}}{\partial x^{\nu}}g'_{\alpha\beta}=\Lambda(x)g_{\mu\nu},
+\end{align}
+meaning the metric is preserved up to a scale factor $\Lambda(x)$ under a conformal transformation, where $\mu,\nu\in\{0,\ldots,d-1\}$. The scale $\Lambda(x)=1$ corresponds to the Poincar\'e group consisting of translations, rotations, and Lorentz transformations. Consider an infinitesimal transformation, $x'^{\mu}=x^{\mu}+\epsilon^{\mu}(x)+\mathcal{O}(\epsilon^2)$. The metric then changes by $\delta g_{\mu\nu}=\partial_{\mu}\epsilon_{\nu}(x)+\partial_{\nu}\epsilon_{\mu}(x)$. The conformality condition requires
+\begin{align}
+\partial_{\mu}\epsilon_{\nu}(x)+\partial_{\nu}\epsilon_{\mu}(x)=F(x)\delta_{\mu\nu},\label{Killing}
+\end{align}
+where $F(x)=\Lambda(x)-1-\mathcal{O}(\epsilon^2)$. Equation~\eqref{Killing} is the conformal Killing equation. Contraction with $\delta^{\mu\nu}$ yields $F(x)=\frac{2}{d}\partial_{\mu}\epsilon^{\mu}$. There are four classes of solutions for $\epsilon_{\mu}(x)$:
+\begin{align}
+P_{\mu}&=i\partial_{\mu} &&\text{(translations)},\nonumber\\
+M_{\mu\nu}&=i\left(x_{\mu}\partial_{\nu}-x_{\nu}\partial_{\mu}\right) &&\text{(rotations and Lorentz transformations)},\nonumber\\
+D&=ix_{\mu}\partial^{\mu} &&\text{(dilatation)},\nonumber\\
+\mathfrak{K}_{\mu}&=i\left(2x_{\mu}x_{\nu}\partial^{\nu}-x^2\partial_{\mu}\right) &&\text{(special conformal transformations (SCT))}.
+\end{align}
+Their corresponding infinitesimal coordinate variations are $\epsilon^{\mu}(x)=a^{\mu}$, $\epsilon^{\mu}(x)=M^{\mu}_{~\nu}x^{\nu}$, $\epsilon^{\mu}(x)=\lambda x^{\mu}$, and $\epsilon^{\mu}(x)=2(b\cdot x)x^{\mu}-x^2b^{\mu}$, respectively. In finite form, the SCT is
+\begin{align}
+x'^{\mu}=\frac{x^{\mu}-b^{\mu}x^{2}}{1-2b\cdot x+b^{2}x^{2}},
+\end{align}
+which can be understood as an inversion of $x^\mu$, followed by a translation by $b^\mu$, and then another inversion \cite{Blumenhagen,Ji-Hari-2026-PRD}. These generators form the full conformal algebra, which contains the Poincar\'e group as a subgroup.
+\begin{align}\label{conformalalgebra}
+    \left[P_{{\mu}},P_{{\nu}}\right]&=0;~\left[\mathfrak{K}_{{\mu}},\mathfrak{K}_{{\nu}}\right]=0;\nonumber\\
+ \left[D, P_{{\mu}}\right]&=iP_{{\mu}};~\left[D, \mathfrak{K}_{{\mu}}\right]=-i\mathfrak{K}_{{\mu}};\nonumber\\
+ \left[P_{{\rho}},M_{{\mu}{\nu}}\right]&=i\left(g_{{\rho}{\mu}}P_{{\nu}}-g_{{\rho}{\nu}}P_{{\mu}}\right);\nonumber\\
+ \left[\mathfrak{K}_{{\rho}},M_{{\mu}{\nu}}\right]&=i\left(g_{{\rho}{\mu}}\mathfrak{K}_{{\nu}}-g_{{\rho}{\nu}}\mathfrak{K}_{{\mu}}\right);\nonumber\\
+ \left[M_{{\alpha}{\beta}},M_{{\rho}{\sigma}}\right]&=-i\left(g_{{\beta}{\sigma}}M_{{\alpha}{\rho}}-g_{{\beta}{\rho}}M_{{\alpha}{\sigma}}+g_{{\alpha}{\rho}}M_{{\beta}{\sigma}}-g_{{\alpha}{\sigma}}M_{{\beta}{\rho}}\right);\nonumber\\
+ \left[\mathfrak{K}_{{\mu}},P_{{\nu}}\right]&=2i\left(g_{{\mu}{\nu}}D-M_{{\mu}{\nu}}\right);~\left[D, M_{{\mu}{\nu}}\right]=0.
+\end{align}
+where, $g_{\mu\nu}$ is the metric tensor.
+
+%Poincare interpolation between IFD and LFD
 
 In 1949, for the study of relativistic particle systems, Dirac \cite{Dirac1949} proposed three forms of relativistic dynamics: the instant form ($x^{0}=0$), the front form ($x^{+}=(x^{0}+x^{3})/\sqrt{2}$=0) and the point form ($x^{\mu}x_{\mu}=a^{2}>0, x^{0}>0$).
 While the instant form dynamics (IFD) of quantum field theory is produced by quantization at equal time $t=x^{0}$, the light-front dynamics (LFD) is produced by quantization at equal light-front time $\tau \equiv (x^{0}+x^{3})/\sqrt{2}=x^{+}$ ($c=1$ unit is taken here).
@@ -232,26 +269,7 @@ Even the Poincar\'e algebra is drastically changed in the LFD compared to the IF
 Among the ten Poincar\'e generators, we have the maximum number (seven) of kinematic (or interaction-independent) operators, which leave the state at $\tau=0$ unchanged. Indeed, the maximum number of kinematic generators allowed in relativistic dynamics is seven. The LFD is the only one that possesses this maximum number of kinematic generators.
 
 Effectively, the LFD maximizes the capacity to
-describe hadrons by saving significant dynamical effort in obtaining QCD solutions that reflect the full Poincar\'e symmetries. Determining which generators are kinematic in each form of dynamics is useful, as having more kinematic generators correspondingly saves dynamical effort when solving relativistic quantum field theories, such as QED and QCD~\cite{ji2023relativistic}.
-
-In our previous work, we thoroughly investigated the interpolating conformal algebra between IFD and LFD in $(1+1)$ dimensions \cite{Ji-Hari-2026-PRD}. We constructed a $4\times4$ interpolating projective spacetime matrix representation to map the algebraic structures seamlessly across all interpolation angles. Furthermore, we explored quantum mechanical operator representations by expressing the conformal generators in terms of the creation and annihilation operators of a simple harmonic oscillator, along with providing a $2\times2$ Pauli matrix representation for the $(1+0)$ and $(0+1)$ conformal groups. Notably, we demonstrated that out of the six generators in the $(1+1)$-dimensional conformal algebra, the number of kinematic generators is dramatically maximized from two in IFD to four in the LFD limit. This outcome concretely signifies the utility of LFD by mathematically proving its capacity to save substantial dynamical efforts in solving $(1+1)$-dimensional relativistic quantum field theories. Building on this foundation, we extend our analysis to $(3+1)$ dimensions in this work.
-
-{\color{red}
-The conformal transformation $x\longmapsto x'$ can be defined as \cite{Francesco,Blumenhagen}, 
-\begin{align}
-    \frac{\partial x'^{\alpha}}{\partial x^{\mu}}\frac{\partial x'^{\beta}}{\partial x^{\nu}}g'_{\alpha\beta}=\Lambda(x)g_{\mu\nu}
-\end{align}
-meaning the metric is preserved up to a scale factor $\Lambda(x)$ under conformal transformations. 
-Consider an infinitesimal transformation, $x'^{\mu}=x^{\mu}+\epsilon^{\mu}(x)+\mathcal{O}(\epsilon^2)$. Then the metric changes by $\delta g_{\mu\nu}=\partial_{\mu}\epsilon_{\nu}(x)+\partial_{\nu}\epsilon_{\mu}(x)$. The conformality condition then requires $\partial_{\mu}\epsilon_{\nu}(x)+\partial_{\nu}\epsilon_{\mu}(x)=F(x)\delta_{\mu\nu}$, where $F(x)=\Lambda(x)-1-\mathcal{O}(\epsilon^2)$, which is known as the conformal Killing equation. Contraction with $\delta^{\mu\nu}$ yields $F(x)=\frac{2}{d}\partial_{\mu}\epsilon^{\mu}$. For $d\geq3$, there are only four classes of solutions for $\epsilon_{\mu}(x)$, which are: $\epsilon^{\mu}(x)=a^{\mu}$ (infinitesimal translations), $\epsilon^{\mu}(x)=M^{\mu}_{~\nu}x^{\nu}$ (infinitesimal rotations and Lorentz transformations), $\epsilon^{\mu}(x)=\lambda x^{\mu}$ (infinitesimal scaling), and $\epsilon^{\mu}(x)=2(b.x) x^{\mu}-x^2b^{\mu}$ (infinitesimal special conformal transformations or SCT). The generators of conformal transformations are: $P_{{\mu}}=i\partial_{{\mu}}$ (translation), $M_{{\mu}{\nu}}=i\left(x_{{\mu}}\partial_{{\nu}}-x_{{\nu}}\partial_{{\mu}}\right)$ (rotation), $D=ix_{{\mu}}\partial^{{\mu}}$ (dilation or scaling), and $\mathfrak{K}_{{\mu}}=i\left(2x_{{\mu}}x_{{\nu}}\partial^{{\nu}}-x^2\partial_{{\mu}}\right)$ (SCT). In finite form, the SCT is given by $x'^{\mu }={\frac {x^{\mu }-b^{\mu }x^{2}}{1-2b\cdot x+b^{2}x^{2}}}$. This can be understood as an inversion of $x^\mu$, followed by a translation by $b^\mu$, and followed again by an inversion \cite{Blumenhagen}. From these generators, we obtain the full conformal algebra, a closed group that includes the Poincaré group as a subgroup.
-\begin{align}\label{conformalalgebra}
-    \left[P_{{\mu}},P_{{\nu}}\right]&=0;~\left[\mathfrak{K}_{{\mu}},\mathfrak{K}_{{\nu}}\right]=0;\nonumber\\
- \left[D, P_{{\mu}}\right]&=iP_{{\mu}};~\left[D, \mathfrak{K}_{{\mu}}\right]=-i\mathfrak{K}_{{\mu}};\nonumber\\
- \left[P_{{\rho}},M_{{\mu}{\nu}}\right]&=i\left(g_{{\rho}{\mu}}P_{{\nu}}-g_{{\rho}{\nu}}P_{{\mu}}\right);\nonumber\\
- \left[\mathfrak{K}_{{\rho}},M_{{\mu}{\nu}}\right]&=i\left(g_{{\rho}{\mu}}\mathfrak{K}_{{\nu}}-g_{{\rho}{\nu}}\mathfrak{K}_{{\mu}}\right);\nonumber\\
- \left[M_{{\alpha}{\beta}},M_{{\rho}{\sigma}}\right]&=-i\left(g_{{\beta}{\sigma}}M_{{\alpha}{\rho}}-g_{{\beta}{\rho}}M_{{\alpha}{\sigma}}+g_{{\alpha}{\rho}}M_{{\beta}{\sigma}}-g_{{\alpha}{\sigma}}M_{{\beta}{\rho}}\right);\nonumber\\
- \left[\mathfrak{K}_{{\mu}},P_{{\nu}}\right]&=2i\left(g_{{\mu}{\nu}}D-M_{{\mu}{\nu}}\right);~\left[D, M_{{\mu}{\nu}}\right]=0.
-\end{align} 
-where, $g_{\mu\nu}$ is the metric tensor.
+describe hadrons by saving significant dynamical effort in obtaining quantum chromodynamics (QCD) solutions that reflect the full Poincar\'e symmetries. Determining which generators are kinematic in each form of dynamics is useful, as having more kinematic generators correspondingly saves dynamical effort when solving relativistic quantum field theories, such as quantum electrodynamics (QED) and QCD~\cite{ji2023relativistic}.
 
 %%%%%%%%%%%%%%
 To interpolate the forms of relativistic quantum field theory between IFD and LFD, we take the following interpolating space-time coordinates  \cite{Ji2001, Hornbostel1992, Ji1996, Ji2012, Ji2015EM, Ji2015SP, Ji2018QED, Ji2021QCD} which is defined as a transformation from the ordinary space-time coordinates $x^{\muT}=\mathcal{R}^{\muT}_{\phantom{\mu}{\nu}}x^{\nu}$, i.e.,
@@ -348,15 +366,13 @@ As discussed in \cite{Ji2001, Ji2012}, the operator $-K_3=M_{\pT\mT}$ is dynamic
 The set of kinematic and dynamic generators depending on the interpolation angle is summarized in Table.~\ref{tab:Kinematic_and_dynamic_generators_for_different_interoplation_angles}.
 Since the kinematic transformations do not alter $x^{\pT}$, the individual time-ordered amplitude must be invariant under the kinematic transformations \cite{Ji2018QED}.
 
-In the following sections, we extend this interpolation method to the conformal group, which has the Poincar\'e group as a subgroup. In Section~\ref{sec:conformal}, we review the conformal algebra in IFD. The interpolation method for the conformal group $SO(4,2)$ is proposed in Section~\ref{conformalsimpler}. To characterize the individual properties of the conformal generators, the $6\times6$ interpolating projective spacetime matrix representation is constructed in Section~\ref{sec:projectivespace}, where we systematically classify the kinematic and dynamic generators across the interpolation angles. Finally, a summary and conclusion are presented in Section~\ref{summary-conclusion}.
-}
+In the following sections, we extend this interpolation method to the conformal group, which has the Poincar\'e group as a subgroup. The interpolation method for the conformal group $SO(4,2)$ is proposed in Section~\ref{conformalsimpler}. To characterize the individual properties of the conformal generators, the $6\times6$ interpolating projective spacetime matrix representation is constructed in Section~\ref{sec:projectivespace}, where we systematically classify the kinematic and dynamic generators across the interpolation angles. Finally, a summary and conclusion are presented in Section~\ref{summary-conclusion}.
 
-\section{Conformal algebra in general}
-\label{sec:conformal}
-
-\section{Interpolating conformal algebra in \texorpdfstring{$(3+1)$}{Lg} dimensions}
-\label{conformalsimpler}
-To extend the interpolation to \texorpdfstring{$(3+1)$}{Lg} dimensions, we define the following generators \cite{Francesco,Blumenhagen,Ji-Hari-2026-PRD} in projective spacetime:
+\section{Conformal algebra in IFD}
+\label{sec:conformal-ifd}
+In the instant-form limit, we use the un-hatted projective basis
+$a,b\in\{-2,-1,0,1,2,3\}$. The fifteen conformal generators are
+organized in the following antisymmetric $6\times6$ array \cite{Francesco,Blumenhagen,Ji-Hari-2026-PRD}:
 \begin{align}\label{Jab}
   J_{ab}&=
   \begin{pmatrix}
@@ -383,7 +399,68 @@ where,
   0&0&0&0&0&-1\\
   \end{pmatrix}_{6\times6}
   \end{align}
-The algebra Eq.\eqref{algebrasimp} with the above $g_{ab}$ is equivalent to the conformal algebra developed in this section. The interpolation is done by a transformation matrix ($6\times6$), which is given by,
+The algebra in Eq.~\eqref{algebrasimp}, with the metric in Eq.~\eqref{metric}, is the IFD realization of the conformal algebra. In particular,
+$J_{-2,-1}=-D$, $J_{-2,\mu}=-\mathfrak{K}_{\mu}/\sqrt{2}$, and
+$J_{-1,\mu}=P_{\mu}/\sqrt{2}$. Its explicit component commutators are collected in Table~\ref{tabelIFD}.
+
+\input{ifd_commutator_table}
+
+\subsection{Dirac-matrix realization of the IFD conformal algebra}
+
+Our previous study of the $(1+1)$-dimensional interpolating conformal
+algebra constructed a $4\times4$ interpolating projective representation and
+used $2\times2$ Pauli-matrix realizations for the $(1+0)$- and
+$(0+1)$-dimensional conformal groups \cite{Ji-Hari-2026-PRD}. Here we give
+the corresponding four-dimensional Dirac-matrix realization only for the IFD
+conformal algebra. The light-front and general interpolating realizations are
+obtained by applying the projective interpolation transformation introduced
+below; no independent hatted gamma-matrix convention is required.
+
+The Dirac matrices obey the Clifford algebra
+\begin{align}
+\{\gamma^\mu,\gamma^\nu\}=2g^{\mu\nu}I_4,\qquad
+\gamma_\mu=g_{\mu\nu}\gamma^\nu,\qquad
+\gamma_5=i\gamma^0\gamma^1\gamma^2\gamma^3.
+\end{align}
+The following dictionary realizes all fifteen IFD conformal generators:
+\begin{align}
+P_\mu&=\frac{i}{2}(1+\gamma_5)\gamma_\mu,
+&\mathfrak{K}_\mu&=-\frac{i}{2}(1-\gamma_5)\gamma_\mu,\nonumber\\
+D&=\frac{i}{2}\gamma_5,
+&K^i&=\frac{i}{2}\gamma_i\gamma_0,\qquad i=1,2,3,\nonumber\\
+J^1&=\frac{i}{2}\gamma_2\gamma_3,
+&J^2&=\frac{i}{2}\gamma_3\gamma_1,
+\qquad J^3=\frac{i}{2}\gamma_1\gamma_2.
+\label{eq:ifd-dirac-dictionary}
+\end{align}
+The longitudinal generator in the projective array has the lowered-index
+form $K_3=-K^3$. Substitution of Eq.~\eqref{eq:ifd-dirac-dictionary} into
+Eq.~\eqref{Jab} gives the spinor realization
+\begingroup\footnotesize
+\begin{align}
+\rho_\gamma(J_{ab})=\frac{i}{2}
+\begin{pmatrix}
+0&-\gamma_5&\dfrac{(1-\gamma_5)\gamma_0}{\sqrt{2}}&\dfrac{(1-\gamma_5)\gamma_1}{\sqrt{2}}&\dfrac{(1-\gamma_5)\gamma_2}{\sqrt{2}}&\dfrac{(1-\gamma_5)\gamma_3}{\sqrt{2}}\\
+\gamma_5&0&\dfrac{(1+\gamma_5)\gamma_0}{\sqrt{2}}&\dfrac{(1+\gamma_5)\gamma_1}{\sqrt{2}}&\dfrac{(1+\gamma_5)\gamma_2}{\sqrt{2}}&\dfrac{(1+\gamma_5)\gamma_3}{\sqrt{2}}\\
+-\dfrac{(1-\gamma_5)\gamma_0}{\sqrt{2}}&-\dfrac{(1+\gamma_5)\gamma_0}{\sqrt{2}}&0&\gamma_0\gamma_1&\gamma_0\gamma_2&\gamma_0\gamma_3\\
+-\dfrac{(1-\gamma_5)\gamma_1}{\sqrt{2}}&-\dfrac{(1+\gamma_5)\gamma_1}{\sqrt{2}}&\gamma_1\gamma_0&0&\gamma_1\gamma_2&\gamma_1\gamma_3\\
+-\dfrac{(1-\gamma_5)\gamma_2}{\sqrt{2}}&-\dfrac{(1+\gamma_5)\gamma_2}{\sqrt{2}}&\gamma_2\gamma_0&\gamma_2\gamma_1&0&\gamma_2\gamma_3\\
+-\dfrac{(1-\gamma_5)\gamma_3}{\sqrt{2}}&-\dfrac{(1+\gamma_5)\gamma_3}{\sqrt{2}}&\gamma_3\gamma_0&\gamma_3\gamma_1&\gamma_3\gamma_2&0
+\end{pmatrix}.
+\label{eq:ifd-dirac-jab}
+\end{align}
+\endgroup
+Thus $\rho_\gamma(J_{-2,-1})=-i\gamma_5/2=-D$ and the
+translation and special-conformal entries reproduce
+$J_{-1,\mu}=P_\mu/\sqrt{2}$ and
+$J_{-2,\mu}=-\mathfrak{K}_\mu/\sqrt{2}$, respectively. The Clifford
+algebra consequently reproduces the IFD commutators in
+Eq.~\eqref{algebrasimp} and Table~\ref{tabelIFD} \cite{Dirac1936,Hepner1962}.
+
+\section{Interpolating conformal algebra in \texorpdfstring{$(3+1)$}{Lg} dimensions}
+\label{conformalsimpler}
+The IFD projective algebra is interpolated by the following $6\times6$
+transformation matrix:
 \begin{align}
     (\mathcal{R}_{\hat{a}}^{b})_{6\times6}=(\mathcal{R}_{\hat{a}}^{b})^T_{6\times6}=\begin{pmatrix}
     1&0&0&0&0&0\\
@@ -597,53 +674,6 @@ $\mathfrak{K}_{1,2} = \mathfrak{K}_{1,2}$ & $\mathfrak{K}_{1,2} \to \mathfrak{K}
 \renewcommand{\arraystretch}{1.5}
 \adjustbox{max width=\textwidth, max totalheight=0.85\textheight}{%
 \begin{tabular}{ |c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c| }
- \hline
- \rule{0pt}{16pt} & $\mathfrak{K}_{{0}}$ & $P_{{0}}$ & $D$ & $\mathfrak{K}_{{3}}$ & $P_{{3}}$ & $K_{{3}}$ & $P_{{1}}$ & $P_{{2}}$ & $\mathfrak{K}_{{1}}$ & $\mathfrak{K}_{{2}}$  & ${K}^{{1}}$ & ${K}^{{2}}$  & ${J}^{{2}}$ & ${J}^{{1}}$ & $J^{{3}}$ \\
- \hline
-  \hline
- \rule{0pt}{16pt} $\mathfrak{K}_{{0}}$ &0&$-2iD$&$-i\mathfrak{K}_{{0}}$&0&$2iK_{{3}}$&${i\mathfrak{K}_{{3}}}$&$2i{K}^{{1}}$&$2i{K}^{{2}}$&0&0&$-i\mathfrak{K}_{{1}}$&$-i\mathfrak{K}_{{2}}$&0&0&0\\
- \hline 
- \rule{0pt}{16pt} $P_{{0}}$ &$2iD$&0&$iP_{{0}}$&${2iK_{{3}}}$&0&${iP_{{3}}}$&0&0&$2i{K}^{{1}}$&$2i{K}^{{2}}$&$-iP_{{1}}$&$-iP_{{2}}$&0&0&0\\
- \hline 
- \rule{0pt}{16pt} $D$ &$i\mathfrak{K}_{{0}}$&$-iP_{{0}}$&0&$i\mathfrak{K}_{{3}}$&$-iP_{{3}}$&0&$-iP_{{1}}$&$-iP_{{2}}$&$i\mathfrak{K}_{{1}}$&$i\mathfrak{K}_{{2}}$&0&0&0&0&0\\
- \hline 
- \rule{0pt}{16pt} $\mathfrak{K}_{{3}}$ &0&${-2iK_{{3}}}$&${-i\mathfrak{K}_{{3}}}$&0&$2iD$&${i\mathfrak{K}_{{0}}}$&${-2i{J}^{{2}}}$&${2i{J}^{{1}}}$&0&0&0&0&${-i\mathfrak{K}_{{1}}}$&${i\mathfrak{K}_{{2}}}$&0\\
- \hline 
- \rule{0pt}{16pt} $P_{{3}}$ &$-2iK_{{3}}$&0&$iP_{{3}}$&$-2iD$&0&${iP_{{0}}}$&0&0&${-2i{J}^{{2}}}$&${2i{J}^{{1}}}$&0&0&${-iP_{{1}}}$&${iP_{{2}}}$&0\\
- \hline 
- \rule{0pt}{16pt} $K_{{3}}$ &${-i\mathfrak{K}_{{3}}}$&${-iP_{{3}}}$&0&${-i\mathfrak{K}_{{0}}}$&${-iP_{{0}}}$&0&0&0&0&0&$i{J}^{{2}}$&$-i{J}^{{1}}$&${i{K}^{{1}}}$&$-{i{K}^{{2}}}$&0\\
- \hline 
- \rule{0pt}{16pt} $P_{{1}}$ &$-2i{K}^{{1}}$&0&$iP_{{1}}$&${2i{J}^{{2}}}$&0&0&0&0&$-2iD$&$-2iJ^{{3}}$&$-iP_{{0}}$&0&${iP_{{3}}}$&0&$-iP_{{2}}$\\
- \hline 
- \rule{0pt}{16pt} $P_{{2}}$ &$-2i{K}^{{2}}$&0&$iP_{{2}}$&${-2i{J}^{{1}}}$&0&0&0&0&$2iJ^{{3}}$&$-2iD$&0&$-iP_{{0}}$&0&${-iP_{{3}}}$&$iP_{{1}}$\\
- \hline 
- \rule{0pt}{16pt} $\mathfrak{K}_{{1}}$ &0&$-2i{K}^{{1}}$&$-i\mathfrak{K}_{{1}}$&0&${2i{J}^{{2}}}$&0&$2iD$&$-2iJ^{{3}}$&0&0&$-i\mathfrak{K}_{{0}}$&0&${i\mathfrak{K}_{{3}}}$&0&$-i\mathfrak{K}_{{2}}$\\
- \hline 
- \rule{0pt}{16pt} $\mathfrak{K}_{{2}}$ &0&$-2i{K}^{{2}}$&$-i\mathfrak{K}_{{2}}$&0&${-2i{J}^{{1}}}$&0&$2iJ^{{3}}$&$2iD$&0&0&0&$-i\mathfrak{K}_{{0}}$&0&${-i\mathfrak{K}_{{3}}}$&$i\mathfrak{K}_{{1}}$\\
- \hline 
- \rule{0pt}{16pt} ${K}^{{1}}$ &$i\mathfrak{K}_{{1}}$&$iP_{{1}}$&0&0&0&$-i{J}^{{2}}$&$iP_{{0}}$&0&$i\mathfrak{K}_{{0}}$&0&0&$-iJ^{{3}}$&${iK^{{3}}}$&0&$-i{K}^{{2}}$\\
- \hline 
- \rule{0pt}{16pt} ${K}^{{2}}$ &$i\mathfrak{K}_{{2}}$&$iP_{{2}}$&0&0&0&$i{J}^{{1}}$&0&$iP_{{0}}$&0&$i\mathfrak{K}_{{0}}$&$iJ^{{3}}$&0&0&${-iK^{{3}}}$&$i{K}^{{1}}$\\
- \hline 
- \rule{0pt}{16pt} ${J}^{{2}}$ &0&0&0&${i\mathfrak{K}_{{1}}}$&${iP_{{1}}}$&$-i{K}^{{1}}$&$-iP_{{3}}$&0&${-i\mathfrak{K}_{{3}}}$&0&$-iK^{{3}}$&0&0&$-iJ^{{3}}$&$i{J}^{{1}}$\\
- \hline 
- \rule{0pt}{16pt} ${J}^{{1}}$ &0&0&0&${-i\mathfrak{K}_{{2}}}$&${-iP_{{2}}}$&$i{K}^{{2}}$&0&$iP_{{3}}$&0&${i\mathfrak{K}_{{3}}}$&0&$iK^{{3}}$&$iJ^{{3}}$&0&$-i{J}^{{2}}$\\
- \hline 
- \rule{0pt}{16pt} $J^{{3}}$ &0&0&0&0&0&0&$iP_{{2}}$&$-iP_{{1}}$&$i\mathfrak{K}_{{2}}$&$-i\mathfrak{K}_{{1}}$&$i{K}^{{2}}$&$-i{K}^{{1}}$&$-i{J}^{{1}}$&$i{J}^{{2}}$&0\\
- \hline 
-\end{tabular}}
-\captionof{table}{Conformal algebra $(3+1)$ in the IFD limit ($\delta \to 0$)}
-\label{tabelIFD}
-\end{minipage}
-
-\newpage
-
-\noindent
-\begin{minipage}[t]{\textwidth}
-\centering
-\renewcommand{\arraystretch}{1.5}
-\adjustbox{max width=\textwidth, max totalheight=0.85\textheight}{%
-\begin{tabular}{ |c||c|c|c|c|c|c|c|c|c|c|c|c|c|c|c| }
 \hline
 \rule{0pt}{16pt} & $\mathfrak{K}_{+}$ & $P_{+}$ & $D_{+}$ & $\mathfrak{K}_{-}$ & $P_{-}$ & $D_{-}$ & $P_{1}$ & $P_{2}$ & $\mathfrak{K}_{1}$ & $\mathfrak{K}_{2}$ & $F^{1}$ & $F^{2}$ & $E^{1}$ & $E^{2}$ & $J^{3}$ \\
 \hline
@@ -704,7 +734,7 @@ LFD saves dynamical effort in solving relativistic quantum field theoretic probl
 \begin{align}
     J_{\hat{a}\hat{b}}=i(X_{\hat{a}}\partial_{\hat{b}}-X_{\hat{b}}\partial_{\hat{a}}),
 \end{align}
-where $\hat{a},\hat{b}\in\{-2,-1,\hat{+},1,2,\hat{-}\}$, $\partial_{\hat{a}}\equiv\frac{\partial}{\partial X^{\hat{a}}}$ and $X_{\hat{a}}$ denotes the four-dimensional projective spacetime. With the condition that the lightcone is preserved in the four-dimensional projective spacetime under the transformations generated by $ J_{\hat{a}\hat{b}}$, we write the infinitesimal conformal transformations in four-dimensional projective spacetime as
+where $\hat{a},\hat{b}\in\{-2,-1,\hat{+},1,2,\hat{-}\}$, $\partial_{\hat{a}}\equiv\frac{\partial}{\partial X^{\hat{a}}}$, and $X_{\hat{a}}$ is a six-dimensional projective embedding vector for the physical $(3+1)$-dimensional spacetime. With the condition that its lightcone is preserved under the transformations generated by $J_{\hat{a}\hat{b}}$, we write the infinitesimal conformal transformations as
 \begin{align}
 R^{\hat{a}}_{~\hat{b}}=g^{\hat{a}}_{~\hat{b}}-\frac{i}{2}\omega^{\hat{c}\hat{d}}(J_{\hat{c}\hat{d}})^{\hat{a}}_{~\hat{b}},\label{R_conformalTransformations}
 \end{align}
@@ -862,7 +892,7 @@ The explicit $6\times6$ matrix representations are then given by
 
 These explicit projective spacetime matrices satisfy the full conformal algebra Eq.\eqref{simplesrint} in interpolation. 
 
-Operating the exponentiated conformal transformations $e^{-\frac{i}{2}\omega^{\hat{c}\hat{d}}(J_{\hat{c}\hat{d}})^{\hat{a}}_{~\hat{b}}}$ on $X_{\hat{b}}$, we get the transformed four-dimensional projective spacetime $X^{\prime}_{\hat{a}}$ as 
+Operating the exponentiated conformal transformations $e^{-\frac{i}{2}\omega^{\hat{c}\hat{d}}(J_{\hat{c}\hat{d}})^{\hat{a}}_{~\hat{b}}}$ on $X_{\hat{b}}$, we obtain the transformed six-dimensional projective embedding vector $X^{\prime}_{\hat{a}}$ as
 \begin{align}
 \label{exponential-conformal-tranf}
   X^{\prime}_{\hat{a}}&=e^{-\frac{i}{2}\omega^{\hat{c}\hat{d}}(J_{\hat{c}\hat{d}})^{\hat{b}}_{~\hat{a}}}X_{\hat{b}},
@@ -877,7 +907,7 @@ e^{-\frac{i}{2}\omega^{\hat{c}\hat{d}}(J_{\hat{c}\hat{d}})^{\hat{b}}_{~\hat{a}}}
 \end{align}
 where we used $(J_{{\hat{c}}{\hat{d}}})^{\hat{a}}_{~\hat{b}}=i(g_{\hat{c}}^{\hat{a}} g_{{\hat{d}}{\hat{b}}}-g_{{\hat{c}}{\hat{b}}} g_{\hat{d}}^{\hat{a}})$ to obtain $(J_{\hat{c}\hat{d}})^{\hat{a}}_{~\hat{b}}=-(J_{\hat{c}\hat{d}})^{\hat{b}}_{~\hat{a}}$.
 %$(J_{\hat{c}\hat{d}})^{\hat{b}}_{~\hat{a}}+(J_{\hat{c}\hat{d}})^{\hat{a}}_{~\hat{b}}=0$. 
-This shows that the conformal transformations, even in the interpolating form, preserve the angles and the ratios of lengths of two vectors before and after the transformations. Now, we find that the assignment of the following projective four-dimensional vector given by 
+This shows that the conformal transformations, even in the interpolating form, preserve the angles and the ratios of lengths of two vectors before and after the transformations. Now, we assign the following six-dimensional projective embedding vector:
 \begin{align}
     {X}_{-1}&=\frac{-\lambda}{\sqrt{2}}, \nonumber\\
     {X}_{-2}&=\frac{-\lambda}{\sqrt{2}}(x^{\hat{\mu}}x_{\hat{\mu}}), \nonumber \\
@@ -894,7 +924,7 @@ provides the lightcone of the projective spacetime, i.e., ${X}_{\hat{a}}{X}^{\ha
 where ${X}^{-1}=-{X}_{-2}$, ${X}^{-2}=-{X}_{-1}$ and $X^{\hat \mu}=g^{\hat{\mu}\hat{\nu}}X_{\hat{\nu}}$ due to the metric
 given by Eq.(\ref{metricghat}).
 From Eq.\eqref{X-mu}, we can then find 
-the dictionary connecting the four-dimensional projective spacetime $X_{\hat{a}}$ and the physical spacetime $x_{\hat{\mu}}$, which reads
+the dictionary connecting the six-dimensional projective embedding vector $X_{\hat{a}}$ and the physical $(3+1)$-dimensional spacetime $x_{\hat{\mu}}$, which reads
 \begin{align}
     x_{\hat{\mu}}&=-\frac{1}{\sqrt{2}}\frac{{X}_{\hat{\mu}}}{ {X}_{-1}}.
 \end{align}
@@ -953,11 +983,13 @@ $\delta \to 0$ and $\delta \to \pi/4$, we find the corresponding number of kinem
         \caption{Transformation of interpolating time under each conformal generator in $(3+1)$ dimensions. Each row denotes a one-parameter transformation $X'=e^{-i\lambda_G G}X$, with the parameter associated with the displayed generator $G$: $b^{\hat{\pm}}$, $b^1$, and $b^2$ for special conformal transformations; $a^{\hat{\pm}}$, $a^1$, and $a^2$ for translations; $\alpha_{\hat{\pm}}$ for $D_{\hat{\pm}}$; $\eta^1$ and $\eta^2$ for $\mathcal{D}^{1}$ and $\mathcal{D}^{2}$; $\phi^1$ and $\phi^2$ for $\mathcal{K}^{1}$ and $\mathcal{K}^{2}$; and $\theta$ for $J^3$. The interpolating parameter between IFD and LFD is $\delta$.}
         \label{tablexprime}
     \end{table}
-    \begin{table}[!htb]
-    \begin{minipage}[t]{.48\linewidth}
-    \vspace{0pt}
-      \resizebox{\linewidth}{!}{%
-        \begin{tabular}{|c||c|c|}
+\FloatBarrier
+
+\newcommand{\IFDTimeTable}{%
+    \begin{table}[!htbp]
+      \centering
+      \small
+        \begin{tabular}{|c||c|}
         \hline
              \rule{0pt}{16pt} Generators & $x^{{0}\prime}$\\
              \hline
@@ -966,7 +998,7 @@ $\delta \to 0$ and $\delta \to \pi/4$, we find the corresponding number of kinem
              \hline
             \rule{0pt}{16pt} $-\mathfrak{K}_{{3}}$ & $x^{{0}\prime}=\frac{x^{{0}}}{1+2b^{{3}}x^{{3}}+(b^{{3}})^2(x)^2}$ \\
              \hline
-             \rule{0pt}{16pt} $P_{{0}}$& $x^{{0}\prime}=x^{{0}}+c^{{0}} $\\
+             \rule{0pt}{16pt} $P_{{0}}$& $x^{{0}\prime}=x^{{0}}+a^{{0}} $\\
              \hline
              \rule{0pt}{16pt} $-P_{{3}}$& $x^{{0}\prime}=x^{{0}}$  \\
              \hline
@@ -984,23 +1016,25 @@ $\delta \to 0$ and $\delta \to \pi/4$, we find the corresponding number of kinem
               \hline
               \rule{0pt}{16pt} $P_{2}$ & $ x^{{0}\prime}=x^{{0}}$  \\
               \hline
-               \rule{0pt}{16pt} $-K^{1}$ &  $ x^{{0}\prime}=\cosh{(\eta_{1})}x^{{0}}+\sinh{(\eta_{1})}x_{{1}}$ \\
+               \rule{0pt}{16pt} $-K^{1}$ &  $ x^{{0}\prime}=\cosh{(\eta^{1})}x^{{0}}+\sinh{(\eta^{1})}x_{{1}}$ \\
                \hline
-               \rule{0pt}{16pt} $-K^{2}$ & $ x^{{0}\prime}=\cosh{(\eta_{2})}x^{{0}}+\sinh{(\eta_{2})}x_{{2}}$ \\
+               \rule{0pt}{16pt} $-K^{2}$ & $ x^{{0}\prime}=\cosh{(\eta^{2})}x^{{0}}+\sinh{(\eta^{2})}x_{{2}}$ \\
                \hline
                \rule{0pt}{16pt} $-J^{2}$ & $ x^{{0}\prime}=x^{{0}}$ \\
                \hline
                \rule{0pt}{16pt} $J^{1}$ & $ x^{{0}\prime}=x^{{0}}$ \\
                \hline
-        \end{tabular}%
-        }
-        \captionof{table}{Transformation of the IFD time in $(3+1)$d}
+        \end{tabular}
+        \caption{Transformation of the IFD time in $(3+1)$d}
         \label{tablex0prime}
-    \end{minipage}\hfill
-    \begin{minipage}[t]{.48\linewidth}
-    \vspace{0pt}
-        \resizebox{\linewidth}{!}{%
-        \begin{tabular}{|c||c|c|}
+    \end{table}%
+}
+
+\newcommand{\LFDTimeTable}{%
+    \begin{table}[!htbp]
+        \centering
+        \small
+        \begin{tabular}{|c||c|}
         \hline
              \rule{0pt}{16pt} Generators & $x^{{+}\prime}$\\
              \hline
@@ -1009,7 +1043,7 @@ $\delta \to 0$ and $\delta \to \pi/4$, we find the corresponding number of kinem
              \hline
             \rule{0pt}{16pt} $\mathfrak{K}_{{+}}$ & $x^{{+}\prime}=\frac{x^{{+}}}{1-2b^{{-}}x^{{+}}}$ \\
              \hline
-             \rule{0pt}{16pt} $P_{{+}}$& $x^{{+}\prime}=x^{{+}}+c^{{+}} $\\
+             \rule{0pt}{16pt} $P_{{+}}$& $x^{{+}\prime}=x^{{+}}+a^{{+}} $\\
              \hline
              \rule{0pt}{16pt} $P_{{-}}$& $x^{{+}\prime}=x^{{+}}$  \\
              \hline
@@ -1027,21 +1061,22 @@ $\delta \to 0$ and $\delta \to \pi/4$, we find the corresponding number of kinem
               \hline
               \rule{0pt}{16pt} $P_{2}$ & $ x^{{+}\prime}=x^{{+}}$  \\
               \hline
-               \rule{0pt}{16pt} $-F^{1}$ &  $x^{{+}\prime}=x^{{+}}+\frac{\eta_{1}^2}{2}x^{{-}}+\eta_{1}x_{{1}}$ \\
+               \rule{0pt}{16pt} $-F^{1}$ &  $x^{{+}\prime}=x^{{+}}+\frac{(\eta^{1})^2}{2}x^{{-}}+\eta^{1}x_{{1}}$ \\
                \hline
-               \rule{0pt}{16pt} $-F^{2}$ & $ x^{{+}\prime}=x^{{+}}+\frac{\eta_{2}^2}{2}x^{{-}}+\eta_{2}x_{{2}}$ \\
+               \rule{0pt}{16pt} $-F^{2}$ & $ x^{{+}\prime}=x^{{+}}+\frac{(\eta^{2})^2}{2}x^{{-}}+\eta^{2}x_{{2}}$ \\
                \hline
                \rule{0pt}{16pt} $-E^{1}$ & $ x^{{+}\prime}=x^{{+}}$ \\
                \hline
                \rule{0pt}{16pt}$-E^{2}$ & $ x^{{+}\prime}=x^{{+}}$ \\
                \hline
-        \end{tabular}%
-        }
-        \captionof{table}{Transformation of LFD time in $(3+1)$d}
+        \end{tabular}
+        \caption{Transformation of LFD time in $(3+1)$d}
         \label{tablexplusprime}
-      \end{minipage}
-      \end{table}
-    \begin{table}[h!]
+    \end{table}%
+}
+
+\newcommand{\KinematicGeneratorTable}{%
+    \begin{table}[!htbp]
     \resizebox{\textwidth}{!}{%
     \begin{tabular}{lcc}
 	Interpolation angle & Kinematic & Dynamic \\
@@ -1054,16 +1089,26 @@ $\delta \to 0$ and $\delta \to \pi/4$, we find the corresponding number of kinem
       \end{tabular}%
     }
     \caption{\label{tab:Kinematic_and_dynamic_generators_for_different_interoplation_angles_conformal1+1}Kinematic and dynamic conformal generators for different interpolation angles in $(3+1)$ dimensions. Here kinematic means that the interpolating time is unchanged up to a scale factor independent of the spacetime coordinates.}
-\end{table}
+\end{table}%
+}
 %
 
 
 In the limit to $\delta=0$, i.e., the IFD ($\mathbb{C}=1;~\mathbb{S}=0$), we find the results shown in Table~\ref{tablex0prime} for the transformed $x^{0\prime}$ 
 for every $(3+1)$d conformal generator. Consistent with Table~\ref{tablexprime}, the seven kinematic generators are $\mathcal{K}^{\hat{1}}=-J^{2}$, $\mathcal{K}^{\hat{2}}=J^{1}$, $J^{3}$, $P^{1}$, $P^{2}$, $P^{3}=-P_{3}$, and $D$.
 
+\IFDTimeTable
+\FloatBarrier
+
 In the limit to $\delta=\pi/4$, i.e., the LFD ($\mathbb{C}=0;~\mathbb{S}=1$), we find the results shown in Table~\ref{tablexplusprime} for the transformed $x^{+\prime}$ for each $(3+1)$d conformal generator. The eight kinematic generators are $\mathcal{K}^{\hat{1}}=-E^{1}$, $\mathcal{K}^{\hat{2}}=-E^{2}$, $J^{3}$, $P^{1}$, $P^{2}$, $P_{-}=\frac{P_{0}-P_{3}}{\sqrt{2}}$, $D_{+}=\frac{(D+K_3)}{\sqrt{2}}$, and $D_{-}=\frac{(D-K_3)}{\sqrt{2}}$. Equivalently, the latter two generators span the kinematic directions $D$ and $K_3$, where $K_3=\left(D_{\hat{+}}s-D_{\hat{-}}c\right)=J_{\hat{-}\hat{+}}$ at $\delta=\pi/4$.
 
-Finally, we contrast the behavior of the special conformal transformations (SCT) in $(3+1)$ dimensions with the $(1+1)$ dimensional case. In $(1+1)$ dimensions, the transverse coordinates vanish ($\vec{x}^{\perp} = 0$), and the transformation under $\mathfrak{K}_{-}$ simplifies to $x^{+\prime} = x^{+}$, making it an additional kinematic generator. However, in $(3+1)$ dimensions, the presence of the transverse term $\vec{x}^{\perp}\cdot\vec{x}^{\perp}$ in the numerator of $x^{+\prime}$ (as shown in Table 9) means that the light-front time is no longer invariant under $\mathfrak{K}_{-}$. Consequently, $\mathfrak{K}_{-}$ transforms from being kinematic in $(1+1)$d to becoming dynamical in $(3+1)$d. 
+\LFDTimeTable
+\FloatBarrier
+
+Finally, we contrast the behavior of the special conformal transformations (SCT) in $(3+1)$ dimensions with the $(1+1)$ dimensional case. In $(1+1)$ dimensions, the transverse coordinates vanish ($\vec{x}^{\perp} = 0$), and the transformation under $\mathfrak{K}_{-}$ simplifies to $x^{+\prime} = x^{+}$, making it an additional kinematic generator. However, in $(3+1)$ dimensions, the presence of the transverse term $\vec{x}^{\perp}\cdot\vec{x}^{\perp}$ in the numerator of $x^{+\prime}$ (as shown in Table~\ref{tab:Kinematic_and_dynamic_generators_for_different_interoplation_angles_conformal1+1}) means that the light-front time is no longer invariant under $\mathfrak{K}_{-}$. Consequently, $\mathfrak{K}_{-}$ transforms from being kinematic in $(1+1)$d to becoming dynamical in $(3+1)$d.
+
+\KinematicGeneratorTable
+\FloatBarrier
 
 As a result, when moving from IFD to LFD in $(3+1)$ dimensions, the kinematic subalgebra gains the longitudinal-boost direction $K_3$. As summarized in Table~\ref{tab:Kinematic_and_dynamic_generators_for_different_interoplation_angles_conformal1+1}, out of the 15 conformal generators in $(3+1)$ dimensions, 8 generators are kinematic in LFD, compared to 7 in IFD. This demonstrates that LFD still maximizes the total number of kinematic generators in $(3+1)$ dimensions, albeit with a different dynamical balance than in lower dimensions.
 

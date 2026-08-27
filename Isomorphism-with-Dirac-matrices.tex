@@ -1,0 +1,240 @@
+Dirac\cite{Dirac1936} has shown the existence of isomorphism between $SO(4,2)$ conformal group and Dirac matrices. Later, Hepner\cite{Hepner1962} has explicitly shown the isomorphism between the group of Dirac's four-row $\gamma$-matrices and the continuous conformal group in Euclidean space. One can show the isomorphism between the conformal group Eq.\eqref{Jab} and the group of fifteen matrices of the $\gamma$'s and their products in the Minkowski space,
+{\begin{align}
+  J'_{a,b}&=
+  \scalebox{0.7}{\begin{pmatrix}
+  0&\gamma_5&\frac{(1-\gamma_5)\gamma_0}{\sqrt{2}}&\frac{(1-\gamma_5)\gamma_1}{\sqrt{2}}&\frac{(1-\gamma_5)\gamma_2}{\sqrt{2}}&\frac{(1-\gamma_5)\gamma_3}{\sqrt{2}}\\
+  -\gamma_5&0&\frac{(1+\gamma_5)\gamma_0}{\sqrt{2}}&\frac{(1+\gamma_5)\gamma_1}{\sqrt{2}}&\frac{(1+\gamma_5)\gamma_2}{\sqrt{2}}&\frac{(1+\gamma_5)\gamma_3}{\sqrt{2}}\\
+    \frac{-(1-\gamma_5)\gamma_0}{\sqrt{2}}&\frac{-(1+\gamma_5)\gamma_0}{\sqrt{2}}&0 & \gamma_0\gamma_1 & \gamma_0\gamma_2 & \gamma_0\gamma_3\\
+   \frac{-(1-\gamma_5)\gamma_1}{\sqrt{2}}&\frac{-(1+\gamma_5)\gamma_1}{\sqrt{2}}&\gamma_1\gamma_0 & 0 & \gamma_1\gamma_2 & \gamma_1\gamma_3\\
+    \frac{-(1-\gamma_5)\gamma_2}{\sqrt{2}}&\frac{-(1+\gamma_5)\gamma_2}{\sqrt{2}}&\gamma_2\gamma_0 & \gamma_2\gamma_1 & 0 & \gamma_2\gamma_3\\
+    \frac{-(1-\gamma_5)\gamma_3}{\sqrt{2}}&\frac{-(1+\gamma_5)\gamma_3}{\sqrt{2}}&\gamma_3\gamma_0 & \gamma_3\gamma_1 & \gamma_3\gamma_2 & 0
+  \end{pmatrix}}. 
+\end{align}}
+This $J'_{a,b}$ obeys the $SO(4+1,1)$ algebra Eq.\eqref{algebrasimp} with the metric is given by Eq.\eqref{metric}. The representation of the conformal group in terms of $4\times4$ gamma matrices are the following;
+\begin{align}
+    P_\mu=&\frac{i}{2}(1+\gamma_5)\gamma_\mu;\\
+    \mathfrak{K}_\mu=&\frac{-i}{2}(1-\gamma_5)\gamma_\mu;\\
+    K^1=&\frac{i}{2}\gamma_1\gamma_0;~~K^2=\frac{i}{2}\gamma_2\gamma_0;~~K^3=\frac{i}{2}\gamma_3\gamma_0;\\
+    J^1=&\frac{i}{2}\gamma_2\gamma_3;~~J^2=\frac{i}{2}\gamma_3\gamma_1;~~J^3=\frac{i}{2}\gamma_1\gamma_2;\\
+    D=&\frac{-i}{2}\gamma_5.
+\end{align}
+
+\subsection{Isomorphism with Dirac matrices}
+The defining property for the gamma matrices to generate a Clifford algebra is the anticommutation relation 
+\begin{align}
+    \left\{\gamma ^{\mu },\gamma ^{\nu }\right\}=\gamma ^{\mu }\gamma ^{\nu }+\gamma ^{\nu }\gamma ^{\mu }=2g ^{\mu \nu }I_{4},
+\end{align}
+Covariant gamma matrices are defined by
+\begin{align}
+    {\gamma _{\mu }=\eta _{\mu \nu }\gamma ^{\nu }=\left\{\gamma ^{0},-\gamma ^{1},-\gamma ^{2},-\gamma ^{3}\right\}.}
+\end{align}
+Further basis $\sigma _{\mu \nu }$ elements of the Clifford algebra are given by
+\begin{align}
+    \sigma _{\mu \nu }&={\frac {1}{4}}[\gamma _{\mu },\gamma _{\nu }]=-{\frac {i}{4}}(\gamma _{\mu }\gamma _{\nu }-\gamma _{\nu }\gamma _{\mu })\\
+    \sigma _{\mu \nu }&={\frac {1}{4}}\left(\gamma _{\mu }\gamma _{\nu }-2g_{\mu\nu}+\gamma _{\mu }\gamma _{\nu }\right)\\
+    \sigma _{\mu \nu }&={\frac {1}{2}}(\gamma _{\mu }\gamma _{\nu }-g_{\mu\nu})
+\end{align}
+where it satisfy,
+\begin{align}
+   \sigma_{\mu\nu}=&-\sigma_{\nu\mu};\\
+   \left[\sigma _{\mu \nu },\sigma _{\rho \sigma }\right]=&\left(-g_{{\nu}{\sigma}}\sigma_{{\mu}{\rho}}+g_{{\nu}{\rho}}\sigma_{{\mu}{\sigma}}-g_{{\mu}{\rho}}\sigma_{{\nu}{\sigma}}+g_{{\mu}{\sigma}}\sigma_{{\nu}{\rho}}\right).
+\end{align}
+
+Let's go to $d=6$; we have $\sigma_{a,b}$ where $a,b\in\{-2,-1,0,1,2,3\}$.
+
+Then $\gamma_a=(~~,\gamma_5,\gamma_0,\gamma_1,\gamma_2,\gamma_3)$.
+
+Let's define 
+\begin{align}
+    J_{a,b}\equiv i\sigma_{a,b}
+\end{align}
+then $\left[\sigma _{ab},\sigma _{cd}\right]=&\left(-g_{{b}{d}}\sigma_{{a}{c}}+g_{{b}{c}}\sigma_{{a}{d}}-g_{{a}{c}}\sigma_{{b}{d}}+g_{{a}{d}}\sigma_{{b}{c}}\right)$ will be (since, $\sigma_{a,b}=-iJ_{a,b}$)
+\begin{align}
+    (-1)\left[J _{ab},J _{cd}\right]=&(-i)\left(-g_{{b}{d}}J_{{a}{c}}+g_{{b}{c}}J_{{a}{d}}-g_{{a}{c}}J_{{b}{d}}+g_{{a}{d}}J_{{b}{c}}\right)\\
+    \left[J _{ab},J _{cd}\right]=&-i\left(g_{{b}{d}}J_{{a}{c}}-g_{{b}{c}}J_{{a}{d}}+g_{{a}{c}}J_{{b}{d}}-g_{{a}{d}}J_{{b}{c}}\right)
+\end{align}
+\begin{align}
+  J_{a,b}&={\frac {i}{2}}(\gamma _{\mu }\gamma _{\nu }-g_{\mu\nu})=\frac{i}{2}
+  \begin{pmatrix}
+  0&\gamma_5&\gamma_0&\gamma_1&\gamma_2&\gamma_3\\
+  -\gamma_5&0&\gamma_5\gamma_0&\gamma_5\gamma_1&\gamma_5\gamma_2&\gamma_5\gamma_3\\
+    -\gamma_0&\gamma_0\gamma_5&0 & \gamma_0\gamma_1 & \gamma_0\gamma_2 & \gamma_0\gamma_3\\
+    -\gamma_1&\gamma_1\gamma_5&\gamma_1\gamma_0 & 0 & \gamma_1\gamma_2 & \gamma_1\gamma_3\\
+    -\gamma_2&\gamma_2\gamma_5&\gamma_2\gamma_0 & \gamma_2\gamma_1 & 0 & \gamma_2\gamma_3\\
+    -\gamma_3&\gamma_3\gamma_5&\gamma_3\gamma_0 & \gamma_3\gamma_1 & \gamma_3\gamma_2 & 0
+  \end{pmatrix}_{6\times6}
+\end{align}
+  \begin{align}
+      g_{ab}=\begin{pmatrix}
+  -1&0&0&0&0&0\\
+  0&1&0&0&0&0\\
+  0&0&1&0&0&0\\
+  0&0&0&-1&0&0\\
+  0&0&0&0&-1&0\\
+  0&0&0&0&0&-1\\
+  \end{pmatrix}_{6\times6}
+  \end{align}
+
+After the 6 dimensional rotation,
+
+\begin{align}
+  J'_{a,b}&=
+  \begin{pmatrix}
+  0&D&\frac{-\mathfrak{K}_0}{\sqrt{2}}&\frac{-\mathfrak{K}_1}{\sqrt{2}}&\frac{-\mathfrak{K}_2}{\sqrt{2}}&\frac{-\mathfrak{K}_3}{\sqrt{2}}\\
+  -D&0&\frac{P_0}{\sqrt{2}}&\frac{P_1}{\sqrt{2}}&\frac{P_2}{\sqrt{2}}&\frac{P_3}{\sqrt{2}}\\
+    \frac{\mathfrak{K}_0}{\sqrt{2}}&\frac{-P_0}{\sqrt{2}}&0 & -K^{1} & -K^{2} & -K^{3}\\
+    \frac{\mathfrak{K}_1}{\sqrt{2}}&\frac{-P_1}{\sqrt{2}}&K^{1} & 0 & J^{3} & -J^{2}\\
+    \frac{\mathfrak{K}_2}{\sqrt{2}}&\frac{-P_2}{\sqrt{2}}&K^{2} & -J^{3} & 0 & J^{1}\\
+    \frac{\mathfrak{K}_3}{\sqrt{2}}&\frac{-P_3}{\sqrt{2}}&K^{3} & J^{2} & -J^{1} & 0
+  \end{pmatrix}_{6\times6}
+\end{align}
+
+\begin{align}
+  \boxed{J'_{a,b}=\frac{i}{2}
+  \begin{pmatrix}
+  0&\gamma_5&\frac{(1-\gamma_5)\gamma_0}{\sqrt{2}}&\frac{(1-\gamma_5)\gamma_1}{\sqrt{2}}&\frac{(1-\gamma_5)\gamma_2}{\sqrt{2}}&\frac{(1-\gamma_5)\gamma_3}{\sqrt{2}}\\
+  -\gamma_5&0&\frac{(1+\gamma_5)\gamma_0}{\sqrt{2}}&\frac{(1+\gamma_5)\gamma_1}{\sqrt{2}}&\frac{(1+\gamma_5)\gamma_2}{\sqrt{2}}&\frac{(1+\gamma_5)\gamma_3}{\sqrt{2}}\\
+    \frac{-(1-\gamma_5)\gamma_0}{\sqrt{2}}&\frac{-(1+\gamma_5)\gamma_0}{\sqrt{2}}&0 & \gamma_0\gamma_1 & \gamma_0\gamma_2 & \gamma_0\gamma_3\\
+   \frac{-(1-\gamma_5)\gamma_1}{\sqrt{2}}&\frac{-(1+\gamma_5)\gamma_1}{\sqrt{2}}&\gamma_1\gamma_0 & 0 & \gamma_1\gamma_2 & \gamma_1\gamma_3\\
+    \frac{-(1-\gamma_5)\gamma_2}{\sqrt{2}}&\frac{-(1+\gamma_5)\gamma_2}{\sqrt{2}}&\gamma_2\gamma_0 & \gamma_2\gamma_1 & 0 & \gamma_2\gamma_3\\
+    \frac{-(1-\gamma_5)\gamma_3}{\sqrt{2}}&\frac{-(1+\gamma_5)\gamma_3}{\sqrt{2}}&\gamma_3\gamma_0 & \gamma_3\gamma_1 & \gamma_3\gamma_2 & 0
+  \end{pmatrix}_{6\times6}}
+\end{align}
+
+  \begin{align}
+      g_{a,b}=\begin{pmatrix}
+  0&-1&0&0&0&0\\
+  -1&0&0&0&0&0\\
+  0&0&1&0&0&0\\
+  0&0&0&-1&0&0\\
+  0&0&0&0&-1&0\\
+  0&0&0&0&0&-1\\
+  \end{pmatrix}_{6\times6}
+  \end{align}
+So fifteen matrices of the $\gamma$'s and their products can be grouped as the fifteen components of a skew angular momentum tensor
+$J_{a,b}$ in six dimensions\footnote{The inhomogeneous lorentz group and the conformal group,
+W. A. Hepner}.
+
+\\
+
+The representation of conformal group in terms of $4\times4$ gamma matrices are the following;
+\begin{align}
+    P_\mu=&\frac{i}{2}(1+\gamma_5)\gamma_\mu;\\
+    \mathfrak{K}_\mu=&\frac{-i}{2}(1-\gamma_5)\gamma_\mu;\\
+    K^1=&\frac{i}{2}\gamma_1\gamma_0;~~K^2=\frac{i}{2}\gamma_2\gamma_0;~~K^3=\frac{i}{2}\gamma_3\gamma_0;\\
+    J^1=&\frac{i}{2}\gamma_2\gamma_3;~~J^2=\frac{i}{2}\gamma_3\gamma_1;~~J^3=\frac{i}{2}\gamma_1\gamma_2;\\
+    D=&\frac{i}{2}\gamma_5.
+\end{align}
+Explicitly,
+\begin{align*}
+    J^{1}&=\frac{1}{2}\begin{pmatrix}
+    0&1&0&0\\
+    1&0&0&0\\
+    0&0&0&1\\
+    0&0&1&0
+    \end{pmatrix}~;~~~~~~J^{2}=\frac{1}{2}\begin{pmatrix}
+    0&-i&0&0\\
+    i&0&0&0\\
+    0&0&0&-i\\
+    0&0&i&0
+    \end{pmatrix}~;~~~~~~J^{3}=\frac{1}{2}\begin{pmatrix}
+    1&0&0&0\\
+    0&-1&0&0\\
+    0&0&1&0\\
+    0&0&0&-1
+    \end{pmatrix};\\
+    K^{1}&=\frac{1}{2}\begin{pmatrix}
+    0&i&0&0\\
+    i&0&0&0\\
+    0&0&0&-i\\
+    0&0&-i&0
+    \end{pmatrix}~;~~~~~~K^{2}=\frac{1}{2}\begin{pmatrix}
+    0&1&0&0\\
+    -1&0&0&0\\
+    0&0&0&-1\\
+    0&0&1&0
+    \end{pmatrix}~;~~~~~~K^{3}=\frac{1}{2}\begin{pmatrix}
+    i&0&0&0\\
+    0&-i&0&0\\
+    0&0&-i&0\\
+    0&0&0&i
+    \end{pmatrix};\\
+    P_0&=\begin{pmatrix}
+    0&0&0&0\\
+    0&0&0&0\\
+    i&0&0&0\\
+    0&i&0&0
+    \end{pmatrix}~;~~~~~~P_1=\begin{pmatrix}
+    0&0&0&0\\
+    0&0&0&0\\
+    0&-i&0&0\\
+    -i&0&0&0
+    \end{pmatrix}~;~~~~~~P_2=\begin{pmatrix}
+    0&0&0&0\\
+    0&0&0&0\\
+    0&-1&0&0\\
+    1&0&0&0
+    \end{pmatrix}~;~~~~~~P_3=\begin{pmatrix}
+    0&0&0&0\\
+    0&0&0&0\\
+    -i&0&0&0\\
+    0&i&0&0
+    \end{pmatrix}\\
+    \mathfrak{K}_0&=\begin{pmatrix}
+    0&0&-i&0\\
+    0&0&0&-i\\
+    0&0&0&0\\
+    0&0&0&0
+    \end{pmatrix}~;~~~~~~\mathfrak{K}_1=\begin{pmatrix}
+    0&0&0&-i\\
+    0&0&-i&0\\
+    0&0&0&0\\
+    0&0&0&0
+    \end{pmatrix}~;~~~~~~\mathfrak{K}_2=\begin{pmatrix}
+    0&0&0&-1\\
+    0&0&1&0\\
+    0&0&0&0\\
+    0&0&0&0
+    \end{pmatrix}~;~~~~~~\mathfrak{K}_3=\begin{pmatrix}
+    0&0&-i&0\\
+    0&0&0&i\\
+    0&0&0&0\\
+    0&0&0&0
+    \end{pmatrix}\\
+    D&=\frac{i}{2}\begin{pmatrix}
+    -1&0&0&0\\
+    0&-1&0&0\\
+    0&0&1&0\\
+    0&0&0&1
+    \end{pmatrix}.
+\end{align*}
+
+this is dirac paper:
+@article{436861d5-35f6-36cf-9470-cb587eced490,
+ ISSN = {0003486X, 19398980},
+ URL = {http://www.jstor.org/stable/1968455},
+ author = {P. A. M. Dirac},
+ journal = {Annals of Mathematics},
+ number = {2},
+ pages = {429--442},
+ publisher = {[Annals of Mathematics, Trustees of Princeton University on Behalf of the Annals of Mathematics, Mathematics Department, Princeton University]},
+ title = {Wave Equations in Conformal Space},
+ urldate = {2026-08-26},
+ volume = {37},
+ year = {1936}
+}
+
+this is hepner:
+@article{Hepner1962The,
+  author = {Hepner, W. A.},
+  title = {The inhomogeneous lorentz group and the conformal group},
+  journal = {Il Nuovo Cimento (1955-1965)},
+  year = {1962},
+  volume = {26},
+  number = {2},
+  pages = {351--368},
+  doi = {10.1007/BF02787046},
+  url = {https://doi.org/10.1007/BF02787046},
+  isbn = {1827-6121}
+}
+
