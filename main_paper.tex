@@ -209,6 +209,7 @@ meaning the metric is preserved up to a scale factor $\Lambda(x)$ under a confor
 \end{align}
 where $F(x)=\Lambda(x)-1-\mathcal{O}(\epsilon^2)$. Equation~\eqref{Killing} is the conformal Killing equation. Contraction with $\delta^{\mu\nu}$ yields $F(x)=\frac{2}{d}\partial_{\mu}\epsilon^{\mu}$. There are four classes of solutions for $\epsilon_{\mu}(x)$:
 \begin{align}
+\label{conformal-generators}
 P_{\mu}&=i\partial_{\mu} &&\text{(translations)},\nonumber\\
 M_{\mu\nu}&=i\left(x_{\mu}\partial_{\nu}-x_{\nu}\partial_{\mu}\right) &&\text{(rotations and Lorentz transformations)},\nonumber\\
 D&=ix_{\mu}\partial^{\mu} &&\text{(dilatation)},\nonumber\\
@@ -294,7 +295,7 @@ To interpolate the forms of relativistic quantum field theory between IFD and LF
     x^{3}
   \end{pmatrix},
 \end{align}
-in which the interpolation angle is allowed to run from $0^\circ$ (IFD) through $45^\circ$ (LFD), $0\le \delta \le \frac{\pi}{4}$. The interpolating coordinates $x^{\itP{\pm}}$ in the limit $\delta\rightarrow\pi/4$ become the light-front coordinates $x^{\pm}=(x^{0}\pm x^{3})/\sqrt{2}$ without  ``\textasciicircum''. Note that we interpolate from $-x^3$, so in the limit $\delta\rightarrow\pi/4$, the interpolating coordinates $x^{\itP{-}}$ is $-x^3$ (or $-z$) axis. Since the perpendicular components remain the same ($x^{\itP{j}}=x^{j},x_{\itP{j}}=x_{j}, j=1,2$), we will omit the ``\textasciicircum''  notation unless necessary from now on for the perpendicular indices $j=1,2$ in a four-vector.
+where $\mathcal{R}^{\muT}_{\phantom{\mu}{\nu}}$ is given by the $4\times4$ involutory matrix with the determinant $-1$ with the interpolation angle allowed to run from $0^\circ$ (IFD) through $45^\circ$ (LFD), $0\le \delta \le \frac{\pi}{4}$. The interpolating coordinates $x^{\itP{\pm}}$ in the limit $\delta\rightarrow\pi/4$ become the light-front coordinates $x^{\pm}=(x^{0}\pm x^{3})/\sqrt{2}$ without  ``\textasciicircum''. Note that we interpolate from $-x^3$, so in the limit $\delta\rightarrow\pi/4$, the interpolating coordinates $x^{\itP{-}}$ is $-x^3$ (or $-z$) axis. Since the perpendicular components remain the same ($x^{\itP{j}}=x^{j},x_{\itP{j}}=x_{j}, j=1,2$), we will omit the ``\textasciicircum''  notation unless necessary from now on for the perpendicular indices $j=1,2$ in a four-vector.
 
  In this interpolating basis, the metric becomes
 \begin{align}\label{eqn:g_munu_interpolation}
@@ -309,22 +310,21 @@ in which the interpolation angle is allowed to run from $0^\circ$ (IFD) through 
   \end{pmatrix},
 \end{align}
 where $\mathbb{S}=\sin2\delta$ and $\mathbb{C}=\cos2\delta$. The lower index variables $x_{\hat{+}}$ and $x_{\hat{-}}$ are related to the upper index variables as $x_{\hat{+}}=g_{\hat{+}\hat{+}}x^{\hat{+}}+g_{\hat{+}\hat{-}}x^{\hat{-}}=\mathbb{C}x^{\hat{+}}+\mathbb{S}x^{\hat{-}}$ and $x_{\hat{-}}=g_{\hat{-}\hat{+}}x^{\hat{+}}+g_{\hat{-}\hat{-}}x^{\hat{-}}=-\mathbb{C}x^{\hat{-}}+\mathbb{S}x^{\hat{+}}$.
-
-The same interpolation
-applies to any four-vectors like the four-momentum and the four generators of special conformal transformations. The details of the relationship between the
+%The same interpolation applies to any four-vectors like the four-momentum and the four generators of special conformal transformations.
+The details of the relationship between the
 interpolating variables and the usual space-time variables
-can be seen in our previous works  \cite{Ji2001, Ravikumar:2021xck, Hornbostel1992, Ji1996, Ji2012, Ji2015EM, Ji2015SP, Ji2018QED, Ji2021QCD}.
+can be found in our previous works  \cite{Ji2001, Ravikumar:2021xck, Hornbostel1992, Ji1996, Ji2012, Ji2015EM, Ji2015SP, Ji2018QED, Ji2021QCD, Ji-Hari-2026-PRD}.
 
-For interpolating the Poincar\'e group, let's start with the Poincar\'e matrix in IFD
+To interpolate the Lorentzian tensor for the Poincar\'e algebra, we start from the tensor in IFD given by 
 \begin{align}\label{eqn:J_mu_nu_IF}
   M_{\mu\nu}=\begin{pmatrix}
      0&-K^1&-K^2&K_3\\
      K^1&0&J^3&-J^2\\
      K^2&-J^3&0&J^1\\
-     -K_3&J^2&-J^1&0
-     \end{pmatrix}
+     -K_3&J^2&-J^1&0 
+     \end{pmatrix} ,
 \end{align}
-In interpolation form, it will transform as
+and apply the unitary-type transformation with the involutory matrix given by Eq.(\ref{eqn:interpolation_angle_definition}), namely
 \begin{align}\label{eqn:Poincare_Matrix_Interpolation_superscripts}
   M_{\muT\nuT}
   &=\mathcal{R}_{\hat{\mu}}^{{\alpha}}M_{\alpha\beta}\mathcal{R}_{\hat{\nu}}^{{\beta}}=\begin{pmatrix}
@@ -345,7 +345,7 @@ and
     -{E}^{\itP{1}} & 0 & {J}^{3} & -{F}^{\itP{1}}\\
     -{E}^{\itP{2}} & -{J}^{3} & 0 & -{F}^{\itP{2}}\\
     -K_3 & {F}^{\itP{1}} & {F}^{\itP{2}} & 0
-  \end{pmatrix}
+  \end{pmatrix} ,
 \end{align}
 where
 \begin{align}\label{eqn:E_F_D_K_Definition_Interpolation_Angle}
@@ -367,16 +367,27 @@ As discussed in \cite{Ji2001, Ji2012, Ravikumar:2021xck}, the operator $-K_3=M_{
 The set of kinematic and dynamic generators depending on the interpolation angle is summarized in Table.~\ref{tab:Kinematic_and_dynamic_generators_for_different_interoplation_angles}.
 Since the kinematic transformations do not alter $x^{\pT}$, the individual time-ordered amplitude must be invariant under the kinematic transformations \cite{Ji2018QED}.
 
-In the following sections, we extend this interpolation method to the conformal group, which has the Poincar\'e group as a subgroup. The interpolation method for the conformal group $SO(4,2)$ is proposed in Section~\ref{conformalsimpler}. To characterize the individual properties of the conformal generators, the $6\times6$ interpolating projective spacetime matrix representation is constructed in Section~\ref{sec:projectivespace}, where we systematically classify the kinematic and dynamic generators across the interpolation angles. Finally, a summary and conclusion are presented in Section~\ref{summary-conclusion}.
+In the following section, Section~\ref{sec:conformal-ifd}, we extend this interpolation method to the conformal group, which carries the Poincar\'e group as a subgroup. We then discuss the interpolation method for the conformal group $SO(4,2)$. To characterize the individual properties of the conformal generators, the $6\times6$ interpolating projective spacetime matrix representation is constructed in Section~\ref{sec:projectivespace}, where we systematically classify the kinematic and dynamic generators across the interpolation angles. Summary and conclusion follow in Section~\ref{summary-conclusion}.
+In Appendix~\ref{app:explicit_matrices}, 
+we present the correspondence of explicit Dirac matrices with the generators of the conformal algebra.
+In Appendix \ref{app:interpolating-time-derivations}, we detail the derivation of the interpolating time transformations for all conformal generators given in 
+Table~\ref{tablexprime}.
+
+%mentioned in Section~\ref{sec:projectivespace}.
 
 %\section{Conformal algebra in IFD}
-{\color{red} \section{From Poincar\'e Algebra to Conformal Algebra}
+\section{From Poincar\'e Algebra to Conformal Algebra}
 \label{sec:conformal-ifd}
-In the instant-form limit, we use the un-hatted projective basis
-$a,b\in\{-2,-1,0,1,2,3\}$. The fifteen conformal generators are
-organized in the following antisymmetric $6\times6$ array \cite{Francesco,Blumenhagen,Ji-Hari-2026-PRD}:
+As summarized in Eq.(\ref{conformal-generators}), the conformal algebra include five more generators ($D, \mathfrak{K}_\mu$) beyond the ten Poincar\'e generators represented by the $4\times 4$ Poincar\'e matrix $M_{\mu,\nu}$ and the translation generators $P_\mu$. 
+We may thus rather naturally extend the $4\times4$ Poincar\'e matrix given by Eq.(\ref{eqn:J_mu_nu_IF}) in IFD to the 
+following antisymmetric $6\times6$ array \cite{Francesco,Blumenhagen,Ji-Hari-2026-PRD} including the column and row vectors of the translation generators $P_\mu$:
 \begin{align}\label{Jab}
-  J_{ab}&=
+  J_{ab}&=\begin{pmatrix}
+      0&-D&\frac{-\mathfrak{K}_{\mu}}{\sqrt{2}}\\
+      D&0&\frac{P_{\mu}}{\sqrt{2}}\\
+      \frac{\mathfrak{K}_{\mu}}{\sqrt{2}}&\frac{-P_{\mu}}{\sqrt{2}}&M_{\mu\nu}
+  \end{pmatrix} \nonumber \\
+  &=
   \begin{pmatrix}
   0&-D&\frac{-\mathfrak{K}_0}{\sqrt{2}}&\frac{-\mathfrak{K}_1}{\sqrt{2}}&\frac{-\mathfrak{K}_2}{\sqrt{2}}&\frac{-\mathfrak{K}_3}{\sqrt{2}}\\
   D&0&\frac{P_0}{\sqrt{2}}&\frac{P_1}{\sqrt{2}}&\frac{P_2}{\sqrt{2}}&\frac{P_3}{\sqrt{2}}\\
@@ -384,11 +395,13 @@ organized in the following antisymmetric $6\times6$ array \cite{Francesco,Blumen
     \frac{\mathfrak{K}_1}{\sqrt{2}}&\frac{-P_1}{\sqrt{2}}&K^{1} & 0 & J^{3} & -J^{2}\\
     \frac{\mathfrak{K}_2}{\sqrt{2}}&\frac{-P_2}{\sqrt{2}}&K^{2} & -J^{3} & 0 & J^{1}\\
     \frac{\mathfrak{K}_3}{\sqrt{2}}&\frac{-P_3}{\sqrt{2}}&-K_3 & J^{2} & -J^{1} & 0
-  \end{pmatrix}_{6\times6}
+  \end{pmatrix}_{6\times6} ,
 \end{align}
-where $J_{ab}=-J_{ba}$ and $a,b\in\{-2,-1,0,1,2,3\}$. These new generators obey the $SO(4,2)$ commutation relations:
+where $J_{ab}=-J_{ba}$ and $a,b\in\{-2,-1,0,1,2,3\}$. We note here that the two extra dimensions denoted as $-2$ and $-1$ are added to the typical (3+1) dimensional space-time coordinates 
+$\{0,1,2,3\}$ enlarging the typical four-dimensional space-time base manifold of the relativistic dynamics into the six-dimensional conformal manifold. Then, these fifteen conformal algebraic generators 
+obey the $SO(4,2)$ commutation relations:
   \begin{align}\label{algebrasimp}
-      \left[J_{{a}{b}},J_{{c}{d}}\right]=-i\left(g_{{b}{d}}J_{{a}{c}}-g_{{b}{c}}J_{{a}{d}}+g_{{a}{c}}J_{{b}{d}}-g_{{a}{d}}J_{{b}{c}}\right)
+      \left[J_{{a}{b}},J_{{c}{d}}\right]=-i\left(g_{{b}{d}}J_{{a}{c}}-g_{{b}{c}}J_{{a}{d}}+g_{{a}{c}}J_{{b}{d}}-g_{{a}{d}}J_{{b}{c}}\right) 
   \end{align}
 where, 
   \begin{align}\label{metric}
@@ -399,11 +412,12 @@ where,
   0&0&0&-1&0&0\\
   0&0&0&0&-1&0\\
   0&0&0&0&0&-1\\
-  \end{pmatrix}_{6\times6}
+  \end{pmatrix}_{6\times6} .
   \end{align}
+%
 The algebra in Eq.~\eqref{algebrasimp}, with the metric in Eq.~\eqref{metric}, is the IFD realization of the conformal algebra. In particular,
 $J_{-2,-1}=-D$, $J_{-2,\mu}=-\mathfrak{K}_{\mu}/\sqrt{2}$, and
-$J_{-1,\mu}=P_{\mu}/\sqrt{2}$. Its explicit component commutators are collected in Table~\ref{tabelIFD}.
+$J_{-1,\mu}=P_{\mu}/\sqrt{2}$. Its explicit component commutators are summarized in Table~\ref{tableIFD}. \\
 
 \begingroup
 \fontsize{7}{8}\selectfont
@@ -448,72 +462,24 @@ $J_{-1,\mu}=P_{\mu}/\sqrt{2}$. Its explicit component commutators are collected 
  \hline 
  \rule{0pt}{16pt} $J^{{3}}$ &0&0&0&0&0&0&$iP_{{2}}$&$-iP_{{1}}$&$i\mathfrak{K}_{{2}}$&$-i\mathfrak{K}_{{1}}$&$i{K}^{{2}}$&$-i{K}^{{1}}$&$-i{J}^{{1}}$&$i{J}^{{2}}$&0\\
  \hline 
-\end{tabular}}
-\captionof{table}{Conformal algebra $(3+1)$ in the IFD limit ($\delta \to 0$)}
-\label{tabelIFD}
+\end{tabular}} 
+\captionof{table}{Conformal algebra $(3+1)$ in the IFD. }
+\label{tableIFD}
 \end{minipage}
 \endgroup
 
+% limit ($\delta \to 0$)
+
 %\section{Isomorphism between Dirac matrices and the IFD conformal algebra}
 
-Our previous study of the $(1+1)$-dimensional interpolating conformal
-algebra constructed a $4\times4$ interpolating projective representation and
-used $2\times2$ Pauli-matrix realizations for the $(1+0)$- and
-$(0+1)$-dimensional conformal groups \cite{Ji-Hari-2026-PRD}. Here we give
-the corresponding four-dimensional Dirac-matrix realization for the $(3+1)$-d IFD
-conformal algebra. The light-front and general interpolating realizations are
-obtained by applying the projective interpolation transformation introduced
-in later sections.
+%\section{Interpolating conformal algebra in \texorpdfstring{$(3+1)$}{Lg} dimensions}
+%\label{conformalsimpler}
 
-The Dirac matrices obey the Clifford algebra
+Now, we extend the interpolating Poincar\'e algebra discussed in the previous section, Section \ref{sec:introduction}, to the interpolating conformal algebra between IFD and LFD.  
+To find the $6\times6$ projective spacetime representations in the interpolating form, it is convenient to extend the $4\times4$ involutory matrix $\mathcal{R}^{\muT}_{\phantom{\mu}{\nu}}$ introduced in Eq.(\ref{eqn:interpolation_angle_definition}) to the  
+ $6\times6$ involutary transformation matrix $(\mathcal{R}_{\hat{a}}^{\phantom{b}{b}})_{6\times6}$ given by
 \begin{align}
-\{\gamma^\mu,\gamma^\nu\}=2g^{\mu\nu}\mathbbm{1},\qquad
-\gamma_\mu=g_{\mu\nu}\gamma^\nu,\qquad
-\gamma_5=i\gamma^0\gamma^1\gamma^2\gamma^3,
-\end{align}
-where $\mathbbm{1}$ is the $4\times 4$ identity matrix. While this algebra and the resulting isomorphism hold for any general basis, we use the standard Dirac basis as an explicit example. The explicit $4\times 4$ matrix representations are provided in Appendix~\ref{app:explicit_matrices}.
-
-The following dictionary realizes all fifteen IFD conformal generators:
-\begin{align}
-P_\mu&=\frac{i}{2}(\mathbbm{1}+\gamma_5)\gamma_\mu,
-&\mathfrak{K}_\mu&=-\frac{i}{2}(\mathbbm{1}-\gamma_5)\gamma_\mu,\nonumber\\
-D&=\frac{i}{2}\gamma_5,
-&K^i&=\frac{i}{2}\gamma_i\gamma_0,\qquad i=1,2,3,\nonumber\\
-J^1&=\frac{i}{2}\gamma_2\gamma_3,
-&J^2&=\frac{i}{2}\gamma_3\gamma_1,
-\qquad J^3=\frac{i}{2}\gamma_1\gamma_2.
-\label{eq:ifd-dirac-dictionary}
-\end{align}
-The longitudinal generator in the projective array has the lowered-index
-form $K_3=-K^3$. Substitution of Eq.~\eqref{eq:ifd-dirac-dictionary} into
-Eq.~\eqref{Jab} gives the spinor realization
-\begingroup\footnotesize
-\begin{align}
-\rho_\gamma(J_{ab})=\frac{i}{2}
-\begin{pmatrix}
-0&-\gamma_5&\dfrac{(1-\gamma_5)\gamma_0}{\sqrt{2}}&\dfrac{(1-\gamma_5)\gamma_1}{\sqrt{2}}&\dfrac{(1-\gamma_5)\gamma_2}{\sqrt{2}}&\dfrac{(1-\gamma_5)\gamma_3}{\sqrt{2}}\\
-\gamma_5&0&\dfrac{(1+\gamma_5)\gamma_0}{\sqrt{2}}&\dfrac{(1+\gamma_5)\gamma_1}{\sqrt{2}}&\dfrac{(1+\gamma_5)\gamma_2}{\sqrt{2}}&\dfrac{(1+\gamma_5)\gamma_3}{\sqrt{2}}\\
--\dfrac{(1-\gamma_5)\gamma_0}{\sqrt{2}}&-\dfrac{(1+\gamma_5)\gamma_0}{\sqrt{2}}&0&\gamma_0\gamma_1&\gamma_0\gamma_2&\gamma_0\gamma_3\\
--\dfrac{(1-\gamma_5)\gamma_1}{\sqrt{2}}&-\dfrac{(1+\gamma_5)\gamma_1}{\sqrt{2}}&\gamma_1\gamma_0&0&\gamma_1\gamma_2&\gamma_1\gamma_3\\
--\dfrac{(1-\gamma_5)\gamma_2}{\sqrt{2}}&-\dfrac{(1+\gamma_5)\gamma_2}{\sqrt{2}}&\gamma_2\gamma_0&\gamma_2\gamma_1&0&\gamma_2\gamma_3\\
--\dfrac{(1-\gamma_5)\gamma_3}{\sqrt{2}}&-\dfrac{(1+\gamma_5)\gamma_3}{\sqrt{2}}&\gamma_3\gamma_0&\gamma_3\gamma_1&\gamma_3\gamma_2&0
-\end{pmatrix}.
-\label{eq:ifd-dirac-jab}
-\end{align}
-\endgroup
-Thus $\rho_\gamma(J_{-2,-1})=-i\gamma_5/2=-D$ and the
-translation and special-conformal entries reproduce
-$J_{-1,\mu}=P_\mu/\sqrt{2}$ and
-$J_{-2,\mu}=-\mathfrak{K}_\mu/\sqrt{2}$, respectively. The Clifford
-algebra consequently reproduces the IFD commutators in
-Eq.~\eqref{algebrasimp} and Table~\ref{tabelIFD} \cite{Dirac1936,Hepner1962}.
-}
-\section{Interpolating conformal algebra in \texorpdfstring{$(3+1)$}{Lg} dimensions}
-\label{conformalsimpler}
-To find the $6\times6$ projective spacetime representations in the interpolating form, it is convenient to use the 
- $6\times6$ transformation matrix given by
-\begin{align}
-    (\mathcal{R}_{\hat{a}}^{b})_{6\times6}=(\mathcal{R}_{\hat{a}}^{b})^T_{6\times6}=\begin{pmatrix}
+    (\mathcal{R}_{\hat{a}}^{\phantom{b}{b}})_{6\times6}=(\mathcal{R}_{\hat{a}}^{\phantom{b}{b}})^T_{6\times6}=\begin{pmatrix}
     1&0&0&0&0&0\\
     0&1&0&0&0&0\\
     0&0&\cos{\delta}&0&0&\sin{\delta}\\
@@ -522,7 +488,7 @@ To find the $6\times6$ projective spacetime representations in the interpolating
     0&0&\sin{\delta}&0&0&-\cos{\delta}
     \end{pmatrix}
 \end{align}
-and apply it to Eq.\eqref{Jab}. Then in interpolation form $J_{\hat{a}\hat{b}}$ becomes $J_{\hat{a}\hat{b}}=\mathcal{R}_{\hat{a}}^{~{c}}J_{cd}\mathcal{R}_{~\hat{b}}^{{d}}$, that is
+and apply it to Eq.\eqref{Jab}. Then, the interpolation form of the antisymmetric tensor of conformal generators, $J_{\hat{a}\hat{b}}$, can be found from the unitary-type transformation given by  $J_{\hat{a}\hat{b}}=\mathcal{R}_{\hat{a}}^{~{c}}J_{cd}\mathcal{R}_{~\hat{b}}^{{d}}$. The explicit computation leads to $J_{\hat{a}\hat{b}}$ as given by
 \begin{align}
     J_{\hat{a}\hat{b}}&=\begin{pmatrix}
     0&-D&-\frac{\mathfrak{K}^{\hat{+}}}{\sqrt{2}}&-\frac{\mathfrak{K}_1}{\sqrt{2}}&-\frac{\mathfrak{K}_2}{\sqrt{2}}&-\frac{\mathfrak{K}^{\hat{-}}}{\sqrt{2}}\\
@@ -531,13 +497,15 @@ and apply it to Eq.\eqref{Jab}. Then in interpolation form $J_{\hat{a}\hat{b}}$ 
     \frac{\mathfrak{K}_1}{\sqrt{2}}&-\frac{P_{1}}{\sqrt{2}}&-{\mathcal{D}}^{\itP{1}} & 0 & {J}^{3} & -{\mathcal{K}}^{\itP{1}}\\
     \frac{\mathfrak{K}_2}{\sqrt{2}}&-\frac{P_{2}}{\sqrt{2}}&-{\mathcal{D}}^{\itP{2}} & -{J}^{3} & 0 & -{\mathcal{K}}^{\itP{2}}\\
     \frac{\mathfrak{K}^{\hat{-}}}{\sqrt{2}}&-\frac{P_{\hat{-}}}{\sqrt{2}}&K_3 & {\mathcal{K}}^{\itP{1}} & {\mathcal{K}}^{\itP{2}} & 0
-  \end{pmatrix}_{(6\times6)}\label{Jhat+hat-}
+  \end{pmatrix}_{(6\times6)}\label{Jhat+hat-} ,
 \end{align}
-where $J_{\hat{a}\hat{b}}=-J_{\hat{b}\hat{a}}$ and $\hat{a},\hat{b}\in\{-2,-1,\hat{+},1,2,\hat{-}\}$. Then the simplified conformal algebra in interpolation is:
+where $J_{\hat{a}\hat{b}}=-J_{\hat{b}\hat{a}}$ and $\hat{a},\hat{b}\in\{-2,-1,\hat{+},1,2,\hat{-}\}$.  
+The simplified interpolating conformal algebra is then given by
   \begin{align}
-      \left[J_{{\hat{a}}{\hat{b}}},J_{{\hat{c}}{\hat{d}}}\right]=-i\left(g_{{\hat{b}}{\hat{d}}}J_{{\hat{a}}{\hat{c}}}-g_{{\hat{b}}{\hat{c}}}J_{{\hat{a}}{\hat{d}}}+g_{{\hat{a}}{\hat{c}}}J_{{\hat{b}}{\hat{d}}}-g_{{\hat{a}}{\hat{d}}}J_{{\hat{b}}{\hat{c}}}\right)\label{simplesrint}
+      \left[J_{{\hat{a}}{\hat{b}}},J_{{\hat{c}}{\hat{d}}}\right]=-i\left(g_{{\hat{b}}{\hat{d}}}J_{{\hat{a}}{\hat{c}}}-g_{{\hat{b}}{\hat{c}}}J_{{\hat{a}}{\hat{d}}}+g_{{\hat{a}}{\hat{c}}}J_{{\hat{b}}{\hat{d}}}-g_{{\hat{a}}{\hat{d}}}J_{{\hat{b}}{\hat{c}}}\right),
+      \label{simplesrint}
   \end{align}
-where, 
+where
 \begin{align}
     g_{\hat{a},\hat{b}}&=\begin{pmatrix}
   0&-1&0&0&0&0\\
@@ -546,11 +514,10 @@ where,
   0&0&0&-1&0&0\\
   0&0&0&0&-1&0\\
   0&0&\mathbb{S}&0&0&-\mathbb{C}\\
-  \end{pmatrix}_{6\times6}\label{metricghat}
+  \end{pmatrix}_{6\times6}.\label{metricghat}
 \end{align}
-The algebra in Eq.\eqref{simplesrint}, with the above interpolating $6\times6$ metric, reproduces $_{15}C_{2} = 105$ explicit commutation relations in the interpolation between IFD and LFD mentioned in Table~\ref{tabelinterpolation}.
-
-The interpolation in projective spacetime naturally produces superscript special conformal generators  ($\mathfrak{K}^{\hat{\pm}}$), which are related to the subscript special conformal generators as $\mathfrak{K}^{\hat{\pm}}=g^{\hat{\pm}\hat{\pm}}\mathfrak{K}_{\hat{\pm}}+g^{\hat{\pm}\hat{\mp}}\mathfrak{K}_{\hat{\mp}}$, where the metric is defined in Eq.\eqref{eqn:g_munu_interpolation}, explicitly,
+In Table~\ref{tab:generator_limits}, we summarize the correspondence of each and every 15 interpolating generators of the conformal algebra with the ones in IFD and LFD taking the limit $\delta \to 0$ and $\delta \to \pi/4$, respectively. 
+Note that the interpolation in projective spacetime naturally produces superscript special conformal generators  ($\mathfrak{K}^{\hat{\pm}}$), which are related to the subscript special conformal generators as $\mathfrak{K}^{\hat{\pm}}=g^{\hat{\pm}\hat{\pm}}\mathfrak{K}_{\hat{\pm}}+g^{\hat{\pm}\hat{\mp}}\mathfrak{K}_{\hat{\mp}}$ with the metric explicitly defined in Eq.\eqref{eqn:g_munu_interpolation}, i.e.
 \begin{align}
     \begin{pmatrix}
         \mathfrak{K}^{\hat{+}}\\
@@ -563,6 +530,27 @@ The interpolation in projective spacetime naturally produces superscript special
         \mathfrak{K}_{\hat{-}}
     \end{pmatrix}.
 \end{align}
+Then, the algebra in Eq.\eqref{simplesrint}, with the above interpolating $6\times6$ metric, reproduces $_{15}C_{2} = 105$ explicit commutation relations in the interpolating conformal algebra between IFD and LFD. These 105 explicit commutation relations are 
+presented in Table~\ref{tableinterpolation} with the abbreviated notations 
+$s=\sin{\delta}$ and $c=\cos{\delta}$ as well as $\mathbb{S}=\sin2\delta$,  $\mathbb{C}=\cos2\delta$. In the IFD limit $c\to 1~\& \, s\to 0$ as well as 
+$\mathbb{C}\rightarrow1~\&~\mathbb{S}\rightarrow0$, one can see that Table~\ref{tableinterpolation} reproduced Table~\ref{tableIFD}.  
+Likewise, in the LFD limit $c\to 0~\& \, s\to 1$ as well as 
+$\mathbb{C}\rightarrow0~\&~\mathbb{S}\rightarrow1$, Table~\ref{tableinterpolation} yields Table~\ref{tableLFD} which lists the explicit commutation relations of the conformal algebra in LFD. 
+
+We note that the full $15 \times 15$ interpolating algebra presented in Table~\ref{tableinterpolation} reduces to the 
+$6 \times 6$ interpolating algebra presented in our previous work~\cite{Ji-Hari-2026-PRD} of the $(1+1)$-dimensional interpolating conformal algebra. In Table III and Table IV of Ref.~\cite{Ji-Hari-2026-PRD}, one can find the respective (1+1)-dimensional reduced conformal algebra of IFD and LFD corresponding to Table~\ref{tableIFD}
+and Table~\ref{tableLFD} of the present work.
+In the same vein of the correspondence presented in this work, Table III and Table IV of Ref.~\cite{Ji-Hari-2026-PRD} can be respectively found in the IFD and LFD limit 
+from the interpolating algebra presented in 
+Table V of Ref.~\cite{Ji-Hari-2026-PRD}. 
+
+{\color{red} 
+In the next section, Section \ref{sec:projectivespace}, we extend the projective spacetime representations of the 6 generators presented in our previous 
+work~\cite{Ji-Hari-2026-PRD} of the $(1+1)$-dimensional interpolating conformal
+algebra to the 15 generators of the $(3+1)$-dimensional interpolating conformal
+algebra. The projective spacetime representations of all 15 interpolating generators between IFD and LFD are provided explicitly.
+}
+
 
 \begin{table}[htpb!]
 \centering
@@ -714,7 +702,7 @@ $\mathfrak{K}_{1,2} = \mathfrak{K}_{1,2}$ & $\mathfrak{K}_{1,2} \to \mathfrak{K}
 \rule{0pt}{16pt} $J^{3}$ & $0$ & $0$ & $0$ & $0$ & $0$ & $0$ & $i P_{2}$ & $-i P_{1}$ & $i\mathfrak{K}_{2}$ & $-i\mathfrak{K}_{1}$ & $i\mathcal{D}^{\hat{2}}$ & $-i\mathcal{D}^{\hat{1}}$ & $i\mathcal{K}^{\hat{2}}$ & $-i\mathcal{K}^{\hat{1}}$ & $0$ \\
 \hline
 \end{tabular}}
-\label{tabelinterpolation}
+\label{tableinterpolation}
 \end{minipage}
 
 \newpage
@@ -761,13 +749,10 @@ $\mathfrak{K}_{1,2} = \mathfrak{K}_{1,2}$ & $\mathfrak{K}_{1,2} \to \mathfrak{K}
  \hline
 \end{tabular}}
 \captionof{table}{Conformal algebra $(3+1)$ in the LFD limit ($\delta \to \pi/4$)}
-\label{tabelLFD}
+\label{tableLFD}
 \end{minipage}
 \endgroup
 \finishlandscape
-
-
-where $\mathbb{S}=\sin2\delta$,  $\mathbb{C}=\cos2\delta$, $s=\sin{\delta}$ and $c=\cos{\delta}$. With the IFD limit $\mathbb{C}\rightarrow1~\&~\mathbb{S}\rightarrow0$ and LFD limit $\mathbb{C}\rightarrow0~\&~\mathbb{S}\rightarrow1$, the algebra Eq.\eqref{simplesrint} will reproduce the explicit commutation relations presented in Table~\ref{tabelIFD} and Table~\ref{tabelLFD}, respectively.
 
 
 \section{\texorpdfstring{$6\times6$}{TEXT} Projective Spacetime Representations}
@@ -775,7 +760,7 @@ where $\mathbb{S}=\sin2\delta$,  $\mathbb{C}=\cos2\delta$, $s=\sin{\delta}$ and 
 To characterize the individual properties of the 15 conformal generators, namely, which generators are kinematic or dynamic, we may correspond the projective spacetime representations 
 given by Eq.(\ref{Jab}) with
 the interpolating $(3+1)$ dimensional conformal algebra
-discussed in the previous sections, especially Section~\ref{conformalsimpler}. 
+discussed in the previous sections. 
 Kinematic generators leave the time defined in the given form of the dynamics invariant.
 Consequently, the individual time-ordered amplitudes in the respective time-ordered processes are invariant under the transformations provided by kinematic generators \cite{Ji2001, Ravikumar:2021xck}.
 Determining which generators are kinematic in each form of dynamics is useful, as maximizing the number of kinematic generators correspondingly saves dynamical effort when solving relativistic quantum field theories, such as QED and QCD~ \cite{ji2023relativistic}. As discussed in Section~\ref{conformalsimpler}, 
@@ -987,7 +972,7 @@ Then, the inverse spacetime of $x^{\hat{\mu}}$ is given by $\frac{x_{\hat{\mu}}}
 \begin{align}
     x^{\hat{+}\prime}&=-\frac{1}{\sqrt{2}}\frac{{X}^{\hat{+}\prime}}{ {X}^{\prime}_{-1}},
 \end{align}
-for each and every interpolating conformal operation according to Eq.(\ref{exponential-conformal-tranf}). We summarized the results of our computation in Table~\ref{tablexprime}.
+for each and every interpolating conformal operation according to Eq.(\ref{exponential-conformal-tranf}). We summarized the results of our computation in Table~\ref{tablexprime} and explicit derivations are detailed in Appendix \ref{app:interpolating-time-derivations}.
 From these results, we can determine which generators leave the interpolating time intact. We call a generator kinematic when $x^{\hat{+}\prime}=\lambda x^{\hat{+}}$, where $\lambda$ is independent of the spacetime coordinates (and may depend on the group parameter). Transformations with coordinate-dependent multiplicative factors are therefore classified as dynamic. For $0\leq \delta < \pi/4$, the seven kinematic generators are $\mathcal{K}^{\hat{1}}$, $\mathcal{K}^{\hat{2}}$, $J^{3}$, $P_{1}$, $P_{2}$, $P_{\hat -}=\sqrt{2}J_{-1\hat{-}}$, and $D=\left(D_{\hat{+}}c+D_{\hat{-}}s\right)=J_{-1 -2}$.
 The first six of these generators leave $x^{\hat{+}}$ exactly unchanged. The scale factor for the dilatation $D$ is $e^{-\alpha}$, with $\alpha=\omega^{-1-2}$ in Eq.(\ref{exponential-conformal-tranf}), as follows straightforwardly from the $6\times6$ matrix representations of $D_{\hat{+}}$ and $D_{\hat{-}}$ in Eq.(\ref{matrix-rep-conformal-generators}).
 Taking the respective limit of the interpolating parameter $\delta$, namely,  
@@ -1171,6 +1156,11 @@ In this work, we presented the interpolating conformal algebra between IFD and L
 
 Building on the correspondence between $(1+1)$d quantum field theory and AdS$_3$, we plan to analyze the holographic dual correspondence between $(3+1)$d QCD and AdS$_5$ by further interpolating between IFD and LFD. With this algebraic framework, we can evaluate light-front QCD, which maximizes the number of kinematic generators and links first-principle QCD to the light-front quark model for hadronic phenomenology. Handling relativistic interactions among hadron constituents is relevant for understanding the advantages of different forms of relativistic dynamics~\cite{Ji2025}.
 
+{\color{red}
+For further discussion of interpolating conformal algebra realization, in our previous work~\cite{Ji-Hari-2026-PRD} of $(1+1)$-dimensional interpolating conformal
+algebra, we discussed the $(1+0)$- and
+$(0+1)$-dimensional conformal algebras in terms of the $2\times2$ Pauli-matrices. Similarly, the corresponding four-dimensional Dirac-matrix realization for the $(3+1)$-dimensional conformal algebra has been discussed~\cite{Hepner1962}. While more works need to be done for this realization in the interpolating conformal algebra, we illustrate the Dirac-matrix realization for the $(3+1)$-dimensional conformal algebra in Appendix~\ref{app:explicit_matrices}.}
+
 
 \acknowledgments{This work was supported by the U.S. Department of Energy (Grant No. DE-FG02-03ER41260).
 The National Energy Research Scientific Computing Center (NERSC) supported by the Office of Science of the U.S. Department of Energy under Contract No. DE-AC02-05CH11231 is also acknowledged. 
@@ -1179,8 +1169,49 @@ The National Energy Research Scientific Computing Center (NERSC) supported by th
 \setcounter{section}{0}
 \section{Explicit \texorpdfstring{$4\times 4$}{4x4} Matrix Representations}
 \label{app:explicit_matrices}
+The Dirac matrices obey the Clifford algebra
+\begin{align}
+\{\gamma^\mu,\gamma^\nu\}=2g^{\mu\nu}\mathbbm{1},\qquad
+\gamma_\mu=g_{\mu\nu}\gamma^\nu,\qquad
+\gamma_5=i\gamma^0\gamma^1\gamma^2\gamma^3,
+\end{align}
+where $\mathbbm{1}$ is the $4\times 4$ identity matrix. While this algebra and the resulting isomorphism hold for any general basis, we use the standard Dirac basis as an explicit example. The explicit $4\times 4$ matrix representations are provided below. The following dictionary realizes all fifteen IFD conformal generators
+in terms of the corresponding standard Dirac matrices:
+\begin{align}
+P_\mu&=\frac{i}{2}(\mathbbm{1}+\gamma_5)\gamma_\mu,
+&\mathfrak{K}_\mu&=-\frac{i}{2}(\mathbbm{1}-\gamma_5)\gamma_\mu,\nonumber\\
+D&=\frac{i}{2}\gamma_5,
+&K^i&=\frac{i}{2}\gamma_i\gamma_0,\qquad i=1,2,3,\nonumber\\
+J^1&=\frac{i}{2}\gamma_2\gamma_3,
+&J^2&=\frac{i}{2}\gamma_3\gamma_1,
+\qquad J^3=\frac{i}{2}\gamma_1\gamma_2.
+\label{eq:ifd-dirac-dictionary}
+\end{align}
+The longitudinal generator in the projective array has the lowered-index
+form $K_3=-K^3$. Substitution of Eq.~\eqref{eq:ifd-dirac-dictionary} into
+Eq.~\eqref{Jab} yields the following representation which we denote as $\rho_\gamma(J_{ab})$: \cite{Dirac1936, Hepner1962, Weinberg_2010}
+\begingroup\footnotesize
+\begin{align}
+\rho_\gamma(J_{ab})=\frac{i}{2}
+\begin{pmatrix}
+0&-\gamma_5&\dfrac{(\mathbbm{1}-\gamma_5)\gamma_0}{\sqrt{2}}&\dfrac{(\mathbbm{1}-\gamma_5)\gamma_1}{\sqrt{2}}&\dfrac{(\mathbbm{1}-\gamma_5)\gamma_2}{\sqrt{2}}&\dfrac{(\mathbbm{1}-\gamma_5)\gamma_3}{\sqrt{2}}\\
+\gamma_5&0&\dfrac{(\mathbbm{1}+\gamma_5)\gamma_0}{\sqrt{2}}&\dfrac{(\mathbbm{1}+\gamma_5)\gamma_1}{\sqrt{2}}&\dfrac{(\mathbbm{1}+\gamma_5)\gamma_2}{\sqrt{2}}&\dfrac{(\mathbbm{1}+\gamma_5)\gamma_3}{\sqrt{2}}\\
+-\dfrac{(\mathbbm{1}-\gamma_5)\gamma_0}{\sqrt{2}}&-\dfrac{(\mathbbm{1}+\gamma_5)\gamma_0}{\sqrt{2}}&0&\gamma_0\gamma_1&\gamma_0\gamma_2&\gamma_0\gamma_3\\
+-\dfrac{(\mathbbm{1}-\gamma_5)\gamma_1}{\sqrt{2}}&-\dfrac{(\mathbbm{1}+\gamma_5)\gamma_1}{\sqrt{2}}&\gamma_1\gamma_0&0&\gamma_1\gamma_2&\gamma_1\gamma_3\\
+-\dfrac{(\mathbbm{1}-\gamma_5)\gamma_2}{\sqrt{2}}&-\dfrac{(\mathbbm{1}+\gamma_5)\gamma_2}{\sqrt{2}}&\gamma_2\gamma_0&\gamma_2\gamma_1&0&\gamma_2\gamma_3\\
+-\dfrac{(\mathbbm{1}-\gamma_5)\gamma_3}{\sqrt{2}}&-\dfrac{(\mathbbm{1}+\gamma_5)\gamma_3}{\sqrt{2}}&\gamma_3\gamma_0&\gamma_3\gamma_1&\gamma_3\gamma_2&0
+\end{pmatrix}.
+\label{eq:ifd-dirac-jab}
+\end{align}
+\endgroup
+For example, $\rho_\gamma(J_{-2,-1})=-i\gamma_5/2=-D$ and the
+translation and special-conformal entries reproduce
+$J_{-1,\mu}=P_\mu/\sqrt{2}$ and
+$J_{-2,\mu}=-\mathfrak{K}_\mu/\sqrt{2}$, respectively. The Clifford
+algebra consequently reproduces the IFD commutators in
+Eq.~\eqref{algebrasimp} and Table~\ref{tableIFD}.
 
-The standard Dirac basis for the $\gamma$ matrices is given by:
+The standard Dirac basis for the $\gamma$ matrices is given by
 \begin{align*}
 \gamma^0&=\begin{pmatrix}1&0&0&0\\0&1&0&0\\0&0&-1&0\\0&0&0&-1\end{pmatrix}~;~~~~~~
 \gamma^1=\begin{pmatrix}0&0&0&1\\0&0&1&0\\0&-1&0&0\\-1&0&0&0\end{pmatrix}~;~~~~~~
