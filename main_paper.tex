@@ -108,11 +108,11 @@ x'^{\mu}=\frac{x^{\mu}-b^{\mu}x^{2}}{1-2b\cdot x+b^{2}x^{2}},
 which can be understood as an inversion of $x^\mu$, followed by a translation by $b^\mu$, and then another inversion \cite{Blumenhagen,Ji-Hari-2026-PRD}. These generators form the full conformal algebra, which contains the Poincar\'e group as a subgroup.
 \begin{align}\label{conformalalgebra}
     \left[P_{{\mu}},P_{{\nu}}\right]&=0;~\left[\mathfrak{K}_{{\mu}},\mathfrak{K}_{{\nu}}\right]=0;\nonumber\\
- \left[D, P_{{\mu}}\right]&=iP_{{\mu}};~\left[D, \mathfrak{K}_{{\mu}}\right]=-i\mathfrak{K}_{{\mu}};\nonumber\\
+ \left[D, P_{{\mu}}\right]&=\textcolor{red}-iP_{{\mu}};~\left[D, \mathfrak{K}_{{\mu}}\right]=\textcolor{red}+i\mathfrak{K}_{{\mu}};\nonumber\\
  \left[P_{{\rho}},M_{{\mu}{\nu}}\right]&=i\left(g_{{\rho}{\mu}}P_{{\nu}}-g_{{\rho}{\nu}}P_{{\mu}}\right);\nonumber\\
  \left[\mathfrak{K}_{{\rho}},M_{{\mu}{\nu}}\right]&=i\left(g_{{\rho}{\mu}}\mathfrak{K}_{{\nu}}-g_{{\rho}{\nu}}\mathfrak{K}_{{\mu}}\right);\nonumber\\
  \left[M_{{\alpha}{\beta}},M_{{\rho}{\sigma}}\right]&=-i\left(g_{{\beta}{\sigma}}M_{{\alpha}{\rho}}-g_{{\beta}{\rho}}M_{{\alpha}{\sigma}}+g_{{\alpha}{\rho}}M_{{\beta}{\sigma}}-g_{{\alpha}{\sigma}}M_{{\beta}{\rho}}\right);\nonumber\\
- \left[\mathfrak{K}_{{\mu}},P_{{\nu}}\right]&=2i\left(g_{{\mu}{\nu}}D-M_{{\mu}{\nu}}\right);~\left[D, M_{{\mu}{\nu}}\right]=0.
+ \left[\mathfrak{K}_{{\mu}},P_{{\nu}}\right]&=\textcolor{red}-2i\left(g_{{\mu}{\nu}}D\textcolor{red}+M_{{\mu}{\nu}}\right);~\left[D, M_{{\mu}{\nu}}\right]=0.
 \end{align}
 where, $g_{\mu\nu}$ is the metric tensor.
 
@@ -574,9 +574,9 @@ $\mathfrak{K}_{1,2} = \mathfrak{K}_{1,2}$ & $\mathfrak{K}_{1,2} \to \mathfrak{K}
 \rule{0pt}{16pt}  & $\mathfrak{K}_{\hat{+}}$ & $P_{\hat{+}}$ & $D_{\hat{+}}$ & $\mathfrak{K}_{\hat{-}}$ & $P_{\hat{-}}$ & $D_{\hat{-}}$ & $P_{1}$ & $P_{2}$ & $\mathfrak{K}_{1}$ & $\mathfrak{K}_{2}$ & $\mathcal{D}^{\hat{1}}$ & $\mathcal{D}^{\hat{2}}$ & $\mathcal{K}^{\hat{1}}$ & $\mathcal{K}^{\hat{2}}$ & $J^{3}$ \\
 \hline
 \hline
-\rule{0pt}{16pt} $\mathfrak{K}_{\hat{+}}$ & $0$ & $-2i[(c+\mathbb{S}s)d_{\hat{+}}+(s-\mathbb{S}c)d_{\hat{-}}]$ & $-i[(c+\mathbb{S}s)\mathfrak{K}_{\hat{+}}+(s-\mathbb{S}c)\mathfrak{K}_{\hat{-}}]$ & $0$ & $2i\mathbb{C}[sD_{\hat{+}}-cD_{\hat{-}}]$ & $i\mathbb{C}[s\mathfrak{K}_{\hat{+}}-c\mathfrak{K}_{\hat{-}}]$ & $-2i[\mathbb{S}\mathcal{K}^{\hat{1}} + \mathbb{C}\mathcal{D}^{\hat{1}}]$ & $-2i[\mathbb{S}\mathcal{K}^{\hat{2}} + \mathbb{C}\mathcal{D}^{\hat{2}}]$ & $0$ & $0$ & $i\mathfrak{K}_{1}$ & $i\mathfrak{K}_{2}$ & $0$ & $0$ & $0$ \\
+\rule{0pt}{16pt} $\mathfrak{K}_{\hat{+}}$ & $0$ & $-2i[(c+\mathbb{S}s)\textcolor{red}D_{\hat{+}}+(s-\mathbb{S}c)\textcolor{red}D_{\hat{-}}]$ & $-i[(c+\mathbb{S}s)\mathfrak{K}_{\hat{+}}+(s-\mathbb{S}c)\mathfrak{K}_{\hat{-}}]$ & $0$ & $2i\mathbb{C}[sD_{\hat{+}}-cD_{\hat{-}}]$ & $i\mathbb{C}[s\mathfrak{K}_{\hat{+}}-c\mathfrak{K}_{\hat{-}}]$ & $-2i[\mathbb{S}\mathcal{K}^{\hat{1}} + \mathbb{C}\mathcal{D}^{\hat{1}}]$ & $-2i[\mathbb{S}\mathcal{K}^{\hat{2}} + \mathbb{C}\mathcal{D}^{\hat{2}}]$ & $0$ & $0$ & $i\mathfrak{K}_{1}$ & $i\mathfrak{K}_{2}$ & $0$ & $0$ & $0$ \\
 \hline
-\rule{0pt}{16pt} $P_{\hat{+}}$ & $2i[(c+\mathbb{S}s)d_{\hat{+}}+(s-\mathbb{S}c)d_{\hat{-}}]$ & $0$ & $i[(c+\mathbb{S}s)P_{\hat{+}}+(s-\mathbb{S}c)P_{\hat{-}}]$ & $-2i\mathbb{C}[sD_{\hat{+}}-cD_{\hat{-}}]$ & $0$ & $-i\mathbb{C}[sP_{\hat{+}}-cP_{\hat{-}}]$ & $0$ & $0$ & $-2i\mathcal{D}^{\hat{1}}$ & $-2i\mathcal{D}^{\hat{2}}$ & $i\mathbb{C} P_{1}$ & $i\mathbb{C} P_{2}$ & $i\mathbb{S} P_{1}$ & $i\mathbb{S} P_{2}$ & $0$ \\
+\rule{0pt}{16pt} $P_{\hat{+}}$ & $2i[(c+\mathbb{S}s)\textcolor{red}D_{\hat{+}}+(s-\mathbb{S}c)\textcolor{red}D_{\hat{-}}]$ & $0$ & $i[(c+\mathbb{S}s)P_{\hat{+}}+(s-\mathbb{S}c)P_{\hat{-}}]$ & $-2i\mathbb{C}[sD_{\hat{+}}-cD_{\hat{-}}]$ & $0$ & $-i\mathbb{C}[sP_{\hat{+}}-cP_{\hat{-}}]$ & $0$ & $0$ & $-2i\mathcal{D}^{\hat{1}}$ & $-2i\mathcal{D}^{\hat{2}}$ & $i\mathbb{C} P_{1}$ & $i\mathbb{C} P_{2}$ & $i\mathbb{S} P_{1}$ & $i\mathbb{S} P_{2}$ & $0$ \\
 \hline
 \rule{0pt}{16pt} $D_{\hat{+}}$ & $i[(c+\mathbb{S}s)\mathfrak{K}_{\hat{+}}+(s-\mathbb{S}c)\mathfrak{K}_{\hat{-}}]$ & $-i[(c+\mathbb{S}s)P_{\hat{+}}+(s-\mathbb{S}c)P_{\hat{-}}]$ & $0$ & $-i\mathbb{C}[s\mathfrak{K}_{\hat{+}}-c\mathfrak{K}_{\hat{-}}]$ & $i\mathbb{C}[sP_{\hat{+}}-cP_{\hat{-}}]$ & $0$ & $-ic P_{1}$ & $-ic P_{2}$ & $ic\mathfrak{K}_{1}$ & $ic\mathfrak{K}_{2}$ & $is[\mathbb{C}\mathcal{K}^{\hat{1}} - \mathbb{S}\mathcal{D}^{\hat{1}}]$ & $is[\mathbb{C}\mathcal{K}^{\hat{2}} - \mathbb{S}\mathcal{D}^{\hat{2}}]$ & $is[\mathbb{S}\mathcal{K}^{\hat{1}} + \mathbb{C}\mathcal{D}^{\hat{1}}]$ & $is[\mathbb{S}\mathcal{K}^{\hat{2}} + \mathbb{C}\mathcal{D}^{\hat{2}}]$ & $0$ \\
 \hline
@@ -915,9 +915,9 @@ $\delta \to 0$ and $\delta \to \pi/4$, we find the corresponding number of kinem
              \hline
              \rule{0pt}{16pt} $P_{\hat{-}}$& $x^{\hat{+}\prime}=x^{\hat{+}}$  \\
              \hline
-             \rule{0pt}{16pt} $D_{\hat{+}}$ & $x^{\hat{+}\prime} = e^{-\alpha_{\hat{+}}\sin{(\delta)}}\left[\left(\cosh[\alpha_{\hat{+}}\cos{(\delta)}]-\mathbb{S}\sinh[\alpha_{\hat{+}}\cos{(\delta)}]\right)x^{\hat{+}}+\mathbb{C}\sinh[\alpha_{\hat{+}}\cos{(\delta)}] x^{\hat{-}}\right]$ \\
+             \rule{0pt}{16pt} $D_{\hat{+}}$ & $x^{\hat{+}\prime} = e^{-\alpha_{\hat{+}}\textcolor{red}\cos{(\delta)}}\left[\left(\cosh[\alpha_{\hat{+}}\textcolor{red}\sin{(\delta)}]-\mathbb{S}\sinh[\alpha_{\hat{+}}\textcolor{red}\sin{(\delta)}]\right)x^{\hat{+}}+\mathbb{C}\sinh[\alpha_{\hat{+}}\textcolor{red}\sin{(\delta)}] x^{\hat{-}}\right]$ \\
              \hline
-             \rule{0pt}{16pt} $D_{\hat{-}}$ & $x^{\hat{+}\prime} = e^{-\alpha_{\hat{-}}\cos{(\delta)}}\left[\left(\cosh[\alpha_{\hat{-}}\sin{(\delta)}]+\mathbb{S} \sinh[\alpha_{\hat{-}}\sin{(\delta)}]\right)x^{\hat{+}} -\mathbb{C} \sinh[\alpha_{\hat{-}}\sin{(\delta)}]x^{\hat{-}}\right]$ \\
+             \rule{0pt}{16pt} $D_{\hat{-}}$ & $x^{\hat{+}\prime} = e^{-\alpha_{\hat{-}}\textcolor{red}\sin{(\delta)}}\left[\left(\cosh[\alpha_{\hat{-}}\textcolor{red}\cos{(\delta)}]+\mathbb{S} \sinh[\alpha_{\hat{-}}\textcolor{red}\cos{(\delta)}]\right)x^{\hat{+}} -\mathbb{C} \sinh[\alpha_{\hat{-}}\textcolor{red}\cos{(\delta)}]x^{\hat{-}}\right]$ \\
              \hline
              \rule{0pt}{16pt} $J^{3}$ & $ x^{\hat{+}\prime}=x^{\hat{+}}$ \\
              \hline
@@ -962,7 +962,7 @@ $\delta \to 0$ and $\delta \to \pi/4$, we find the corresponding number of kinem
              \hline
              \rule{0pt}{16pt} $D$ & $x^{{0}\prime} = e^{-\alpha}x^{0}$ \\
              \hline
-             \rule{0pt}{16pt} $-K_{3}$ & $x^{{0}\prime} = \cosh[\alpha]x^{0}-\sinh[\alpha] x^{3}$ \\
+             \rule{0pt}{16pt} $-K_{3}$ & $x^{{0}\prime} = \cosh[\alpha]x^{0}\textcolor{red  }+\sinh[\alpha] x^{3}$ \\
              \hline
              \rule{0pt}{16pt} $J^{3}$ & $ x^{{0}\prime}=x^{{0}}$ \\
              \hline
@@ -1616,9 +1616,9 @@ hence
     x^{\hat{+}\prime}=&(\cosh{\eta_{3}}-\mathbb{S}\sinh{\eta_{3}})x^{\hat{+}}+\mathbb{C}(\sinh{\eta_{3}})x^{\hat{-}}
 \end{align}
 
-\subsubsection{\texorpdfstring{$D_{\hat{+}}$}{D hat minus}}
+\subsubsection{\texorpdfstring{$D_{\hat{+}}$}{D hat plus}}
 
-Let $v=\alpha_{\hat{+}}\cos\delta$. The transformation of the interpolating projective
+Let $v=\alpha_{\hat{+}}\textcolor{red}\sin\delta$. The transformation of the interpolating projective
 space-time vector by $D_{\hat{+}}$ is
 \begin{align}
 \begin{pmatrix}
@@ -1629,8 +1629,8 @@ X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}\\
 &=\begin{pmatrix}
-e^{-\alpha_{\hat{+}}\sin\delta} & 0 & 0 & 0 & 0 & 0\\
-0 & e^{\alpha_{\hat{+}}\sin\delta} & 0 & 0 & 0 & 0\\
+e^{-\alpha_{\hat{+}}\textcolor{red}\cos\delta} & 0 & 0 & 0 & 0 & 0\\
+0 & e^{\alpha_{\hat{+}}\textcolor{red}\cos\delta} & 0 & 0 & 0 & 0\\
 0 & 0 & \cosh v+\mathbb{S}\sinh v & 0 & 0 & -\mathbb{C}\sinh v\\
 0 & 0 & 0 & 1 & 0 & 0\\
 0 & 0 & 0 & 0 & 1 & 0\\
@@ -1640,8 +1640,8 @@ e^{-\alpha_{\hat{+}}\sin\delta} & 0 & 0 & 0 & 0 & 0\\
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}\\
 &=\begin{pmatrix}
-e^{-\alpha_{\hat{+}}\sin\delta}X_{-2}\\
-e^{\alpha_{\hat{+}}\sin\delta}X_{-1}\\
+e^{-\alpha_{\hat{+}}\textcolor{red}\cos\delta}X_{-2}\\
+e^{\alpha_{\hat{+}}\textcolor{red}\cos\delta}X_{-1}\\
 \left(\cosh v+\mathbb{S}\sinh v\right)X_{\hat{+}}
  -\mathbb{C}\sinh v\,X_{\hat{-}}\\
 X_1\\ X_2\\
@@ -1651,25 +1651,25 @@ X_1\\ X_2\\
 \end{align}
 Thus,
 \begin{align}
-x_{\hat{+}}'&=e^{-\alpha_{\hat{+}}\sin\delta}
+x_{\hat{+}}'&=e^{-\alpha_{\hat{+}}\textcolor{red}\cos\delta}
 \left[\left(\cosh v+\mathbb{S}\sinh v\right)x_{\hat{+}}
  -\mathbb{C}\sinh v\,x_{\hat{-}}\right], \nonumber\\
-x_{\hat{-}}'&=e^{-\alpha_{\hat{+}}\sin\delta}
+x_{\hat{-}}'&=e^{-\alpha_{\hat{+}}\textcolor{red}\cos\delta}
 \left[-\mathbb{C}\sinh v\,x_{\hat{+}}
  +\left(\cosh v-\mathbb{S}\sinh v\right)x_{\hat{-}}\right],
 \end{align}
 and hence
 \begin{align}
 x^{\hat{+}\prime}
-=e^{-\alpha_{\hat{+}}\sin\delta}
+=e^{-\alpha_{\hat{+}}\textcolor{red}\cos\delta}
 \left[\left(\cosh v-\mathbb{S}\sinh v\right)x^{\hat{+}}
  +\mathbb{C}\sinh v\,x^{\hat{-}}\right].
 \end{align}
 
 
-\subsubsection{\texorpdfstring{$D_{\hat{-}}$}{D hat plus}}
+\subsubsection{\texorpdfstring{$D_{\hat{-}}$}{D hat minus}}
 
-Let $u=\alpha_{\hat{-}}\sin\delta$. The transformation of the interpolating projective
+Let $u=\alpha_{\hat{-}}\textcolor{red}\cos\delta$. The transformation of the interpolating projective
 space-time vector by $D_{\hat{-}}$ is
 \begin{align}
 \begin{pmatrix}
@@ -1680,8 +1680,8 @@ X_{-2}'\\ X_{-1}'\\ X_{\hat{+}}'\\ X_1'\\ X_2'\\ X_{\hat{-}}'
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}\\
 &=\begin{pmatrix}
-e^{-\alpha_{\hat{-}}\cos\delta} & 0 & 0 & 0 & 0 & 0\\
-0 & e^{\alpha_{\hat{-}}\cos\delta} & 0 & 0 & 0 & 0\\
+e^{-\alpha_{\hat{-}}\textcolor{red}\sin\delta} & 0 & 0 & 0 & 0 & 0\\
+0 & e^{\alpha_{\hat{-}}\textcolor{red}\sin\delta} & 0 & 0 & 0 & 0\\
 0 & 0 & \cosh u-\mathbb{S}\sinh u & 0 & 0 & \mathbb{C}\sinh u\\
 0 & 0 & 0 & 1 & 0 & 0\\
 0 & 0 & 0 & 0 & 1 & 0\\
@@ -1691,8 +1691,8 @@ e^{-\alpha_{\hat{-}}\cos\delta} & 0 & 0 & 0 & 0 & 0\\
 X_{-2}\\ X_{-1}\\ X_{\hat{+}}\\ X_1\\ X_2\\ X_{\hat{-}}
 \end{pmatrix}\\
 &=\begin{pmatrix}
-e^{-\alpha_{\hat{-}}\cos\delta}X_{-2}\\
-e^{\alpha_{\hat{-}}\cos\delta}X_{-1}\\
+e^{-\alpha_{\hat{-}}\textcolor{red}\sin\delta}X_{-2}\\
+e^{\alpha_{\hat{-}}\textcolor{red}\sin\delta}X_{-1}\\
 \left(\cosh u-\mathbb{S}\sinh u\right)X_{\hat{+}}
  +\mathbb{C}\sinh u\,X_{\hat{-}}\\
 X_1\\ X_2\\
@@ -1702,17 +1702,17 @@ X_1\\ X_2\\
 \end{align}
 It follows that
 \begin{align}
-x_{\hat{+}}'&=e^{-\alpha_{\hat{-}}\cos\delta}
+x_{\hat{+}}'&=e^{-\alpha_{\hat{-}}\textcolor{red}\sin\delta}
 \left[\left(\cosh u-\mathbb{S}\sinh u\right)x_{\hat{+}}
  +\mathbb{C}\sinh u\,x_{\hat{-}}\right], \nonumber\\
-x_{\hat{-}}'&=e^{-\alpha_{\hat{-}}\cos\delta}
+x_{\hat{-}}'&=e^{-\alpha_{\hat{-}}\textcolor{red}\sin\delta}
 \left[\mathbb{C}\sinh u\,x_{\hat{+}}
  +\left(\cosh u+\mathbb{S}\sinh u\right)x_{\hat{-}}\right].
 \end{align}
 Raising the index yields
 \begin{align}
 x^{\hat{+}\prime}
-=e^{-\alpha_{\hat{-}}\cos\delta}
+=e^{-\alpha_{\hat{-}}\textcolor{red}\sin\delta}
 \left[\left(\cosh u+\mathbb{S}\sinh u\right)x^{\hat{+}}
  -\mathbb{C}\sinh u\,x^{\hat{-}}\right].
 \end{align}
