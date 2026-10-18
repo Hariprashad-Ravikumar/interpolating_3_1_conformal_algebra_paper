@@ -73,7 +73,7 @@ $^{2}$ \quad Department of Physics, North Carolina State University, Raleigh, No
 \abstract{We extend the interpolation of the Poincar\'e algebra between instant form dynamics (IFD) and light-front dynamics (LFD) to the conformal algebra in $(3+1)$ dimensions. Building upon our recent formulation of the interpolating conformal algebra in $(1+1)$ dimensions, we propose an interpolation method for the conformal group $SO(4,2)$. A central feature of this work is classifying the $15$ conformal generators into kinematic and dynamic categories as a function of the interpolation angle ($0 \leq \delta \leq \frac{\pi}{4}$). We show that among the five additional generators beyond the Poincar\'e group, the dilatation generator remains strictly kinematic across the entire interpolation region. We also find that in the exact light-front limit ($\delta = \frac{\pi}{4}$), one additional generator from the Special Conformal Transformations (SCT) becomes kinematic in $(1+1)$ but dynamical in $(3+1)$. This behavior shows the advantage of LFD in maximizing kinematic generators and minimizing dynamical complexity. To support this algebraic framework, we construct a $6 \times 6$ interpolating projective spacetime matrix representation. We detail the explicit transformations of the interpolating time under all $15$ generators, providing a systematic view of conformal symmetry across the relativistic dynamics.}
 
 % Keywords
-\keyword{conformal algebra; light-front dynamics; instant form dynamics; Witt algebra} 
+\keyword{conformal algebra; light-front dynamics; instant form dynamics} 
 
 \begin{document}
 \section{Introduction}
@@ -91,9 +91,9 @@ In general, the conformal transformation $x\longmapsto x'$ in $d$ dimensions can
 \end{align}
 meaning the metric is preserved up to a scale factor $\Lambda(x)$ under a conformal transformation, where $\mu,\nu\in\{0,\ldots,d-1\}$. The scale $\Lambda(x)=1$ corresponds to the Poincar\'e group consisting of translations, rotations, and Lorentz transformations. Consider an infinitesimal transformation, $x'^{\mu}=x^{\mu}+\epsilon^{\mu}(x)+\mathcal{O}(\epsilon^2)$. The metric then changes by $\delta g_{\mu\nu}=\partial_{\mu}\epsilon_{\nu}(x)+\partial_{\nu}\epsilon_{\mu}(x)$. The conformality condition requires
 \begin{align}
-\partial_{\mu}\epsilon_{\nu}(x)+\partial_{\nu}\epsilon_{\mu}(x)=F(x)\delta_{\mu\nu},\label{Killing}
+\partial_{\mu}\epsilon_{\nu}(x)+\partial_{\nu}\epsilon_{\mu}(x)=F(x)\textcolor{red}g_{\mu\nu},\label{Killing}
 \end{align}
-where $F(x)=\Lambda(x)-1-\mathcal{O}(\epsilon^2)$. Equation~\eqref{Killing} is the conformal Killing equation. Contraction with $\delta^{\mu\nu}$ yields $F(x)=\frac{2}{d}\partial_{\mu}\epsilon^{\mu}$. There are four classes of solutions for $\epsilon_{\mu}(x)$:
+where $F(x)=\Lambda(x)-1-\mathcal{O}(\epsilon^2)$. Equation~\eqref{Killing} is the conformal Killing equation. Contraction with $\textcolor{red}g^{\mu\nu}$ yields $F(x)=\frac{2}{d}\partial_{\mu}\epsilon^{\mu}$. There are four classes of solutions for $\epsilon_{\mu}(x)$:
 \begin{align}
 \label{conformal-generators}
 P_{\mu}&=i\partial_{\mu} &&\text{(translations)},\nonumber\\
